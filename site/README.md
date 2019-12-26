@@ -1,0 +1,7 @@
+https://coolors.co/app/247ba0-70c1b3-b2dbbf-f3ffbd-ff1654
+
+#FF1654
+#F3FFBD
+#B2DBBF
+#70C1B3
+#247BA0
