@@ -6,5 +6,6 @@ var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest
 var Ancient_Shoreline = new L.GeoJSON.AJAX("./geojson/1.Ancient_Shoreline.geojson", {
 	fillColor: "#FF1654",
 	fillOpacity: "0.2",
-	color: "#F3FFBD"
+	color: "#FF1654",
+	opacity: "1"
 }).addTo(map);
