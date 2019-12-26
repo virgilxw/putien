@@ -24,13 +24,14 @@
 
 h5 {
 	font-weight: normal;
+	line-height: 200%;
 }
 
 .credits {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	font-size: 0.7em;
+	font-size: 0.8em;
 	margin-top: 30px;
 	padding-top: 5px;
 	border-top: 2px solid rgba(70, 70, 70, 0.5);
