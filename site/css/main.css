@@ -21,7 +21,7 @@ section {
 .site-container .title {
 	background-color: #247BA0;
 	max-width: 30vw;
-	margin-bottom: 50vh;
+	margin-bottom: 100vh;
 	margin-top: 30vh;
 }
 
@@ -219,8 +219,20 @@ blockquote:nth-of-type(even) footer:after {
 	width: 20vw;
 	height: 40vh;
 	background-color: white;
-	transform: translate(-40px, 0px);
+	transform: translate(-40px, -50vh);
 	border: 3px solid rgba(112, 193, 179, 0.7);
+	display: flex;
+	flex-direction: column;
+}
+
+#inset1Map {
+	height: calc(100% - 20px);
+}
+
+.subtitle {
+	font-size: 0.8em;
+	vertical-align: bottom;
+	margin: auto;
 }
 
 #s2 {

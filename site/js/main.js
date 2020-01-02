@@ -1,6 +1,6 @@
 $(document).ready(function () {
-	var mainMap = L.map('MainMap').setView([25.35, 119.12], 12)
-	var inset1 = L.map('inset1', {
+	var mainMap = L.map('MainMap').setView([25.45, 119.12], 12)
+	var inset1 = L.map('inset1Map', {
 		zoomControl: false,
 		attributionControl: false
 	}).setView([25.44, 119.01], 12)
@@ -84,9 +84,7 @@ $(document).ready(function () {
 
 
 	// ScrollMagic Scenes
-	function s1Enter() {
-		mainMap.flyTo([25.45, 119.12], 12)
-	}
+	function s1Enter() {}
 
 	function s1Exit() {}
 
@@ -118,7 +116,7 @@ $(document).ready(function () {
 		.addTo(controller);
 
 	var scene2 = new ScrollMagic.Scene({
-			triggerElement: "#s2"
+			triggerElement: "#inset1Map"
 		}).on("enter", s2Enter)
 		.on("leave", s2Exit)
 		.addIndicators({
