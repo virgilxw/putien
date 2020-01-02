@@ -229,4 +229,14 @@ blockquote:nth-of-type(even) footer:after {
 
 .shoreline {
 	display: flex;
+	flex-direction: column;
+	position: absolute;
+	left: 0;
+	transform: translate(40px, 0px);
+}
+
+.shoreline legend {
+	background-color: white;
+	text-align: center;
+	padding: 2px 5px;
 }
