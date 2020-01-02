@@ -222,3 +222,11 @@ blockquote:nth-of-type(even) footer:after {
 	transform: translate(-40px, 0px);
 	border: 3px solid rgba(112, 193, 179, 0.7);
 }
+
+#s2 {
+	margin-bottom: 60vh;
+}
+
+.shoreline {
+	display: flex;
+}

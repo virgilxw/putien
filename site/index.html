@@ -6,6 +6,33 @@
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+
+	<!-- Plugins -->
+
+	<!-- Leaflet -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.6.0/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.6.0/leaflet.js" integrity="sha256-fNoRrwkP2GuYPbNSJmMJOCyfRB2DhPQe0rGTgzRsyso=" crossorigin="anonymous"></script>
+
+	<!-- Leaflet.AJAX -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js" integrity="sha256-rVeyUZMfAHhQJ7hvWaHrKknTDdqGcn1gxBBJA++E4z8=" crossorigin="anonymous"></script>
+
+	<!-- Scrollmagic -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+
+	<!-- jQuery-->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+	<!-- jQuery UI -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css" integrity="sha256-RPilbUJ5F7X6DdeTO6VFZ5vl5rO5MJnmSk4pwhWfV8A=" crossorigin="anonymous" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha256-KM512VNnjElC30ehFwehXjx1YCHPiQkOPmqnrWtpccM=" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/header.css">
+
+	<script src="js/main.js"></script>
+
 	<link href="https://fonts.googleapis.com/css?family=Ma+Shan+Zheng|Roboto&display=swap" rel="stylesheet">
 </head>
 
@@ -46,7 +73,6 @@
 				<span>Last updated 26 Dec 2019</span>
 			</div>
 		</section>
-
 		<section id="s2">
 			<h2>A Seemingly Ordinary City</h2>
 			<p>
@@ -57,10 +83,31 @@
 			</p>
 			<p>
 				The process of reclaimation accelerated during the Song (960–1279) Dynasty as greater numbers of Han Chinese migrated into the Putian Plain. The pre-industrial limits to reclaimation were reached during the Qing dynasty (636–1912), even though reclaimation projects continue in the twenty-first century.
-
 			</p>
-
+			<fieldset class="shoreline">
+				<legend>Putian's Shoreline Through the Ages </legend>
+				<label for="radio-1">Ancient Shoreline</label>
+				<input type="radio" name="radio-1" id="radio-1">
+				<label for="radio-2">Tang Dynasty (~750 A.D.)</label>
+				<input type="radio" name="radio-1" id="radio-2">
+				<label for="radio-3">Song Dynasty (~1100 A.D.)</label>
+				<input type="radio" name="radio-1" id="radio-3">
+				<label for="radio-4">Yuan Dynasty (~1300 A.D.)</label>
+				<input type="radio" name="radio-1" id="radio-4">
+				<label for="radio-5">Ming-Qing Transition (~1644 A.D.)</label>
+				<input type="radio" name="radio-1" id="radio-5">
+			</fieldset>
 			<div id="inset1"></div>
+		</section>
+
+		<section>
+			<h2>Putian’s Hydrological Conundrum</h2>
+			<p>
+				Newly drained land took the form of barren mudflats. A system of irrigation canals and weirs developed concurently to transform mudflats into productive rice-growing agricultural fields, and to reclaim new land from the ocean.
+			</p>
+			<p>
+				Putian’s irrigation system is extraordinarily complex and interconnected to meet the challenges of its distinct hydrological challanges. Salt water enters deep into the plain on the rising tide, pushing up the Mulan river to the Mulan Weir, located southwest of Putian city. The irrigation system is used as a reservoir of freshwater and requires constant operation to be effective. Several weirs divert freshwater from the moutains into the region’s irrigation canals, while sluice gates are opened and closed twice daily in time with the tides of the sea. Water is refilled into these temporary reservoirs during high tide. During low tide, water is released to mitigate saltwater intrusion.
+			</p>
 		</section>
 
 		<section>
@@ -94,25 +141,4 @@
 
 	<div id="MainMap"></div>
 
-	<!-- Plugins -->
-
-	<!-- Leaflet -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.6.0/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous" />
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.6.0/leaflet.js" integrity="sha256-fNoRrwkP2GuYPbNSJmMJOCyfRB2DhPQe0rGTgzRsyso=" crossorigin="anonymous"></script>
-
-	<!-- Leaflet.AJAX -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js" integrity="sha256-rVeyUZMfAHhQJ7hvWaHrKknTDdqGcn1gxBBJA++E4z8=" crossorigin="anonymous"></script>
-
-	<!-- Scrollmagic -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
-
-	<!-- jQuery-->
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-
-	<link rel="stylesheet" type="text/css" href="css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/header.css">
-
-	<script src="js/main.js"></script>
 </body></html>

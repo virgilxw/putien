@@ -25,12 +25,11 @@ $(document).ready(function () {
 
 	// ScrollMagic Scenes
 	function s1Enter() {
-		mainMap.flyTo([25.35, 119.12], 10)
+		mainMap.flyTo([25.35, 119.12], 11)
 		// $(".leaflet-marker-icon").position()
 	}
 
 	function s1Exit() {
-
 		mainMap.flyTo([25.35, 119.12], 12)
 	}
 
@@ -44,6 +43,12 @@ $(document).ready(function () {
 
 		mainMap.flyTo([25.35, 119.12], 10)
 	}
+
+	// Shoreline slider
+
+	$("input").checkboxradio({
+		icon: false
+	});
 
 
 	// ScrollMagic
