@@ -232,7 +232,7 @@ blockquote:nth-of-type(even) footer:after {
 	flex-direction: column;
 	position: absolute;
 	left: 0;
-	transform: translate(40px, 0px);
+	transform: translate(40px, 400px);
 }
 
 .shoreline legend {

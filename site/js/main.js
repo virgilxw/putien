@@ -10,28 +10,85 @@ $(document).ready(function () {
 		attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
 	}).addTo(mainMap);
 
-	var Ancient_Shoreline = new L.GeoJSON.AJAX("./geojson/1.Ancient_Shoreline.geojson", {
-		fillColor: "#FF1654",
-		fillOpacity: "0.2",
-		color: "#FF1654",
-		opacity: "1"
-	}).addTo(mainMap);
-
 	var Esri_NatGeoWorldMap = new L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}', {
 		maxZoom: 16
 	}).addTo(inset1)
 
 	var PutianMarker = new L.Marker([25.44, 119.01]);
 
-	// ScrollMagic Scenes
-	function s1Enter() {
-		mainMap.flyTo([25.35, 119.12], 11)
-		// $(".leaflet-marker-icon").position()
+	// Shorelines
+	var Ancient_Shoreline = new L.GeoJSON.AJAX("./geojson/1.Ancient_Shoreline.geojson").addTo(mainMap)
+	var Tang_Shoreline = new L.GeoJSON.AJAX("./geojson/2.Tang_Shoreline.geojson")
+	var Song_Shoreline = new L.GeoJSON.AJAX("./geojson/3.Song_Shoreline.geojson")
+	var Yuan_Shoreline = new L.GeoJSON.AJAX("./geojson/4.Yuan_Shoreline.geojson")
+	var MingQing_Shoreline = new L.GeoJSON.AJAX("./geojson/5.MingQing_Shoreline.geojson")
+
+	function add_Ancient_Layer() {
+		mainMap.removeLayer(Tang_Shoreline)
+		mainMap.removeLayer(Song_Shoreline)
+		mainMap.removeLayer(Yuan_Shoreline)
+		mainMap.removeLayer(MingQing_Shoreline)
+		mainMap.addLayer(Ancient_Shoreline)
 	}
 
-	function s1Exit() {
-		mainMap.flyTo([25.35, 119.12], 12)
+	function add_Tang_Layer() {
+		mainMap.removeLayer(Ancient_Shoreline)
+		mainMap.removeLayer(Song_Shoreline)
+		mainMap.removeLayer(Yuan_Shoreline)
+		mainMap.removeLayer(MingQing_Shoreline)
+		mainMap.addLayer(Tang_Shoreline)
 	}
+
+	function add_Song_Layer() {
+		mainMap.removeLayer(Ancient_Shoreline)
+		mainMap.removeLayer(Tang_Shoreline)
+		mainMap.removeLayer(Yuan_Shoreline)
+		mainMap.removeLayer(MingQing_Shoreline)
+		mainMap.addLayer(Song_Shoreline)
+	}
+
+	function add_Yuan_Layer() {
+		mainMap.removeLayer(Ancient_Shoreline)
+		mainMap.removeLayer(Tang_Shoreline)
+		mainMap.removeLayer(Song_Shoreline)
+		mainMap.removeLayer(MingQing_Shoreline)
+		mainMap.addLayer(Yuan_Shoreline)
+	}
+
+	function add_MingQing_Layer() {
+		mainMap.removeLayer(Ancient_Shoreline)
+		mainMap.removeLayer(Tang_Shoreline)
+		mainMap.removeLayer(Song_Shoreline)
+		mainMap.removeLayer(Yuan_Shoreline)
+		mainMap.addLayer(MingQing_Shoreline)
+	}
+	$('.shoreline label').click(function () {
+		switch ($(this)[0].htmlFor) {
+			case "radio-Ancient":
+				add_Ancient_Layer()
+				break;
+			case "radio-Tang":
+				add_Tang_Layer()
+				break;
+			case "radio-Song":
+				add_Song_Layer()
+				break;
+			case "radio-Yuan":
+				add_Yuan_Layer()
+				break;
+			case "radio-Ming":
+				add_MingQing_Layer()
+				break;
+		}
+	})
+
+
+	// ScrollMagic Scenes
+	function s1Enter() {
+		mainMap.flyTo([25.45, 119.12], 12)
+	}
+
+	function s1Exit() {}
 
 	// ScrollMagic Scenes
 	function s2Enter() {
@@ -39,13 +96,9 @@ $(document).ready(function () {
 		inset1.flyTo([25.44, 119.01], 5)
 	}
 
-	function s2Exit() {
-
-		mainMap.flyTo([25.35, 119.12], 10)
-	}
+	function s2Exit() {}
 
 	// Shoreline slider
-
 	$("input").checkboxradio({
 		icon: false
 	});
