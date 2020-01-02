@@ -147,10 +147,10 @@
   <mapcanvas name="theMapCanvas" annotationsVisible="1">
     <units>meters</units>
     <extent>
-      <xmin>13246184.61433495953679085</xmin>
-      <ymin>2923060.82305545080453157</ymin>
-      <xmax>13252475.93746411055326462</xmax>
-      <ymax>2929822.68835769407451153</ymax>
+      <xmin>13238725.64951701648533344</xmin>
+      <ymin>2909229.20683153113350272</ymin>
+      <xmax>13263890.94203362055122852</xmax>
+      <ymax>2936276.66804050421342254</ymax>
     </extent>
     <rotation>0</rotation>
     <destinationsrs>
@@ -2600,9 +2600,271 @@ def my_form_open(dialog, layer, feature):
         <Removable>1</Removable>
         <Searchable>1</Searchable>
       </flags>
-      <renderer-v2 type="singleSymbol" symbollevels="0" forceraster="0" enableorderby="0">
+      <renderer-v2 type="categorizedSymbol" symbollevels="0" forceraster="0" attr="category" enableorderby="0">
+        <categories>
+          <category render="true" value="" label="" symbol="0"/>
+          <category render="true" value="Mulan Channel" label="Mulan Channel" symbol="1"/>
+          <category render="true" value="Taiping Channels" label="Taiping Channels" symbol="2"/>
+          <category render="true" value="Wangjiangli Channels" label="Wangjiangli Channels" symbol="3"/>
+          <category render="true" value="Yanshou Channels" label="Yanshou Channels" symbol="4"/>
+        </categories>
         <symbols>
           <symbol type="line" clip_to_extent="1" force_rhr="0" name="0" alpha="1">
+            <layer locked="0" class="SimpleLine" enabled="1" pass="0">
+              <prop k="capstyle" v="square"/>
+              <prop k="customdash" v="5;2"/>
+              <prop k="customdash_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="customdash_unit" v="MM"/>
+              <prop k="draw_inside_polygon" v="0"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="line_color" v="229,34,44,255"/>
+              <prop k="line_style" v="solid"/>
+              <prop k="line_width" v="1"/>
+              <prop k="line_width_unit" v="MM"/>
+              <prop k="offset" v="0"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="ring_filter" v="0"/>
+              <prop k="use_custom_dash" v="0"/>
+              <prop k="width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option type="QString" name="name" value=""/>
+                  <Option name="properties"/>
+                  <Option type="QString" name="type" value="collection"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+          <symbol type="line" clip_to_extent="1" force_rhr="0" name="1" alpha="1">
+            <layer locked="0" class="SimpleLine" enabled="1" pass="0">
+              <prop k="capstyle" v="round"/>
+              <prop k="customdash" v="5;2"/>
+              <prop k="customdash_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="customdash_unit" v="MM"/>
+              <prop k="draw_inside_polygon" v="0"/>
+              <prop k="joinstyle" v="round"/>
+              <prop k="line_color" v="227,26,28,255"/>
+              <prop k="line_style" v="solid"/>
+              <prop k="line_width" v="1"/>
+              <prop k="line_width_unit" v="MM"/>
+              <prop k="offset" v="0"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="ring_filter" v="0"/>
+              <prop k="use_custom_dash" v="0"/>
+              <prop k="width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <effect type="effectStack" enabled="1">
+                <effect type="dropShadow">
+                  <prop k="blend_mode" v="13"/>
+                  <prop k="blur_level" v="2.645"/>
+                  <prop k="blur_unit" v="MM"/>
+                  <prop k="blur_unit_scale" v="3x:0,0,0,0,0,0"/>
+                  <prop k="color" v="0,0,0,255"/>
+                  <prop k="draw_mode" v="2"/>
+                  <prop k="enabled" v="0"/>
+                  <prop k="offset_angle" v="135"/>
+                  <prop k="offset_distance" v="2"/>
+                  <prop k="offset_unit" v="MM"/>
+                  <prop k="offset_unit_scale" v="3x:0,0,0,0,0,0"/>
+                  <prop k="opacity" v="1"/>
+                </effect>
+                <effect type="outerGlow">
+                  <prop k="blend_mode" v="0"/>
+                  <prop k="blur_level" v="0.7935"/>
+                  <prop k="blur_unit" v="MM"/>
+                  <prop k="blur_unit_scale" v="3x:0,0,0,0,0,0"/>
+                  <prop k="color1" v="0,0,255,255"/>
+                  <prop k="color2" v="0,255,0,255"/>
+                  <prop k="color_type" v="0"/>
+                  <prop k="discrete" v="0"/>
+                  <prop k="draw_mode" v="2"/>
+                  <prop k="enabled" v="1"/>
+                  <prop k="opacity" v="0.5"/>
+                  <prop k="rampType" v="gradient"/>
+                  <prop k="single_color" v="239,41,41,255"/>
+                  <prop k="spread" v="2"/>
+                  <prop k="spread_unit" v="MM"/>
+                  <prop k="spread_unit_scale" v="3x:0,0,0,0,0,0"/>
+                </effect>
+                <effect type="drawSource">
+                  <prop k="blend_mode" v="0"/>
+                  <prop k="draw_mode" v="2"/>
+                  <prop k="enabled" v="1"/>
+                  <prop k="opacity" v="1"/>
+                </effect>
+                <effect type="innerShadow">
+                  <prop k="blend_mode" v="13"/>
+                  <prop k="blur_level" v="2.645"/>
+                  <prop k="blur_unit" v="MM"/>
+                  <prop k="blur_unit_scale" v="3x:0,0,0,0,0,0"/>
+                  <prop k="color" v="0,0,0,255"/>
+                  <prop k="draw_mode" v="2"/>
+                  <prop k="enabled" v="1"/>
+                  <prop k="offset_angle" v="135"/>
+                  <prop k="offset_distance" v="2"/>
+                  <prop k="offset_unit" v="MM"/>
+                  <prop k="offset_unit_scale" v="3x:0,0,0,0,0,0"/>
+                  <prop k="opacity" v="0.146"/>
+                </effect>
+                <effect type="innerGlow">
+                  <prop k="blend_mode" v="0"/>
+                  <prop k="blur_level" v="0.7935"/>
+                  <prop k="blur_unit" v="MM"/>
+                  <prop k="blur_unit_scale" v="3x:0,0,0,0,0,0"/>
+                  <prop k="color1" v="0,0,255,255"/>
+                  <prop k="color2" v="0,255,0,255"/>
+                  <prop k="color_type" v="0"/>
+                  <prop k="discrete" v="0"/>
+                  <prop k="draw_mode" v="2"/>
+                  <prop k="enabled" v="0"/>
+                  <prop k="opacity" v="0.386"/>
+                  <prop k="rampType" v="gradient"/>
+                  <prop k="single_color" v="255,255,255,255"/>
+                  <prop k="spread" v="2"/>
+                  <prop k="spread_unit" v="MM"/>
+                  <prop k="spread_unit_scale" v="3x:0,0,0,0,0,0"/>
+                </effect>
+              </effect>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option type="QString" name="name" value=""/>
+                  <Option name="properties"/>
+                  <Option type="QString" name="type" value="collection"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+          <symbol type="line" clip_to_extent="1" force_rhr="0" name="2" alpha="1">
+            <layer locked="0" class="SimpleLine" enabled="1" pass="0">
+              <prop k="capstyle" v="square"/>
+              <prop k="customdash" v="5;2"/>
+              <prop k="customdash_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="customdash_unit" v="MM"/>
+              <prop k="draw_inside_polygon" v="0"/>
+              <prop k="joinstyle" v="round"/>
+              <prop k="line_color" v="189,0,38,255"/>
+              <prop k="line_style" v="solid"/>
+              <prop k="line_width" v="0.236364"/>
+              <prop k="line_width_unit" v="MM"/>
+              <prop k="offset" v="-1.27273"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="ring_filter" v="0"/>
+              <prop k="use_custom_dash" v="0"/>
+              <prop k="width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option type="QString" name="name" value=""/>
+                  <Option name="properties"/>
+                  <Option type="QString" name="type" value="collection"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+            <layer locked="0" class="SimpleLine" enabled="1" pass="0">
+              <prop k="capstyle" v="square"/>
+              <prop k="customdash" v="5;2"/>
+              <prop k="customdash_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="customdash_unit" v="MM"/>
+              <prop k="draw_inside_polygon" v="0"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="line_color" v="189,0,38,255"/>
+              <prop k="line_style" v="solid"/>
+              <prop k="line_width" v="0.236364"/>
+              <prop k="line_width_unit" v="MM"/>
+              <prop k="offset" v="1.27273"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="ring_filter" v="0"/>
+              <prop k="use_custom_dash" v="0"/>
+              <prop k="width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option type="QString" name="name" value=""/>
+                  <Option name="properties"/>
+                  <Option type="QString" name="type" value="collection"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+            <layer locked="0" class="MarkerLine" enabled="1" pass="0">
+              <prop k="interval" v="1.5"/>
+              <prop k="interval_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="interval_unit" v="MM"/>
+              <prop k="offset" v="0"/>
+              <prop k="offset_along_line" v="0"/>
+              <prop k="offset_along_line_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_along_line_unit" v="MM"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="placement" v="interval"/>
+              <prop k="ring_filter" v="0"/>
+              <prop k="rotate" v="1"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option type="QString" name="name" value=""/>
+                  <Option name="properties"/>
+                  <Option type="QString" name="type" value="collection"/>
+                </Option>
+              </data_defined_properties>
+              <symbol type="marker" clip_to_extent="1" force_rhr="0" name="@2@2" alpha="1">
+                <layer locked="0" class="SimpleMarker" enabled="1" pass="0">
+                  <prop k="angle" v="0"/>
+                  <prop k="color" v="255,0,0,255"/>
+                  <prop k="horizontal_anchor_point" v="1"/>
+                  <prop k="joinstyle" v="bevel"/>
+                  <prop k="name" v="line"/>
+                  <prop k="offset" v="0,0"/>
+                  <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+                  <prop k="offset_unit" v="MM"/>
+                  <prop k="outline_color" v="189,0,38,255"/>
+                  <prop k="outline_style" v="solid"/>
+                  <prop k="outline_width" v="0.2"/>
+                  <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+                  <prop k="outline_width_unit" v="MM"/>
+                  <prop k="scale_method" v="area"/>
+                  <prop k="size" v="1"/>
+                  <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+                  <prop k="size_unit" v="MM"/>
+                  <prop k="vertical_anchor_point" v="1"/>
+                  <data_defined_properties>
+                    <Option type="Map">
+                      <Option type="QString" name="name" value=""/>
+                      <Option name="properties"/>
+                      <Option type="QString" name="type" value="collection"/>
+                    </Option>
+                  </data_defined_properties>
+                </layer>
+              </symbol>
+            </layer>
+          </symbol>
+          <symbol type="line" clip_to_extent="1" force_rhr="0" name="3" alpha="1">
+            <layer locked="0" class="SimpleLine" enabled="1" pass="0">
+              <prop k="capstyle" v="round"/>
+              <prop k="customdash" v="0.66;2"/>
+              <prop k="customdash_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="customdash_unit" v="MM"/>
+              <prop k="draw_inside_polygon" v="0"/>
+              <prop k="joinstyle" v="round"/>
+              <prop k="line_color" v="219,30,42,255"/>
+              <prop k="line_style" v="solid"/>
+              <prop k="line_width" v="0.66"/>
+              <prop k="line_width_unit" v="MM"/>
+              <prop k="offset" v="0"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="ring_filter" v="0"/>
+              <prop k="use_custom_dash" v="1"/>
+              <prop k="width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option type="QString" name="name" value=""/>
+                  <Option name="properties"/>
+                  <Option type="QString" name="type" value="collection"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+          <symbol type="line" clip_to_extent="1" force_rhr="0" name="4" alpha="1">
             <layer locked="0" class="SimpleLine" enabled="1" pass="0">
               <prop k="capstyle" v="square"/>
               <prop k="customdash" v="5;2"/>
@@ -2630,6 +2892,36 @@ def my_form_open(dialog, layer, feature):
             </layer>
           </symbol>
         </symbols>
+        <source-symbol>
+          <symbol type="line" clip_to_extent="1" force_rhr="0" name="0" alpha="1">
+            <layer locked="0" class="SimpleLine" enabled="1" pass="0">
+              <prop k="capstyle" v="square"/>
+              <prop k="customdash" v="5;2"/>
+              <prop k="customdash_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="customdash_unit" v="MM"/>
+              <prop k="draw_inside_polygon" v="0"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="line_color" v="189,0,38,255"/>
+              <prop k="line_style" v="solid"/>
+              <prop k="line_width" v="1"/>
+              <prop k="line_width_unit" v="MM"/>
+              <prop k="offset" v="0"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="ring_filter" v="0"/>
+              <prop k="use_custom_dash" v="0"/>
+              <prop k="width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option type="QString" name="name" value=""/>
+                  <Option name="properties"/>
+                  <Option type="QString" name="type" value="collection"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </source-symbol>
+        <colorramp type="randomcolors" name="[source]"/>
         <rotation/>
         <sizescale/>
       </renderer-v2>
@@ -5634,7 +5926,7 @@ def my_form_open(dialog, layer, feature):
       <ProjectionsEnabled type="int">1</ProjectionsEnabled>
     </SpatialRefSys>
     <Layouts>
-      <lastLayoutExportDir type="QString">D:/programming/putien/maps</lastLayoutExportDir>
+      <lastLayoutExportDir type="QString">D:/programming/putien/maps/Map 15.png</lastLayoutExportDir>
     </Layouts>
     <PositionPrecision>
       <Automatic type="bool">true</Automatic>
@@ -7155,7 +7447,7 @@ def my_form_open(dialog, layer, feature):
         <LabelFont description="Lora,10,-1,5,50,1,0,0,0,0,Italic" style="Italic"/>
         <FontColor red="0" green="0" blue="0" alpha="255"/>
       </LayoutItem>
-      <LayoutItem rasterBorder="1" size="72.2,38.4,mm" excludeFromExports="0" map_uuid="{92eb21b0-6510-41de-a3ff-29f264a218f6}" wrapChar="" titleAlignment="1" type="65642" equalColumnWidth="0" resizeToContents="1" groupUuid="" rasterBorderColor="0,0,0,255" templateUuid="{62b1ab09-b0d1-4108-bdfa-79c0190fa712}" frame="true" background="true" splitLayer="0" title="" wmsLegendHeight="25" positionOnPage="0.15,0.15,mm" uuid="{62b1ab09-b0d1-4108-bdfa-79c0190fa712}" blendMode="0" zValue="19" symbolHeight="4" columnSpace="2" wmsLegendWidth="50" columnCount="1" position="0.15,0.15,mm" referencePoint="0" outlineWidthM="0.3,mm" fontColor="#000000" frameJoinStyle="miter" rasterBorderWidth="0" boxSpace="2" id="" visibility="1" itemRotation="0" opacity="1" positionLock="false" legendFilterByAtlas="0" lineSpacing="1" symbolWidth="7">
+      <LayoutItem rasterBorder="1" size="52.3,44,mm" excludeFromExports="0" map_uuid="{92eb21b0-6510-41de-a3ff-29f264a218f6}" wrapChar="" titleAlignment="1" type="65642" equalColumnWidth="0" resizeToContents="1" groupUuid="" rasterBorderColor="0,0,0,255" templateUuid="{62b1ab09-b0d1-4108-bdfa-79c0190fa712}" frame="true" background="true" splitLayer="0" title="" wmsLegendHeight="25" positionOnPage="0.15,0.15,mm" uuid="{62b1ab09-b0d1-4108-bdfa-79c0190fa712}" blendMode="0" zValue="19" symbolHeight="4" columnSpace="2" wmsLegendWidth="50" columnCount="1" position="0.15,0.15,mm" referencePoint="0" outlineWidthM="0.3,mm" fontColor="#000000" frameJoinStyle="miter" rasterBorderWidth="0" boxSpace="2" id="" visibility="1" itemRotation="0" opacity="1" positionLock="false" legendFilterByAtlas="0" lineSpacing="1" symbolWidth="7">
         <FrameColor red="0" green="0" blue="0" alpha="255"/>
         <BackgroundColor red="255" green="255" blue="255" alpha="255"/>
         <LayoutObject>
@@ -7188,25 +7480,29 @@ def my_form_open(dialog, layer, feature):
         <layer-tree-group>
           <customproperties/>
           <layer-tree-group checked="Qt::Checked" name="Composition" expanded="1">
-            <customproperties/>
-            <layer-tree-layer id="Beiyang_Irrigation_System_c8f5c542_1c8c_4daf_acdd_98f2a6d3e6ca" source="./Processed_Layers/Beiyang Irrigation System.geojson|layername=Beiyang Irrigation System" checked="Qt::Checked" name="Beiyang Irrigation System" expanded="0" providerKey="ogr">
-              <customproperties/>
-            </layer-tree-layer>
+            <customproperties>
+              <property key="legend/title-style" value="hidden"/>
+            </customproperties>
             <layer-tree-layer id="Putian_Irrigation_Channels_39ddce46_81ec_4216_90dc_798062a5954a" source="./layers/Daishengli Subcanton (banner alliances not found)/Putian_Irrigation_Channels.shp" checked="Qt::Checked" name="Putian_Irrigation_Channels copy" expanded="1" providerKey="ogr">
-              <customproperties/>
-            </layer-tree-layer>
-            <layer-tree-layer id="Putian_Irrigation_Canals_f4d7f955_e031_4fad_95b8_912f86366dc3" source="./layers/Li subcantons on the Putian Plain/Putian_Irrigation_Canals.shp" checked="Qt::Checked" name="Putian_Irrigation_Canals copy" expanded="0" providerKey="ogr">
-              <customproperties/>
+              <customproperties>
+                <property key="legend/title-label" value="Rivers and Irrigation"/>
+              </customproperties>
             </layer-tree-layer>
             <layer-tree-layer id="Putian_Village_Polygon_2cf014e8_87d5_4554_8387_dd9f8fdef78f" source="./layers/Putian_Villages/Putian_Village_Polygon.shp" checked="Qt::Checked" name="Putian_Village_Polygon" expanded="0" providerKey="ogr">
-              <customproperties/>
+              <customproperties>
+                <property key="legend/title-label" value="Village Settlements"/>
+              </customproperties>
+            </layer-tree-layer>
+            <layer-tree-layer id="Beiyang_Irrigation_System_c8f5c542_1c8c_4daf_acdd_98f2a6d3e6ca" source="./Processed_Layers/Beiyang Irrigation System.geojson|layername=Beiyang Irrigation System" checked="Qt::Checked" name="Beiyang Irrigation System" expanded="1" providerKey="ogr">
+              <customproperties>
+                <property key="legend/node-order" value="2,4,1,3"/>
+                <property key="legend/title-style" value="hidden"/>
+              </customproperties>
             </layer-tree-layer>
           </layer-tree-group>
           <custom-order enabled="0">
             <item>Putian_Irrigation_Channels_39ddce46_81ec_4216_90dc_798062a5954a</item>
-            <item>Putian_Irrigation_Canals_f4d7f955_e031_4fad_95b8_912f86366dc3</item>
             <item>Putian_Village_Polygon_2cf014e8_87d5_4554_8387_dd9f8fdef78f</item>
-            <item>Beiyang_Irrigation_System_c8f5c542_1c8c_4daf_acdd_98f2a6d3e6ca</item>
           </custom-order>
         </layer-tree-group>
       </LayoutItem>
@@ -7226,7 +7522,7 @@ def my_form_open(dialog, layer, feature):
         <LabelFont description="Lora,10,-1,5,50,1,0,0,0,0,Italic" style="Italic"/>
         <FontColor red="0" green="0" blue="0" alpha="255"/>
       </LayoutItem>
-      <LayoutItem id="" halign="4" positionLock="false" groupUuid="" background="false" position="148.5,202.877,mm" excludeFromExports="0" labelText="Map 14: Mulan Nanyang Irrigation System (of the Southern Plain)" opacity="1" outlineWidthM="0.3,mm" frameJoinStyle="miter" visibility="1" marginX="0" templateUuid="{5653eb2a-5ec5-4659-bf90-ad3cb39dc15b}" valign="128" type="65641" referencePoint="4" marginY="0" frame="false" positionOnPage="148.5,202.877,mm" blendMode="0" itemRotation="0" htmlState="0" size="170.698,14.2458,mm" zValue="4" uuid="{5653eb2a-5ec5-4659-bf90-ad3cb39dc15b}">
+      <LayoutItem id="" halign="4" positionLock="false" groupUuid="" background="false" position="148.5,202.877,mm" excludeFromExports="0" labelText="Map 15: Beiyang Irrigation Systems (of the Northern Plain)" opacity="1" outlineWidthM="0.3,mm" frameJoinStyle="miter" visibility="1" marginX="0" templateUuid="{5653eb2a-5ec5-4659-bf90-ad3cb39dc15b}" valign="128" type="65641" referencePoint="4" marginY="0" frame="false" positionOnPage="148.5,202.877,mm" blendMode="0" itemRotation="0" htmlState="0" size="170.698,14.2458,mm" zValue="4" uuid="{5653eb2a-5ec5-4659-bf90-ad3cb39dc15b}">
         <FrameColor red="0" green="0" blue="0" alpha="255"/>
         <BackgroundColor red="255" green="255" blue="255" alpha="255"/>
         <LayoutObject>
@@ -7242,7 +7538,7 @@ def my_form_open(dialog, layer, feature):
         <LabelFont description="Lora,14,-1,5,50,0,0,0,0,0,Regular" style="Regular"/>
         <FontColor red="0" green="0" blue="0" alpha="255"/>
       </LayoutItem>
-      <LayoutItem size="78.1757,16.9174,mm" excludeFromExports="0" numUnitsPerSegment="2" type="65646" groupUuid="" templateUuid="{0641536a-d00d-4fd0-b1ba-b69e37271f59}" frame="false" numSegments="3" background="true" lineJoinStyle="miter" numSegmentsLeft="0" unitLabel="km" segmentMillimeters="22.1252" unitType="km" positionOnPage="190.926,178.837,mm" uuid="{0641536a-d00d-4fd0-b1ba-b69e37271f59}" blendMode="0" zValue="3" labelBarSpace="3" boxContentSpace="1" minBarWidth="50" style="Single Box" position="190.926,178.837,mm" referencePoint="0" mapUuid="{92eb21b0-6510-41de-a3ff-29f264a218f6}" outlineWidthM="0.3,mm" lineCapStyle="square" frameJoinStyle="miter" id="" visibility="1" itemRotation="0" opacity="1" maxBarWidth="150" height="3" positionLock="false" segmentSizeMode="0" outlineWidth="0.3" numMapUnitsPerScaleBarUnit="1" alignment="0">
+      <LayoutItem size="78.1757,16.9174,mm" excludeFromExports="0" numUnitsPerSegment="2" type="65646" groupUuid="" templateUuid="{0641536a-d00d-4fd0-b1ba-b69e37271f59}" frame="false" numSegments="3" background="true" lineJoinStyle="miter" numSegmentsLeft="0" unitLabel="km" segmentMillimeters="22.1252" unitType="km" positionOnPage="218.824,180.635,mm" uuid="{0641536a-d00d-4fd0-b1ba-b69e37271f59}" blendMode="0" zValue="3" labelBarSpace="3" boxContentSpace="1" minBarWidth="50" style="Single Box" position="218.824,180.635,mm" referencePoint="0" mapUuid="{92eb21b0-6510-41de-a3ff-29f264a218f6}" outlineWidthM="0.3,mm" lineCapStyle="square" frameJoinStyle="miter" id="" visibility="1" itemRotation="0" opacity="1" maxBarWidth="150" height="3" positionLock="false" segmentSizeMode="0" outlineWidth="0.3" numMapUnitsPerScaleBarUnit="1" alignment="0">
         <FrameColor red="0" green="0" blue="0" alpha="255"/>
         <BackgroundColor red="255" green="255" blue="255" alpha="166"/>
         <LayoutObject>
