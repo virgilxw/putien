@@ -9,6 +9,14 @@ header {
 	background-color: #247BA0;
 }
 
+header a:link,
+header a:visited,
+header a:hover,
+header a:active {
+	color: #ffffff;
+	text-decoration: none;
+}
+
 #content {
 	display: flex;
 	flex-direction: row;
