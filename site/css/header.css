@@ -7,52 +7,39 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	background-color: #247BA0;
+	font-family: 'Roboto', sans-serif;
 }
 
+header a,
 header a:link,
 header a:visited,
 header a:hover,
 header a:active {
 	color: #ffffff;
 	text-decoration: none;
-}
-
-#content {
-	display: flex;
-	flex-direction: row;
-	flex: 1;
-	background-color: rgba(255, 250, 240, 1);
-	order: 2;
-}
-
-header ul {
-	list-style: none;
-	font-family: 'Roboto', sans-serif;
-	font-weight: 500;
-	font-size: 18px;
-	color: rgba(255, 255, 255, 0.9);
-	text-decoration: none;
-	padding: 10px 20px;
-}
-
-header li {
-	display: inline-block;
-}
-
-header a {
 	text-decoration: none;
 	color: rgba(255, 255, 255, 0.9);
 	vertical-align: baseline;
 }
 
-ul.right {
+header ul {
 	font-size: 15px;
 }
 
-ul.right li {
+header li {
 	padding: 0 15px;
+	display: inline-block;
 }
 
 .zh {
 	font-family: 'Ma Shan Zheng', cursive;
+}
+
+#masthead {
+	list-style: none;
+	font-weight: 500;
+	font-size: 18px;
+	color: rgba(255, 255, 255, 0.9);
+	text-decoration: none;
+	padding: 10px 20px;
 }

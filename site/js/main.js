@@ -144,12 +144,13 @@ $(document).ready(function () {
 	var Irrigation_Poly = new L.GeoJSON.AJAX("./geojson/Irrigation_Poly.geojson", {
 		style: {
 			fillOpacity: 1,
-			color: "#3e97ff",
+			fillColor: "#53a3ff",
 			weight: 0
 		}
 	})
 	var Irrigation_Line = new L.GeoJSON.AJAX("./geojson/Irrigation_Line.geojson", {
 		style: {
+			color: "#53a3ff",
 			weight: 1
 		}
 	})
@@ -189,6 +190,7 @@ $(document).ready(function () {
 	}
 
 	function s3Enter() {
+		purge_Shoreline_Layers()
 		mainMap.addLayer(Irrigation_Poly)
 		mainMap.addLayer(Irrigation_Line)
 	}
@@ -197,6 +199,12 @@ $(document).ready(function () {
 		mainMap.removeLayer(Irrigation_Poly)
 		mainMap.removeLayer(Irrigation_Line)
 	}
+
+	function s3aEnter() {
+
+	}
+
+	function s3aExit() {}
 
 	// ScrollMagic Scenes
 	var scene1 = new ScrollMagic.Scene({
@@ -212,7 +220,7 @@ $(document).ready(function () {
 			triggerElement: ".shoreline",
 			offset: 400,
 			triggerHook: 0.4,
-			duration: 800
+			duration: 900
 		}).setPin(".shoreline")
 		.on("enter", s2Enter)
 		.on("leave", purge_Shoreline_Layers)
@@ -270,12 +278,24 @@ $(document).ready(function () {
 		.addTo(controller);
 
 	var scene3 = new ScrollMagic.Scene({
-			triggerElement: "#s3"
+			triggerElement: "#s3",
+			offset: 200
 		})
 		.addIndicators({
 			name: "Scene 3"
 		})
 		.on("enter", s3Enter)
 		.on("leave", s3Exit)
+		.addTo(controller);
+
+	var scene3a = new ScrollMagic.Scene({
+			triggerElement: "#s3",
+			offset: 500
+		})
+		.addIndicators({
+			name: "Scene 3a"
+		})
+		.on("enter", s3aEnter)
+		.on("leave", s3aExit)
 		.addTo(controller);
 });
