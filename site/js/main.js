@@ -1,5 +1,10 @@
 $(document).ready(function () {
-	var mainMap = L.map('MainMap').setView([25.45, 119.12], 12)
+	var mainMap = L.map('MainMap', {
+		zoomControl: false
+	}).setView([25.45, 119.12], 12);
+	L.control.scale().addTo(mainMap);
+
+
 	var inset1 = L.map('inset1Map', {
 		zoomControl: false,
 		attributionControl: false
@@ -20,43 +25,46 @@ $(document).ready(function () {
 	var Ancient_Shoreline = new L.GeoJSON.AJAX("./geojson/Ancient_Shoreline.geojson", {
 		style: {
 			fillColor: "#fef0d9",
-			color: "black",
-			opacity: 0.5,
+			opacity: 0,
 			fillOpacity: 0.8
 		}
 	})
 	var Tang_Shoreline = new L.GeoJSON.AJAX("./geojson/Tang_Shoreline_Addition.geojson", {
 		style: {
 			fillColor: "#fdcc8a",
-			color: "black",
-			opacity: 0.5,
+			opacity: 0,
 			fillOpacity: 0.8
 		}
 	})
 	var Song_Shoreline = new L.GeoJSON.AJAX("./geojson/Song_Shoreline_Addition.geojson", {
 		style: {
 			fillColor: "#fc8d59",
-			color: "black",
-			opacity: 0.5,
+			opacity: 0,
 			fillOpacity: 0.8
 		}
 	})
 	var Yuan_Shoreline = new L.GeoJSON.AJAX("./geojson/Yuan_Shoreline_Addition.geojson", {
 		style: {
 			fillColor: "#e34a33",
-			color: "black",
-			opacity: 0.5,
+			opacity: 0,
 			fillOpacity: 0.8
 		}
 	})
 	var MingQing_Shoreline = new L.GeoJSON.AJAX("./geojson/MingQing_Shoreline_Addition.geojson", {
 		style: {
 			fillColor: "#b30000",
-			color: "black",
-			opacity: 0.5,
+			opacity: 0,
 			fillOpacity: 0.8
 		}
 	})
+
+	function purge_Shoreline_Layers() {
+		mainMap.removeLayer(Tang_Shoreline)
+		mainMap.removeLayer(Song_Shoreline)
+		mainMap.removeLayer(Yuan_Shoreline)
+		mainMap.removeLayer(MingQing_Shoreline)
+		mainMap.removeLayer(Ancient_Shoreline)
+	}
 
 	function add_Ancient_Layer() {
 		mainMap.removeLayer(Tang_Shoreline)
@@ -127,28 +135,147 @@ $(document).ready(function () {
 		}
 	})
 
-	// Shoreline slider
+	// Shoreline checkbox Settings
 	$("input").checkboxradio({
 		icon: false
 	});
 
+	// Irrigation
+	var Irrigation_Poly = new L.GeoJSON.AJAX("./geojson/Irrigation_Poly.geojson", {
+		style: {
+			fillOpacity: 1,
+			color: "#3e97ff",
+			weight: 0
+		}
+	})
+	var Irrigation_Line = new L.GeoJSON.AJAX("./geojson/Irrigation_Line.geojson", {
+		style: {
+			weight: 1
+		}
+	})
 
 	// ScrollMagic
 	var controller = new ScrollMagic.Controller();
 
-	// ScrollMagic Scenes
+	// Shoreline Scene Functions
 	function s1Enter() {
 		inset1.addLayer(PutianMarker)
 		inset1.flyTo([25.44, 119.01], 5)
 	}
 
-	function s1Exit() {}
+	function s2Enter() {
+		$("#radio-Ancient").click()
+		add_Ancient_Layer()
+	}
 
+	function s2aEnter() {
+		$("#radio-Tang").click()
+		add_Tang_Layer()
+	}
+
+	function s2bEnter() {
+		$("#radio-Song").click()
+		add_Song_Layer()
+	}
+
+	function s2cEnter() {
+		$("#radio-Yuan").click()
+		add_Yuan_Layer()
+	}
+
+	function s2dEnter() {
+		$("#radio-Ming").click()
+		add_MingQing_Layer()
+	}
+
+	function s3Enter() {
+		mainMap.addLayer(Irrigation_Poly)
+		mainMap.addLayer(Irrigation_Line)
+	}
+
+	function s3Exit() {
+		mainMap.removeLayer(Irrigation_Poly)
+		mainMap.removeLayer(Irrigation_Line)
+	}
+
+	// ScrollMagic Scenes
 	var scene1 = new ScrollMagic.Scene({
 			triggerElement: "#inset1Map"
 		}).on("enter", s1Enter)
 		.addIndicators({
-			name: "s1"
+			name: "Trigger inset 1"
 		})
+		.addTo(controller);
+
+	// Shoreline Scene Scenes
+	var scene2 = new ScrollMagic.Scene({
+			triggerElement: ".shoreline",
+			offset: 400,
+			triggerHook: 0.4,
+			duration: 800
+		}).setPin(".shoreline")
+		.on("enter", s2Enter)
+		.on("leave", purge_Shoreline_Layers)
+		.addIndicators({
+			name: "Scene 2: pin + add Layer"
+		})
+		.addTo(controller);
+
+	var scene2a = new ScrollMagic.Scene({
+			triggerElement: ".shoreline",
+			offset: 550,
+			triggerHook: 0.4
+		})
+		.on("enter", s2aEnter)
+		.on("leave", s2Enter)
+		.addIndicators({
+			name: "add Tang Layer"
+		})
+		.addTo(controller);
+
+	var scene2b = new ScrollMagic.Scene({
+			triggerElement: ".shoreline",
+			offset: 700,
+			triggerHook: 0.4
+		})
+		.on("enter", s2bEnter)
+		.on("leave", s2aEnter)
+		.addIndicators({
+			name: "add Song Layer"
+		})
+		.addTo(controller);
+
+	var scene2c = new ScrollMagic.Scene({
+			triggerElement: ".shoreline",
+			offset: 850,
+			triggerHook: 0.4
+		})
+		.on("enter", s2cEnter)
+		.on("leave", s2bEnter)
+		.addIndicators({
+			name: "add Yuan Layer"
+		})
+		.addTo(controller);
+
+	var scene2d = new ScrollMagic.Scene({
+			triggerElement: ".shoreline",
+			offset: 1000,
+			triggerHook: 0.4
+		})
+		.on("enter", s2dEnter)
+		.on("leave", s2cEnter)
+		.addIndicators({
+			name: "add MingQing Layer"
+		})
+		.addTo(controller);
+
+	var scene3 = new ScrollMagic.Scene({
+			triggerElement: "#s3"
+		})
+		.addIndicators({
+			name: "Scene 3"
+		})
+		.on("enter", s3Enter)
+		.on("leave", s3Exit)
 		.addTo(controller);
 });

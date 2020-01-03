@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.6.0/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous" />
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.6.0/leaflet.js" integrity="sha256-fNoRrwkP2GuYPbNSJmMJOCyfRB2DhPQe0rGTgzRsyso=" crossorigin="anonymous"></script>
 
+	<!-- Leaflet Scale Bar-->
 	<!-- Leaflet.AJAX -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js" integrity="sha256-rVeyUZMfAHhQJ7hvWaHrKknTDdqGcn1gxBBJA++E4z8=" crossorigin="anonymous"></script>
 
@@ -86,16 +87,17 @@
 			</p>
 			<fieldset class="shoreline">
 				<legend>Putian's Shoreline Through the Ages </legend>
-				<label for="radio-Ancient">Ancient Shoreline</label>
+				<label for="radio-Ancient">Ancient Shoreline<span class="swatch" id="swatch1"></span></label>
 				<input type="radio" name="radio-shoreline" id="radio-Ancient" checked>
-				<label for="radio-Tang">Tang Dynasty (~750 A.D.)</label>
+				<label for="radio-Tang">Tang Dynasty (~750 A.D.)<span class="swatch" id="swatch2"></span></label>
 				<input type="radio" name="radio-shoreline" id="radio-Tang">
-				<label for="radio-Song">Song Dynasty (~1100 A.D.)</label>
+				<label for="radio-Song">Song Dynasty (~1100 A.D.)<span class="swatch" id="swatch3"></span></label>
 				<input type="radio" name="radio-shoreline" id="radio-Song">
-				<label for="radio-Yuan">Yuan Dynasty (~1300 A.D.)</label>
+				<label for="radio-Yuan">Yuan Dynasty (~1300 A.D.)<span class="swatch" id="swatch4"></span></label>
 				<input type="radio" name="radio-shoreline" id="radio-Yuan">
-				<label for="radio-Ming">Ming-Qing Transition (~1644 A.D.)</label>
+				<label for="radio-Ming">Ming-Qing Transition (~1644 A.D.)<span class="swatch" id="swatch5"></span></label>
 				<input type="radio" name="radio-shoreline" id="radio-Ming">
+
 			</fieldset>
 			<div id="inset1">
 				<div id="inset1Map"></div>
@@ -103,7 +105,7 @@
 			</div>
 		</section>
 
-		<section>
+		<section id="s3">
 			<h2>Putian’s Hydrological Conundrum</h2>
 			<p>
 				Newly drained land took the form of barren mudflats. A system of irrigation canals and weirs developed concurently to transform mudflats into productive rice-growing agricultural fields, and to reclaim new land from the ocean.
@@ -144,4 +146,6 @@
 
 	<div id="MainMap"></div>
 
-</body></html>
+</body>
+
+</html>
