@@ -33,35 +33,35 @@ $(document).ready(function () {
 
 	var Ancient_Shoreline = new L.GeoJSON.AJAX("./geojson/Ancient_Shoreline_Inverted.geojson", {
 		style: {
-			fillColor: "#fef0d9",
+			fillColor: "#9ecae1",
 			opacity: 0,
 			fillOpacity: 0.8
 		}
 	})
 	var Tang_Shoreline = new L.GeoJSON.AJAX("./geojson/Tang_Shoreline_Inverted.geojson", {
 		style: {
-			fillColor: "#fdcc8a",
+			fillColor: "#6baed6",
 			opacity: 0,
 			fillOpacity: 0.8
 		}
 	})
 	var Song_Shoreline = new L.GeoJSON.AJAX("./geojson/Song_Shoreline_Inverted.geojson", {
 		style: {
-			fillColor: "#fc8d59",
+			fillColor: "#4292c6",
 			opacity: 0,
 			fillOpacity: 0.8
 		}
 	})
 	var Yuan_Shoreline = new L.GeoJSON.AJAX("./geojson/Yuan_Shoreline_Inverted.geojson", {
 		style: {
-			fillColor: "#e34a33",
+			fillColor: "#2171b5",
 			opacity: 0,
 			fillOpacity: 0.8
 		}
 	})
 	var MingQing_Shoreline = new L.GeoJSON.AJAX("./geojson/MingQing_Shoreline_Inverted.geojson", {
 		style: {
-			fillColor: "#b30000",
+			fillColor: "#084594",
 			opacity: 0,
 			fillOpacity: 0.8
 		}
