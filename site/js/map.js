@@ -31,39 +31,54 @@ $(document).ready(function () {
 		}
 	];
 
-	var Ancient_Shoreline = new L.GeoJSON.AJAX("./geojson/Ancient_Shoreline.geojson", {
+	var Ancient_Shoreline = new L.GeoJSON.AJAX("./geojson/Ancient_Shoreline_Inverted.geojson", {
 		style: {
 			fillColor: "#fef0d9",
 			opacity: 0,
 			fillOpacity: 0.8
 		}
 	})
-	var Tang_Shoreline = new L.GeoJSON.AJAX("./geojson/Tang_Shoreline.geojson", {
+	var Tang_Shoreline = new L.GeoJSON.AJAX("./geojson/Tang_Shoreline_Inverted.geojson", {
 		style: {
 			fillColor: "#fdcc8a",
 			opacity: 0,
 			fillOpacity: 0.8
 		}
 	})
-	var Song_Shoreline = new L.GeoJSON.AJAX("./geojson/Song_Shoreline.geojson", {
+	var Song_Shoreline = new L.GeoJSON.AJAX("./geojson/Song_Shoreline_Inverted.geojson", {
 		style: {
 			fillColor: "#fc8d59",
 			opacity: 0,
 			fillOpacity: 0.8
 		}
 	})
-	var Yuan_Shoreline = new L.GeoJSON.AJAX("./geojson/Yuan_Shoreline.geojson", {
+	var Yuan_Shoreline = new L.GeoJSON.AJAX("./geojson/Yuan_Shoreline_Inverted.geojson", {
 		style: {
 			fillColor: "#e34a33",
 			opacity: 0,
 			fillOpacity: 0.8
 		}
 	})
-	var MingQing_Shoreline = new L.GeoJSON.AJAX("./geojson/MingQing_Shoreline.geojson", {
+	var MingQing_Shoreline = new L.GeoJSON.AJAX("./geojson/MingQing_Shoreline_Inverted.geojson", {
 		style: {
 			fillColor: "#b30000",
 			opacity: 0,
 			fillOpacity: 0.8
+		}
+	})
+
+	// Irrigation
+	var Irrigation_Poly = new L.GeoJSON.AJAX("./geojson/Irrigation_Poly.geojson", {
+		style: {
+			fillOpacity: 1,
+			fillColor: "#53a3ff",
+			weight: 0
+		}
+	})
+	var Irrigation_Line = new L.GeoJSON.AJAX("./geojson/Irrigation_Line.geojson", {
+		style: {
+			color: "#53a3ff",
+			weight: 1
 		}
 	})
 
@@ -77,6 +92,13 @@ $(document).ready(function () {
 				"Song Dynasty (~1100 A.D.)": Song_Shoreline,
 				"Yuan Dynasty (~1300 A.D.)": Yuan_Shoreline,
 				"Ming-Qing Transition (~1644 A.D.)": MingQing_Shoreline
+			}
+		}, {
+			groupName: "Water and Irrigation",
+			expanded: true,
+			layers: {
+				"Canals": Irrigation_Line,
+				"Major Water Bodies": Irrigation_Poly
 			}
 		}
 	];
