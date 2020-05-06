@@ -18,66 +18,76 @@ Baima shenghou 白马圣侯
 Baima xianggong 白马相公
 Baima yuanshuai 白马元帅
 Baiya jiangjun 白牙将军
-18 luo han 18罗汉
-Asan/Asi 阿三阿四
-Aye gong 阿爷公
-Anling shenggong 安灵圣公
-Anshan shengwang 安善圣王
-Ansheng lingfei 安圣灵妃
-Aotou ma 鳌头妈
-Baban 八班
-Babaoye 八宝爷
-Bajiang 八将
-Baxian 八仙
-Bai daren 白大人
-Baifu daren 白府大人
-Baigong daren 白公大人
-Baihu jiangjun 白虎将军
-Baima jiangjun 白马将军
-Baima shenghou 白马圣侯
-Baima xianggong 白马相公
-Baima yuanshuai 白马元帅
-Baiya jiangjun 白牙将军
-18 luo han 18罗汉
-Asan/Asi 阿三阿四
-Aye gong 阿爷公
-Anling shenggong 安灵圣公
-Anshan shengwang 安善圣王
-Ansheng lingfei 安圣灵妃
-Aotou ma 鳌头妈
-Baban 八班
-Babaoye 八宝爷
-Bajiang 八将
-Baxian 八仙
-Bai daren 白大人
-Baifu daren 白府大人
-Baigong daren 白公大人
-Baihu jiangjun 白虎将军
-Baima jiangjun 白马将军
-Baima shenghou 白马圣侯
-Baima xianggong 白马相公
-Baima yuanshuai 白马元帅
-Baiya jiangjun 白牙将军
-18 luo han 18罗汉
-Asan/Asi 阿三阿四
-Aye gong 阿爷公
-Anling shenggong 安灵圣公
-Anshan shengwang 安善圣王
-Ansheng lingfei 安圣灵妃
-Aotou ma 鳌头妈
-Baban 八班
-Babaoye 八宝爷
-Bajiang 八将
-Baxian 八仙
-Bai daren 白大人
-Baifu daren 白府大人
-Baigong daren 白公大人
-Baihu jiangjun 白虎将军
-Baima jiangjun 白马将军
-Baima shenghou 白马圣侯
-Baima xianggong 白马相公
-Baima yuanshuai 白马元帅
-Baiya jiangjun 白牙将军
+Baiya zhongjun 白牙中军
+Banshan daxian 半山大仙
+Baogong yuanshuai 鲍公元帅
+Baoling zhongjun 保令中军
+Baosheng dadi 保生大帝
+Baosong furen 抱送夫人
+Beidou shengwang 北斗圣王(许远)
+Beidou xingjun 北斗星君
+Beidou zhongtian dasheng 北斗中天大圣
+Beiyue Cao jiangjun 北岳曹将军
+Bingling gong 炳灵公
+Boye 伯爷
+Cai daren 蔡大人
+Caigong yuanshuai 蔡公元帅
+Cai zhongjun 蔡中军
+Cao jiangjun 曹将军
+Chen dajiangjun 陈大将军
+Chen dashi 陈大师
+Chenfu daren 陈府大人
+Chengong sheren 陈公舍人
+Chengong shenghou 陈公圣侯
+Chengong taishi 陈公太师
+Chen jiangjun 陈将军
+Chen Jinggu 陈靖姑
+Chenma 陈妈
+Chensheng faye 陈圣法爷
+Chensheng hufa 陈圣护法
+Chenshi zhenren 陈氏真人
+Chen taiwei 陈太尉
+Chen Wenlong 陈文龙
+Chen xiannu 陈仙女
+Chen Zhida 陈智达
+Chen zongjun 陈中军
+Chenghuang dashen 城隍大神
+Chifeng shengwang 敕封圣王
+Chima jiangjun 赤马将军
+Chou Liang dawang 臭梁大王
+Cigan niangniang 慈感娘娘
+Cigan xianfei 慈感仙妃
+Congzi 囱子
+Cuifu dama 鲁府大妈
+Cuifu daren 崔府大人
+Da diye 大帝爷
+Dafa tianshi 大法天师
+Dama 大妈
+Damou zushi 达摩祖师
+Da qing 大青
+Dashi 大使
+Daxiong 大兄
+Daye 大爷
+Da ye, Er ye/Da ye/Er ye 大爷/二爷
+Deng, Wang, Shi zhongjun/Deng zhongjun/Wang zhongjun/Shi Zhongjun 邓,王,施中军
+Diguan dadi 地官大帝
+Dikui 地魁
+Dizang pusa 地藏菩萨
+Dizang wang 地藏王
+Dian daren 电大人
+Dianmu 电母
+Ding yuanshuai 丁元帅
+Dong eryuanshui 董二元帅
+Dongfu xiansheng 东阜先生
+Dongxi shizhe 东西使者
+Dongyue dadi 东岳大帝
+Dongyue zhusheng shangdi 东岳注生上帝
+Dong Zhian 董直庵
+Dong, Ge, Zhou sanjiangjun 董,葛,周三将军
+Dudu ye/Zhenggong dudu/Qigong dudu/Qi Jiguang/Qidudu 都督爷/郑公都督/戚公都督/戚继光都督
+Dufei niangniang 都妃娘娘
+Duguan pusa 都管菩萨
+Dutian yuanshuai 都天元帅
 Dutong 都统
 Dutong shenghou 都统圣侯
 Dutong yuanshuai 都统元帅
@@ -106,7 +116,7 @@ Fozu 佛祖
 Fu daren 傅大人
 Fude zhengshen 福德正神
 Fuhu jiangjun
-Fuma shengjun/Fuma shenghou 福马圣君/福马圣侯
+Fuma shengjun/Fuma shenghou 福马圣君(福马圣侯)
 Furen 夫人
 Furenma 夫人妈
 Fushan shenghou 孚善圣侯
@@ -197,7 +207,7 @@ Jianyin tongzi 剑印童子
 Jiang daren 江大人
 Jiangding shengwang 江定圣王
 Jiangfu zhizun
-Jiang Guojiu/Zhaoshun shengwang 江国舅/昭顺圣王
+Jiang Guojiu/Zhaoshun shengwang 江国舅(昭顺圣王)
 Jiang Meifei 江梅妃
 Jinda jiangjun 金大将军
 Jin daren 金大人
@@ -236,8 +246,8 @@ Leibu xingun 雷部星君
 Leigong 雷公
 Leigong leimu 雷公雷母
 Leisheng puhua tianzun 雷声普化天尊
-武按圣王/Lei Wanchun 武按圣王/雷万春
-Leixian shengjie 雷贤圣姐
+Lei Wanchun 武按圣王(雷万春)
+Leixian shengjie
 Li dajiangjun 李大将军
 Li dama 李大妈
 Li daren 李大人
@@ -296,7 +306,7 @@ Liu yuandajiang 六员大将
 Liu yuanshuai 刘元帅
 Liu zhongjun 刘中军
 Longnu 龙女
-Longwang/Sihai longwang 龙王/四海龙王
+Longwang/Sihai longwang 龙王(四海龙王)
 Luban xianshi 鲁班仙师
 Lubu dashen 鲁部大神
 Lubu furen 鲁部夫人
@@ -338,9 +348,7 @@ Ma jiangjun 马将军
 Mamian 马面
 Mashi furen 马氏夫人
 Ma Yuan jiangjun 马援将军
-Ma yuanshuai (Magong
-yuanshuai)
-马元帅(马公元帅)
+Ma yuanshuai/Magong yuanshuai 马元帅(马公元帅)
 Mazu 妈祖
 Mao xianzushi
 Meihua sanniang 梅花三娘
@@ -363,7 +371,7 @@ Pangu dijun 盘古帝君
 Panguan 判官
 Panggong shenghou 庞公圣侯
 Peng daren 蓬大人
-Penggong/daren 蓬公/大人
+Penggong/Penggong daren 蓬公(大人)
 Peng jiangjun 彭将军
 Peng taishan 彭泰山
 Peng zhongjun 彭中军
@@ -371,7 +379,6 @@ Pu’an xianshi 普庵仙师
 Puhua tianzun 普化天尊
 Puji shenghou 普济圣侯
 Puxian 普贤
-Qi Jiguang/ Dudu Qi Jiguang 戚继光/戚继光都督
 Qitian dasheng 齐天大圣
 Qixing niangniang 七星娘娘
 Qiye 七爷
@@ -423,16 +430,48 @@ Shema 社妈
 She taijun 余太君
 Shen daifu 沈大夫
 Shennongshi 神农氏
-Shengmu 圣母
-Shengmu/Sheng fu 圣母/圣父
+Shengmu/Sheng fu 圣母,圣父
+Shengzishen 圣子神
+Shijiamouni 释伽牟尼
+Shijia wenfo 释伽文佛
+Shi jiangjun 施将军
+Shitai daoren
+Shiwu ma 十五妈
+Shizhe zhongjun 侍者中军
+Shi zuoye 史佐爷
+Shuaigong shenghou 帅公圣侯
+Shuiguan dadi 水官大帝
+Shuizhu xianshi 水珠仙师
+Shunfenger 顺风耳
+Shuntian shengmu 顺天圣母
+Sida jiangjun 四大将军
+Si dajiang (Liu, Zhang, Zhao, Su) 四大将(刘,张,赵,苏)
+Sida jinggang 四大金刚
+Sida yuanshuai 四大元帅
+Sihai longwang 四海龙王
+Sima shenghou 司马圣侯
+Sima shengwang 司马圣王(张巡)
+Si mengjiang/ Si mengjiang(Chen, Zheng, Qiu, Liu) 四猛将/四大将军
+Si tongzi 四童子
+Siye 四爷
+Sizhou wenfou 泗州文佛
+Song daren 宋大人
+Song yuanshuai 宋元帅
+Song zhongjun 宋中军
+Su dajiang 苏大将
+Sugong ershi 苏公二使
+Taishan kangwang 泰山康王
+Taishang laojun 太上老君
+Taiyi tianzun 太乙天尊
+Taiyi xiangu 太乙仙姑
 Tang dajiang 唐大将
 Tang sanzang 唐三藏
-Tangshi yima 汤氏姨妈
+Tangshi yima
 Taohua shengmu 桃花圣母
 Tiandi 天地
 Tiandijun qinshi 天地君亲师
 Tiangang 天罡
-Tiangong 田公元帅
+Tiangong 田公
 Tiangong daren 天公大人
 Tiangong yuanshuai 田公元帅
 Tianguan dadi 天官大帝
@@ -442,7 +481,7 @@ Tianmen Zhu zhizun 天门朱至尊
 Tianmin zongshi 田民宗师
 Tianpeng yuanshuai 天蓬元帅
 Tianqian shengmu 天前圣母
-Tianshang shengmu (Mazu) 天上圣母
+Tianshang shengmu/Tianshang shengmu (Mazu) 天上圣母
 Tianshang wuji shengmu 天上无极圣母
 Tiegong taishi 铁公太师
 Tiegong yuanshuai 铁公元帅
@@ -481,7 +520,7 @@ Wencao 文曹
 Wencao wupan 文曹武判
 Wenchang dijun 文昌帝君
 Wen daren 瘟大人
-Wengong yuanshuai/Wen yuanshuai 温公元帅/温元帅
+Wengong yuanshuai/Wen yuanshuai 温公元帅(温元帅)
 Wenlai yuanshuai 文赖元帅
 Wenlin shuima 文临水妈
 Wenshu 文殊
@@ -491,10 +530,10 @@ Wenwu panguan 文武判官
 Wenwu siguan dadi 文武四官大帝
 Wenwu zhusheng 文武诸神
 Wenye 温爷
-Wen yuanshuai/Kang yuanshuai/Ma yuanshuai/Zhao yuanshuai 温元帅/康元帅/马元帅/赵元帅
+Wen, Kang, Ma, Zhao yuanshuai/Wen yuanshuai, Kang yuanshuai, Ma yuanshuai, Zhao yuanshuai 温,康,马,赵元帅
 Wenggong daren 翁公大人
 Wugong dutong 吴公都统
-Wuan shengwang/Leiwanchun 武按圣王/雷万春
+Wuan shengwang 武按圣王(雷万春)
 Wubu yuanshuai 五部元帅
 Wu daren 吴大人
 Wudiye 五帝爷
@@ -517,7 +556,7 @@ Wushi xiansheng 吴氏先生
 Wusima 武司马
 Wutan liesheng 五坛列圣
 Wutan zhizun 五坛至尊
-Wutian shenghou/Wugong shenghou 吾天圣侯/伍公圣侯
+Wutian shenghou/Wugong shenghou 吾天圣侯(伍公圣侯)
 Wuxian dadi 五显大帝
 Wuxian faye 五显法爷
 Wuxian lingguan 五显灵官
@@ -544,7 +583,8 @@ Xie daye 谢大爷
 Xiefu daxiong 谢府大兄
 Xiehu jiangjun 协 (谢)虎将军
 Xieshun shenghou 协顺圣侯
-Xietian dadi 
+Xietian dadi 协天大帝
+Xinghua chenghuang 兴化城隍
 Xu daren 徐大人
 Xugong taibao 徐公太保
 Xu guniang 徐姑娘
@@ -553,7 +593,7 @@ Xushi shengfei 许氏圣妃
 Xu Yuan 许远
 Xuantan gong 玄坛公
 Xuantan yuanshuai 玄坛元帅
-Xuantian dadi 玄天大帝
+Xuantian dadi/玄武 玄天大帝(武)
 Xuantian shangdi 玄天上帝
 Xue daren 薛大人
 Yahan zhongjun 亚汉中军
@@ -568,7 +608,7 @@ Yanggong ershi 杨公二使
 Yanggong taishi 杨公太师
 Yanggong yuanshuai 杨公元帅
 Yang Jiye 杨继业
-Yangjia bajiang/Yangmen bajiang/Yangfu bajiang 杨家八将/杨门八将/杨府八将
+Yangjia bajiang/Yangmen bajiang/Yangfu bajiang 杨家（门, 府）八将
 Yang jiuniang 杨九娘
 Yangsheng 杨圣中军
 Yangshi xiangu 杨氏仙姑
@@ -576,7 +616,7 @@ Yang yuanshuai 杨元帅
 Yang Zongbao 杨宗保
 Yaogong yuanshuai 姚公元帅
 Yaoshi furen 姚氏夫人
-Yide furen/shema 懿德夫人/社妈
+Yide furen/shema 懿德夫人(社妈)
 Yide xianfei 懿德仙妃
 Yi dian zhen jun 一殿真君
 Yilie qiansui 伊烈千岁
@@ -624,18 +664,18 @@ Zhaogong taishi 赵公太师
 Zhaogong yuanshuai 赵公元帅
 Zhaoli daye 昭利大爷
 Zhaoling shengjun 昭灵圣君
-Zhaoshun/Jiang Guojiu 昭顺圣王/江国舅
+Zhaoshun shengwang 昭顺圣王(江国舅)
 Zheng daifu 郑大夫
 Zhenggong dutong 郑公都统
 Zhenggong sheren 郑公舍人
 Zhenggong shenghou 郑公圣侯
 Zhengshun shengwang 正顺圣王
-Zhengyi lingguan 正一灵官/五显华光大帝
+Zhengyi lingguan/Wuxian huaguang dadi/Wang Lingguan 正一灵官(五显华光大帝)
 Zheng Yue 郑岳
 Zhida xiansheng 智达先生
 Zhongji shenghou 忠济圣侯
-Zhongjun/Zhong junye 中军/中军爷
-Zhong Kui 钟馗(圣君)
+Zhongjun (Zhong junye) 中军(中军爷)
+Zhong Kui/shengjun 钟馗(圣君)
 Zhongtian dasheng 中天大圣
 Zhongyou shenghou 忠佑圣候
 Zhong yuanshuai 钟元帅
@@ -655,7 +695,7 @@ Zhusheng dadi 注生大帝
 Zhusheng shangdi 注生上帝
 Zhu xiansheng 朱先生
 Zhu yuanshuai 朱元帅
-Zhuzi/Zhu Xi 朱子/朱熹
+Zhuzi/Zhu Xi 朱子
 Zhuzi shengjun 朱紫圣君
 Zhuogong taibao 卓公太保
 Zhuojiao zhongjun 卓角中军
