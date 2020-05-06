@@ -1,1 +1,5 @@
+<<<<<<< HEAD
+{"UID": "V654", "Name": "Fengxiu", "Name_zh": "凤秀", "Alliance": "Gaomei wucun (Gaomei five village ritual alliance)", "Alliance_UID": "A145", "Alliance_zh": "高美五村", "Irrigation_Region": "Northern", "Raw": {"Settlement": "Fengxiu was originally called Gaoli 高里. The village population is over 500 people. ", "Surname_Groups": "", "Village_Temples": "", "Rituals": {"Processions": "", "Birthday": ""}}, "Administrative Village": "-1", "Administrative Village_zh": "-1", "Population": "500"}
+=======
 {"UID": "V654", "Name": "Fengxiu", "Name_zh": "凤秀", "Alliance": "Gaomei wucun (Gaomei five village ritual alliance)", "Alliance_UID": "A145", "Alliance_zh": "高美五村", "Irrigation_Region": "Northern", "Village_Settlement": "Fengxiu was originally called Gaoli 高里. The village population is over 500 people. ", "Surname_Groups": "", "Village_Temples": "", "Rituals": {"Yuanxiao processions": "", "Birthday celebrations of the gods": ""}, "Administrative Village": "-1", "Administrative Village_zh": "-1"}
+>>>>>>> 7ac463f3da89d6e0299de685c128687221ad09a4

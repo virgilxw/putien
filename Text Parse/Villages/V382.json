@@ -1,1 +1,5 @@
+<<<<<<< HEAD
+{"UID": "V382", "Name": "Jiaonan", "Name_zh": "郊南", "Alliance": "Nanjiao qijing (Nanjiao sevenfold ritual alliance)", "Alliance_UID": "A084", "Alliance_zh": "南郊七境", "Irrigation_Region": "Northern", "Raw": {"Settlement": "people. The population of Jiaonan is approximately 700 ", "Surname_Groups": "", "Village_Temples": "", "Rituals": {"Processions": "", "Birthday": ""}}, "Administrative Village": "-1", "Administrative Village_zh": "-1", "Population": "-1"}
+=======
 {"UID": "V382", "Name": "Jiaonan", "Name_zh": "郊南", "Alliance": "Nanjiao qijing (Nanjiao sevenfold ritual alliance)", "Alliance_UID": "A084", "Alliance_zh": "南郊七境", "Irrigation_Region": "Northern", "Village_Settlement": "people. The population of Jiaonan is approximately 700 ", "Surname_Groups": "", "Village_Temples": "", "Rituals": {"Yuanxiao processions": "", "Birthday celebrations of the gods": ""}, "Administrative Village": "-1", "Administrative Village_zh": "-1"}
+>>>>>>> 7ac463f3da89d6e0299de685c128687221ad09a4
