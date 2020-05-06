@@ -106,7 +106,7 @@ Fozu 佛祖
 Fu daren 傅大人
 Fude zhengshen 福德正神
 Fuhu jiangjun
-Fuma shengjun (Fuma shenghou) 福马圣君 (福马圣侯)
+Fuma shengjun/Fuma shenghou 福马圣君/福马圣侯
 Furen 夫人
 Furenma 夫人妈
 Fushan shenghou 孚善圣侯
@@ -122,7 +122,7 @@ Gongzheng mingwang 恭正明王
 Gouye 狗爷
 Guma 姑妈
 Guniang 姑娘
-Guangong/ Guan diye 关公/关帝爷
+Guangong/Guan diye 关公/关帝爷
 Guanhu jiangjun 管虎将军
 Guan Ping 关平
 Guansheng dijun 关圣帝君
@@ -197,9 +197,7 @@ Jianyin tongzi 剑印童子
 Jiang daren 江大人
 Jiangding shengwang 江定圣王
 Jiangfu zhizun
-Jiang Guojiu (Zhaoshun
-shengwang)
-江国舅(昭顺圣王)
+Jiang Guojiu/Zhaoshun shengwang 江国舅/昭顺圣王
 Jiang Meifei 江梅妃
 Jinda jiangjun 金大将军
 Jin daren 金大人
@@ -238,8 +236,8 @@ Leibu xingun 雷部星君
 Leigong 雷公
 Leigong leimu 雷公雷母
 Leisheng puhua tianzun 雷声普化天尊
-Lei Wanchun 武按圣王(雷万春)
-Leixian shengjie
+武按圣王/Lei Wanchun 武按圣王/雷万春
+Leixian shengjie 雷贤圣姐
 Li dajiangjun 李大将军
 Li dama 李大妈
 Li daren 李大人
@@ -298,7 +296,7 @@ Liu yuandajiang 六员大将
 Liu yuanshuai 刘元帅
 Liu zhongjun 刘中军
 Longnu 龙女
-Longwang (Sihai longwang) 龙王(四海龙王)
+Longwang/Sihai longwang 龙王/四海龙王
 Luban xianshi 鲁班仙师
 Lubu dashen 鲁部大神
 Lubu furen 鲁部夫人
@@ -365,7 +363,7 @@ Pangu dijun 盘古帝君
 Panguan 判官
 Panggong shenghou 庞公圣侯
 Peng daren 蓬大人
-Penggong (daren) 蓬公(大人)
+Penggong/daren 蓬公/大人
 Peng jiangjun 彭将军
 Peng taishan 彭泰山
 Peng zhongjun 彭中军
@@ -373,7 +371,7 @@ Pu’an xianshi 普庵仙师
 Puhua tianzun 普化天尊
 Puji shenghou 普济圣侯
 Puxian 普贤
-Qi (Jiguang) dudu 戚 (继光) 都督
+Qi Jiguang/ Dudu Qi Jiguang 戚继光/戚继光都督
 Qitian dasheng 齐天大圣
 Qixing niangniang 七星娘娘
 Qiye 七爷
@@ -409,7 +407,7 @@ Sanwei furen 三位夫人
 Sanwei xianshi 三位仙师
 Sanxingjun 三星君
 Sanyan wuyan 三眼五眼
-Sanye
+Sanye 三爷
 Sanyi jiaozhu 三一教主
 Sanyuan dajiang 三员大将
 San zhenfo 三真佛
@@ -426,48 +424,15 @@ She taijun 余太君
 Shen daifu 沈大夫
 Shennongshi 神农氏
 Shengmu 圣母
-Shengmu, Sheng fu 圣母, 圣父
-Ruigou shengwang 瑞沟圣王
-Ruigou xianggong 瑞沟相公
-San daren 三大人
-Sandian zhenjun 三殿真君
-Sanfeng zhenren 三丰真人
-San furen 三夫人
-Sanguan dadi 三官大帝
-Sanjiao faye 三教法爷
-Sanjiao xiansheng 三教先生
-Sanjiuku 三救苦
-Sansheng zhenjun 三圣真君
-Sanwei furen 三位夫人
-Sanwei xianshi 三位仙师
-Sanxingjun 三星君
-Sanyan wuyan 三眼五眼
-Sanye
-Sanyi jiaozhu 三一教主
-Sanyuan dajiang 三员大将
-San zhenfo 三真佛
-Shancai 善才
-Shancai dongzi 善才童子
-Shandian cimu 闪电云母
-Shan jiangjun 山将军
-Shanshen 山神
-Shangyang zhenren 上阳真人
-Shegong 社公
-Shegong, Shema 社公,社妈
-Shema 社妈
-She taijun 余太君
-Shen daifu 沈大夫
-Shennongshi 神农氏
-Shengmu 圣母
-Shengmu, Sheng fu 圣母, 圣父
+Shengmu/Sheng fu 圣母/圣父
 Tang dajiang 唐大将
 Tang sanzang 唐三藏
-Tangshi yima
+Tangshi yima 汤氏姨妈
 Taohua shengmu 桃花圣母
 Tiandi 天地
 Tiandijun qinshi 天地君亲师
 Tiangang 天罡
-Tiangong 田公
+Tiangong 田公元帅
 Tiangong daren 天公大人
 Tiangong yuanshuai 田公元帅
 Tianguan dadi 天官大帝
@@ -516,7 +481,7 @@ Wencao 文曹
 Wencao wupan 文曹武判
 Wenchang dijun 文昌帝君
 Wen daren 瘟大人
-Wengong yuanshuai (Wen yuanshuai) 温公元帅 (温元帅)
+Wengong yuanshuai/Wen yuanshuai 温公元帅/温元帅
 Wenlai yuanshuai 文赖元帅
 Wenlin shuima 文临水妈
 Wenshu 文殊
@@ -526,10 +491,10 @@ Wenwu panguan 文武判官
 Wenwu siguan dadi 文武四官大帝
 Wenwu zhusheng 文武诸神
 Wenye 温爷
-Wen, Kang, Ma, Zhao yuanshuai 温,康,马,赵元帅
+Wen yuanshuai/Kang yuanshuai/Ma yuanshuai/Zhao yuanshuai 温元帅/康元帅/马元帅/赵元帅
 Wenggong daren 翁公大人
 Wugong dutong 吴公都统
-Wuan shengwang 武按圣王(雷万春)
+Wuan shengwang/Leiwanchun 武按圣王/雷万春
 Wubu yuanshuai 五部元帅
 Wu daren 吴大人
 Wudiye 五帝爷
@@ -552,7 +517,7 @@ Wushi xiansheng 吴氏先生
 Wusima 武司马
 Wutan liesheng 五坛列圣
 Wutan zhizun 五坛至尊
-Wutian (gong) shenghou 吾天圣侯 (伍公圣侯)
+Wutian shenghou/Wugong shenghou 吾天圣侯/伍公圣侯
 Wuxian dadi 五显大帝
 Wuxian faye 五显法爷
 Wuxian lingguan 五显灵官
@@ -588,7 +553,7 @@ Xushi shengfei 许氏圣妃
 Xu Yuan 许远
 Xuantan gong 玄坛公
 Xuantan yuanshuai 玄坛元帅
-Xuantian dadi (wu) 玄天大帝(武)
+Xuantian dadi 玄天大帝
 Xuantian shangdi 玄天上帝
 Xue daren 薛大人
 Yahan zhongjun 亚汉中军
@@ -603,7 +568,7 @@ Yanggong ershi 杨公二使
 Yanggong taishi 杨公太师
 Yanggong yuanshuai 杨公元帅
 Yang Jiye 杨继业
-Yangjia/men/fu ba jiang 杨家（门, 府）八将
+Yangjia bajiang/Yangmen bajiang/Yangfu bajiang 杨家八将/杨门八将/杨府八将
 Yang jiuniang 杨九娘
 Yangsheng 杨圣中军
 Yangshi xiangu 杨氏仙姑
@@ -611,7 +576,7 @@ Yang yuanshuai 杨元帅
 Yang Zongbao 杨宗保
 Yaogong yuanshuai 姚公元帅
 Yaoshi furen 姚氏夫人
-Yide furen (shema) 懿德夫人(社妈)
+Yide furen/shema 懿德夫人/社妈
 Yide xianfei 懿德仙妃
 Yi dian zhen jun 一殿真君
 Yilie qiansui 伊烈千岁
@@ -659,18 +624,18 @@ Zhaogong taishi 赵公太师
 Zhaogong yuanshuai 赵公元帅
 Zhaoli daye 昭利大爷
 Zhaoling shengjun 昭灵圣君
-Zhaoshun shengwang 昭顺圣王(江国舅)
+Zhaoshun/Jiang Guojiu 昭顺圣王/江国舅
 Zheng daifu 郑大夫
 Zhenggong dutong 郑公都统
 Zhenggong sheren 郑公舍人
 Zhenggong shenghou 郑公圣侯
 Zhengshun shengwang 正顺圣王
-Zhengyi lingguan (see also Wuxian huaguang dadi, Wang Lingguan) 正一灵官 (五显华光大帝)
+Zhengyi lingguan 正一灵官/五显华光大帝
 Zheng Yue 郑岳
 Zhida xiansheng 智达先生
 Zhongji shenghou 忠济圣侯
-Zhongjun (Zhong junye) 中军(中军爷)
-Zhong Kui (shengjun) 钟馗(圣君)
+Zhongjun/Zhong junye 中军/中军爷
+Zhong Kui 钟馗(圣君)
 Zhongtian dasheng 中天大圣
 Zhongyou shenghou 忠佑圣候
 Zhong yuanshuai 钟元帅
@@ -690,7 +655,7 @@ Zhusheng dadi 注生大帝
 Zhusheng shangdi 注生上帝
 Zhu xiansheng 朱先生
 Zhu yuanshuai 朱元帅
-Zhuzi (Zhu Xi) 朱子
+Zhuzi/Zhu Xi 朱子/朱熹
 Zhuzi shengjun 朱紫圣君
 Zhuogong taibao 卓公太保
 Zhuojiao zhongjun 卓角中军
