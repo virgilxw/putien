@@ -8,3 +8,4 @@
 # File Formats
 *.bak
 *.bak~
+*.ipynb_checkpoints
