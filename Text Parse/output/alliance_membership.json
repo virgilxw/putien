@@ -1340,7 +1340,7 @@
 	}, {
 		"UID_V": "V255",
 		"Name": "Shandou",
-		"Name_zh": "\n"
+		"Name_zh": "山兜"
 	}]
 }, {
 	"UID_A": "A055",
@@ -1577,8 +1577,8 @@
 	"Num_Villages": 1,
 	"Villages": [{
 		"UID_V": "V301",
-		"Name": "Xialin下林",
-		"Name_zh": "\n"
+		"Name": "Xialin",
+		"Name_zh": "下林"
 	}]
 }, {
 	"UID_A": "A064",
@@ -1609,8 +1609,8 @@
 		"Name_zh": "黄厝"
 	}, {
 		"UID_V": "V306",
-		"Name": "Xiadaiwei下埭尾",
-		"Name_zh": ""
+		"Name": "Xiadaiwei",
+		"Name_zh": "下埭尾"
 	}, {
 		"UID_V": "V307",
 		"Name": "Shangdaiwei",
@@ -1677,8 +1677,8 @@
 	"Num_Villages": 1,
 	"Villages": [{
 		"UID_V": "V317",
-		"Name": "南门",
-		"Name_zh": "\n"
+		"Name": "Nanmen",
+		"Name_zh": "南门"
 	}]
 }, {
 	"UID_A": "A070",
@@ -2499,8 +2499,8 @@
 		"Name_zh": "北山"
 	}, {
 		"UID_V": "V470",
-		"Name": "新村",
-		"Name_zh": "Xincun"
+		"Name": "Xincun",
+		"Name_zh": "新村"
 	}, {
 		"UID_V": "V471",
 		"Name": "Zhenxia",
@@ -2613,12 +2613,12 @@
 		"Name_zh": "游桥头"
 	}, {
 		"UID_V": "V491",
-		"Name": "Caidai",
-		"Name_zh": "dongzhi"
+		"Name": "Caidai dongzhi",
+		"Name_zh": "蔡埭东至"
 	}, {
 		"UID_V": "V492",
-		"Name": "Caidai",
-		"Name_zh": "xizhi"
+		"Name": "Caidai xizhi",
+		"Name_zh": "蔡埭西至"
 	}, {
 		"UID_V": "V493",
 		"Name": "Qianhuang",
@@ -2956,7 +2956,7 @@
 	}, {
 		"UID_V": "V557",
 		"Name": "Xialou",
-		"Name_zh": "霞楼\n"
+		"Name_zh": "霞楼"
 	}]
 }, {
 	"UID_A": "A123",
@@ -3167,8 +3167,8 @@
 	"Num_Villages": 1,
 	"Villages": [{
 		"UID_V": "V598",
-		"Name": "塘西",
-		"Name_zh": "\n"
+		"Name": "Tangxi",
+		"Name_zh": "塘西"
 	}]
 }, {
 	"UID_A": "A131",
@@ -3546,7 +3546,7 @@
 	}, {
 		"UID_V": "V667",
 		"Name": "Xinjing",
-		"Name_zh": "新井\n"
+		"Name_zh": "新井"
 	}]
 }, {
 	"UID_A": "A148",
