@@ -28,7 +28,7 @@
     <layer-tree-layer id="ESRI_Satellite__ArcGIS_World_Imagery__1b3f810d_821a_4c40_a99d_d47f1c386c84" checked="Qt::Unchecked" expanded="0" source="crs=EPSG:3857&amp;format&amp;type=xyz&amp;url=https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/%7Bz%7D/%7By%7D/%7Bx%7D&amp;zmax=19&amp;zmin=0" name="ESRI Satellite (ArcGIS/World_Imagery)" providerKey="wms">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer id="OSM_Standard_f98917cf_2eca_4188_9ade_be6ed733c396" checked="Qt::Checked" expanded="1" source="crs=EPSG:3857&amp;format&amp;type=xyz&amp;url=http://tile.openstreetmap.org/%7Bz%7D/%7Bx%7D/%7By%7D.png&amp;zmax=19&amp;zmin=0" name="OSM Standard" providerKey="wms">
+    <layer-tree-layer id="OSM_Standard_f98917cf_2eca_4188_9ade_be6ed733c396" checked="Qt::Checked" expanded="0" source="crs=EPSG:3857&amp;format&amp;type=xyz&amp;url=http://tile.openstreetmap.org/%7Bz%7D/%7Bx%7D/%7By%7D.png&amp;zmax=19&amp;zmin=0" name="OSM Standard" providerKey="wms">
       <customproperties/>
     </layer-tree-layer>
     <custom-order enabled="0">
@@ -48,10 +48,10 @@
   <mapcanvas annotationsVisible="1" name="theMapCanvas">
     <units>meters</units>
     <extent>
-      <xmin>13254567.28029184974730015</xmin>
-      <ymin>2928918.99914474412798882</ymin>
-      <xmax>13264940.77425980009138584</xmax>
-      <ymax>2941152.78534403070807457</ymax>
+      <xmin>13261566.99699465185403824</xmin>
+      <ymin>2933223.38703213725239038</ymin>
+      <xmax>13268245.31013578921556473</xmax>
+      <ymax>2939166.5753446938470006</ymax>
     </extent>
     <rotation>0</rotation>
     <destinationsrs>
@@ -85,8 +85,8 @@
         <legendlayerfile visible="0" isInOverview="0" layerid="ESRI_Satellite__ArcGIS_World_Imagery__1b3f810d_821a_4c40_a99d_d47f1c386c84"/>
       </filegroup>
     </legendlayer>
-    <legendlayer showFeatureCount="0" checked="Qt::Checked" open="true" drawingOrder="-1" name="OSM Standard">
-      <filegroup open="true" hidden="false">
+    <legendlayer showFeatureCount="0" checked="Qt::Checked" open="false" drawingOrder="-1" name="OSM Standard">
+      <filegroup open="false" hidden="false">
         <legendlayerfile visible="1" isInOverview="0" layerid="OSM_Standard_f98917cf_2eca_4188_9ade_be6ed733c396"/>
       </filegroup>
     </legendlayer>
@@ -804,7 +804,7 @@ def my_form_open(dialog, layer, feature):
       <attributeactions>
         <defaultAction key="Canvas" value="{00000000-0000-0000-0000-000000000000}"/>
       </attributeactions>
-      <attributetableconfig actionWidgetStyle="dropDown" sortOrder="0" sortExpression="&quot;uid&quot;">
+      <attributetableconfig actionWidgetStyle="dropDown" sortOrder="0" sortExpression="&quot;name&quot;">
         <columns>
           <column width="-1" hidden="0" type="field" name="ogc_fid"/>
           <column width="-1" hidden="0" type="field" name="name"/>
