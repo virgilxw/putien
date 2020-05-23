@@ -48,10 +48,10 @@
   <mapcanvas annotationsVisible="1" name="theMapCanvas">
     <units>meters</units>
     <extent>
-      <xmin>13249564.67585346102714539</xmin>
-      <ymin>2924452.99858826166018844</ymin>
-      <xmax>13254751.42283743619918823</xmax>
-      <ymax>2930569.89168790401890874</ymax>
+      <xmin>13247922.25338077731430531</xmin>
+      <ymin>2930138.17371443286538124</ymin>
+      <xmax>13258295.747348727658391</xmax>
+      <ymax>2942371.959913719445467</ymax>
     </extent>
     <rotation>0</rotation>
     <destinationsrs>

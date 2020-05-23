@@ -48,10 +48,10 @@
   <mapcanvas annotationsVisible="1" name="theMapCanvas">
     <units>meters</units>
     <extent>
-      <xmin>13243552.88400981947779655</xmin>
-      <ymin>2926371.09651039820164442</ymin>
-      <xmax>13248739.6309937946498394</xmax>
-      <ymax>2932487.98961004056036472</ymax>
+      <xmin>13245210.64097578451037407</xmin>
+      <ymin>2930022.56233282526955009</ymin>
+      <xmax>13250397.38795975968241692</xmax>
+      <ymax>2936139.45543246762827039</ymax>
     </extent>
     <rotation>0</rotation>
     <destinationsrs>
@@ -224,7 +224,9 @@
         </settings>
       </labeling>
       <customproperties>
-        <property key="dualview/previewExpressions" value="OBJECTID"/>
+        <property key="dualview/previewExpressions">
+          <value>OBJECTID</value>
+        </property>
         <property key="embeddedWidgets/count" value="0"/>
         <property key="variableNames"/>
         <property key="variableValues"/>
@@ -718,7 +720,9 @@ def my_form_open(dialog, layer, feature):
         </settings>
       </labeling>
       <customproperties>
-        <property key="dualview/previewExpressions" value="&quot;ogc_fid&quot;"/>
+        <property key="dualview/previewExpressions">
+          <value>"ogc_fid"</value>
+        </property>
       </customproperties>
       <blendMode>0</blendMode>
       <featureBlendMode>0</featureBlendMode>
