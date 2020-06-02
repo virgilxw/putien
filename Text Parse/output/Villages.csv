@@ -458,6 +458,7 @@ V451,Linfeng,林峰,Northern,500
 V452,Kengbian,坑边,Northern,150
 V453,Kengtou,坑头,Northern,400
 V454,Chenglin,澄林,Northern,1000
+V455,Xiayu,下宇,Northern,1000
 V456,Guantang,官塘,Northern,500
 V457,Xitianwei,西天尾,Northern,5000
 V458,Miaoqian,庙前,Northern,1000
@@ -489,7 +490,8 @@ V483,Jiaodong,郊东,Northern,1800
 V484,Jiaoxi,郊西,Northern,600
 V485,Paohudun,袍笏墩,Northern,1000
 V486,Wujiang,吴江),Northern,3700
-V487,Shanglin,上林,Northern,750
+V488,Shanglin,上林,Northern,750
+V487,Xiadun,下墩,Northern,800
 V489,Xikou,溪口,Northern,800
 V490,Youqiaotou,游桥头,Northern,1000
 V491,Caidai,dongzhi,Northern,730
@@ -565,14 +567,17 @@ V560,Sizhou,泗洲,Northern,535
 V561,Siying,泗营,Northern,500
 V562,Xiaojia,肖甲,Northern,1500
 V563,Zhixiang,直巷,Northern,2000
+V564,Baiyuan,白园,Northern,800
 V565,Xiangtou,巷头,Northern,200
 V566,Lingqian,岭前,Northern,500
 V567,Pudun,埔墩,Northern,400
 V568,Dingcuowei,顶厝尾,Northern,500
 V569,Putou,埔头,Northern,900
+V570,Xizheng,西郑,Northern,100
 V571,Lianhecun,联合村,Northern,900
 V572,Dinggou,顶沟,Northern,400
 V573,Shipaidou,石牌兜,Northern,400
+V574,Tianzhongyang,田中央,Northern,400
 V575,Matou,码头,Northern,1200
 V576,Dubin,都邠,Northern,2500
 V577,Xiujiao,秀郊,Northern,700
