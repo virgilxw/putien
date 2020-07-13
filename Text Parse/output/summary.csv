@@ -56,7 +56,7 @@ V054,Qianhu,前湖,Zhangjiang bashê (Zhangjiang eight shê ritual alliance),A01
 V055,Huibi,灰壁,Zhangjiang bashê (Zhangjiang eight shê ritual alliance),A011,章江八社,Southern
 V056,Xicuo,西厝,Zhangjiang bashê (Zhangjiang eight shê ritual alliance),A011,章江八社,Southern
 V057,Beicuo,北厝,Zhangjiang bashê (Zhangjiang eight shê ritual alliance),A011,章江八社,Southern
-V058,尾厝,Weicuo,Zhangjiang bashê (Zhangjiang eight shê ritual alliance),A011,章江八社,Southern
+V058,Weicuo,尾厝,Zhangjiang bashê (Zhangjiang eight shê ritual alliance),A011,章江八社,Southern
 V059,Houting,后亭,Xindu jiushê (Xindu nine shê ritual alliance),A012,新度九社,Southern
 V060,Dubian,度边,Xindu jiushê (Xindu nine shê ritual alliance),A012,新度九社,Southern
 V061,Dongdian,东店,Xindu jiushê (Xindu nine shê ritual alliance),A012,新度九社,Southern
@@ -67,7 +67,7 @@ V065,Houzheng,后郑,Puban qijing (Puban sevenfold ritual of alliance),A014,蒲�
 V066,Houdai,后戴,Puban qijing (Puban sevenfold ritual of alliance),A014,蒲阪七境,Southern
 V067,Goudong,沟东,Puban qijing (Puban sevenfold ritual of alliance),A014,蒲阪七境,Southern
 V068,Shangdun,上墩,Puban qijing (Puban sevenfold ritual of alliance),A014,蒲阪七境,Southern
-V069,腰沟,Yaogou,Puban qijing (Puban sevenfold ritual of alliance),A014,蒲阪七境,Southern
+V069,Yaogou,腰沟,Puban qijing (Puban sevenfold ritual of alliance),A014,蒲阪七境,Southern
 V070,Peiwei,沛尾,Puban qijing (Puban sevenfold ritual of alliance),A014,蒲阪七境,Southern
 V071,Xijiao,西角,Puban qijing (Puban sevenfold ritual of alliance),A014,蒲阪七境,Southern
 V072,Zhongjing,中境,Xiaban qijing (Xiaban sevenfold ritual alliance),A015,下阪七境,Southern
@@ -103,10 +103,6 @@ V101,Changchuan,长川,Fengshan liucun (Fengshan six village ritual alliance),A0
 V102,Xiaban,下阪,Fengshan liucun (Fengshan six village ritual alliance),A023,凤山六村,Southern
 V103,Tiancuo,田厝,Fengshan liucun (Fengshan six village ritual alliance),A023,凤山六村,Southern
 V104,Shangyuanqian,上院前,Fengshan liucun (Fengshan six village ritual alliance),A023,凤山六村,Southern
-V100,定庄,1.,Fengshan liucun (Fengshan six village ritual alliance),A023,凤山六村,Southern
-V101,Changchuan,长川,Fengshan liucun (Fengshan six village ritual alliance),A023,凤山六村,Southern
-V102,Xiaban,下阪,Fengshan liucun (Fengshan six village ritual alliance),A023,凤山六村,Southern
-V014,Tiancuo,田厝,Goukou qijing (Goukou sevenfold ritual alliance),A003,沟口七境,Southern
 V105,Xiayuanqian,下院前,Fengshan liucun (Fengshan six village ritual alliance),A023,凤山六村,Southern
 V106,Guiling,桂岭,Huangshi bashê (Huangshi eight shê ritual alliance),A024,黄石八社,Southern
 V107,Tingxia,亭下,Huangshi bashê (Huangshi eight shê ritual alliance),A024,黄石八社,Southern
@@ -141,7 +137,7 @@ V135,Yudai,余埭,Qiaodou wucun (Qiaodou five village ritual alliance),A029,桥�
 V136,Lindun,林墩,Lindun sancun (Lindun three village ritual alliance),A030,林墩三村,Southern
 V137,Jiangxi,江西,Lindun sancun (Lindun three village ritual alliance),A030,林墩三村,Southern
 V138,Longhua,龙华,Lindun sancun (Lindun three village ritual alliance),A030,林墩三村,Southern
-V139,Jiangdong,江东,Jiangdong shiershê (Jiangdong twelve shê ritual alliance),A031,江东十二社,Southern
+V139,Jiangdong,江东,Jiangdong shiershê (Jviangdong twelve shê ritual alliance),A031,江东十二社,Southern
 V140,Haibin,海滨,Haibin wujia (Haibin five jia riutal alliance),A032,海滨五甲,Southern
 V141,Zhelang,遮浪,Zhelang sanjia (Zhelang three jia ritual alliance),A033,遮浪三甲,Southern
 V142,Huadi,华堤,Donghua sancun (Donghua three village ritual alliance),A034,东华三村,Southern
@@ -164,7 +160,7 @@ V158,Kangcuo,康厝,Tangxia shisanxiang (Tangxia Thirteen village ritual allianc
 V159,Wucuo,吴厝,Tangxia shisanxiang (Tangxia Thirteen village ritual alliance),A037,塘下十三乡,Southern
 V160,Shanqianzi,山前仔,Tangxia shisanxiang (Tangxia Thirteen village ritual alliance),A037,塘下十三乡,Southern
 V161,Huiyang,惠洋,Huiyang bashê (Huiyang eight shê ritual alliance),A038,惠洋八社,Southern
-V162,Dongdai,东埭),Dongdai liujia (Dongjia six jia ritual alliance),A039,东埭六甲,Southern
+V162,Dongdai,东埭,Dongdai liujia (Dongjia six jia ritual alliance),A039,东埭六甲,Southern
 V163,Jinshan,金山,Jinshan sijia (Jinshan four jia ritual alliance),A040,金山四甲,Southern
 V164,Dongjia,东甲,Dongjia sijia (Dongjia four jia ritual alliance),A041,东甲四甲,Southern
 V165,Shangzou,上邹,Dongshan sishé (Dongshan four shê ritual alliance),A042,东山四社,Southern
@@ -172,7 +168,7 @@ V166,Xiazou,下邹,Dongshan sishé (Dongshan four shê ritual alliance),A042,东
 V167,Dongcuo,东厝,Dongshan sishé (Dongshan four shê ritual alliance),A042,东山四社,Southern
 V168,Zhengcuo,郑厝,Dongshan sishé (Dongshan four shê ritual alliance),A042,东山四社,Southern
 V169,Dounan,斗南,Dounan wushê (Dounan five shê ritual alliance),A043,斗南五社,Southern
-V170,Pingshan,屏山),Pingshan wushê (Pingshan five shê ritual alliance),A044,屏山五社,Southern
+V170,Pingshan,屏山,Pingshan wushê (Pingshan five shê ritual alliance),A044,屏山五社,Southern
 V171,Dongxiang,东乡,Houji qijing (Houji sevenfold ritual alliance),A045,后积七境,Southern
 V172,Houji,后积,Houji qijing (Houji sevenfold ritual alliance),A045,后积七境,Southern
 V173,Qicuo,歧厝,Houji qijing (Houji sevenfold ritual alliance),A045,后积七境,Southern
@@ -280,7 +276,7 @@ V274,Shanglin,上林,Lingui qijing (Lingui sevenfold ritual alliance),A057,林�
 V275,Xuke,徐柯,Lingui qijing (Lingui sevenfold ritual alliance),A057,林桂七境,Southern
 V276,Xiayu,下余,Lingui qijing (Lingui sevenfold ritual alliance),A057,林桂七境,Southern
 V277,Xintang,新塘,Lingyun shangshibaxiang (Lingyun eighteen village ritual alliance),A058,凌云上十八乡,Southern
-V278,Gouwei,village,Lingyun shangshibaxiang (Lingyun eighteen village ritual alliance),A058,凌云上十八乡,Southern
+V278,Gouwei,沟尾,Lingyun shangshibaxiang (Lingyun eighteen village ritual alliance),A058,凌云上十八乡,Southern
 V279,Qinwei,沁尾,Lingyun shangshibaxiang (Lingyun eighteen village ritual alliance),A058,凌云上十八乡,Southern
 V280,Longtou,龙头,Lingyun shangshibaxiang (Lingyun eighteen village ritual alliance),A058,凌云上十八乡,Southern
 V281,Xipu,西埔,Lingyun shangshibaxiang (Lingyun eighteen village ritual alliance),A058,凌云上十八乡,Southern
@@ -300,9 +296,9 @@ V294,Lingcuo,凌厝,Lingyun shangshibaxiang (Lingyun eighteen village ritual all
 V295,Xiagou,下沟,Lingyun shangshibaxiang (Lingyun eighteen village ritual alliance),A058,凌云上十八乡,Southern
 V296,Goujinyang,沟津洋,Lingyun shangshibaxiang (Lingyun eighteen village ritual alliance),A058,凌云上十八乡,Southern
 V297,Hengtang,横塘,Hengtang qijia (Hengtang seven jia ritual alliance),A059,横塘七甲,Southern
-V298,Yushang,屿上),Yushang ershê (Yushan two shê ritual alliance),A060,屿上二社,Northern
+V298,Yushang,屿上,Yushang ershê (Yushan two shê ritual alliance),A060,屿上二社,Northern
 V299,Huangtou,黄头,Huangtou ershê (Huangtou two shê ritual alliance),A061,黄头二社,Northern
-V300,Caizhai,蔡宅),Caizhai ershê (Caizhai two shê ritual alliance),A062,蔡宅二社,Northern
+V300,Caizhai,蔡宅,Caizhai ershê (Caizhai two shê ritual alliance),A062,蔡宅二社,Northern
 V301,Xialin,下林,Xialin ershê (Xialin two shê ritual alliance),A063,下林二社,Northern
 V302,Dongpo,东坡,Dongpo ershê (Dongpo two shê ritual alliance),A064,东坡二社,Northern
 V303,Xiahuang,下黄,Xiahuang qijing (Xiahuang sevenfold ritual alliance),A065,下黄七境,Northern
@@ -320,13 +316,12 @@ V314,Wudun,梧墩,Liuqiao sancun (Liuqiao three village ritual alliance),A066,�
 V315,Goutou,沟头,Goutou erja (Goutou two territory ritual alliance),A067,沟头二甲,Northern
 V316,Xiaotang,筱塘,Xiaotang ershê (Xiaotang two shê ritual alliance),A068,筱塘二社,Northern
 V317,Nanmen,南门,Nanmen qijing (Nanmen sevenfold ritual alliance),A069,南门七境,Northern
-V317d,Gouwei,沟尾,Nanmen qijing (Nanmen sevenfold ritual alliance),A069,南门七境,Northern
 V318,Beimo,北磨,Beimo wushê (Beimen five shê ritual alliance),A070,北磨五社,Northern
 V319,Daxi,大溪,Beimo wushê (Beimen five shê ritual alliance),A070,北磨五社,Northern
 V320,Xiamo,下磨,Beimo wushê (Beimen five shê ritual alliance),A070,北磨五社,Northern
 V321,Qianpu,前埔,Beimo wushê (Beimen five shê ritual alliance),A070,北磨五社,Northern
 V322,Xiaxie,下斜,Beimo wushê (Beimen five shê ritual alliance),A070,北磨五社,Northern
-V323,Anfu,安福),Anfu ershê (Anfu two shê ritual alliance),A071,安福二社,Northern
+V323,Anfu,安福,Anfu ershê (Anfu two shê ritual alliance),A071,安福二社,Northern
 V324,Longqiaojie,龙桥街,Longqiao qijing (Longqiao sevenfold ritual alliance),A072,龙桥七境,Northern
 V325,Dinglongqiao,顶龙桥,Longqiao qijing (Longqiao sevenfold ritual alliance),A072,龙桥七境,Northern
 V326,Xiagongli,下宫里,Longqiao qijing (Longqiao sevenfold ritual alliance),A072,龙桥七境,Northern
@@ -415,10 +410,10 @@ V408,Houting,后亭,Shangyu qijing (Shangyu sevenfold ritual alliance),A089,上�
 V409,Daicheng,岱埕,Shangyu qijing (Shangyu sevenfold ritual alliance),A089,上俞七境,Northern
 V410,Xihu,西湖,Xihu ercun (Xihu two village ritual alliance),A090,西湖二村,Northern
 V411,Duxia,度下,Xihu ercun (Xihu two village ritual alliance),A090,西湖二村,Northern
-V412,Jikui,集奎),Jilui sijia (Jikui four jia ritual alliance),A091,集奎四甲,Northern
+V412,Jikui,集奎,Jilui sijia (Jikui four jia ritual alliance),A091,集奎四甲,Northern
 V413,Hougong,后宫,Hougong erjia (Hougong two jia ritual alliance),A092,后宫二甲,Northern
 V414,Houxue,后学,Hougong erjia (Hougong two jia ritual alliance),A092,后宫二甲,Northern
-V415,Dongting,东亭),Dongting sijia (Dongting four jia ritual alliance),A093,东亭四甲,Northern
+V415,Dongting,东亭,Dongting sijia (Dongting four jia ritual alliance),A093,东亭四甲,Northern
 V416,Dongdun,东墩,Yangwei liucun (Yangwei six village ritual alliance),A094,洋尾六村,Northern
 V417,Lijiao,李角,Yangwei liucun (Yangwei six village ritual alliance),A094,洋尾六村,Northern
 V418,Xidun,西墩,Yangwei liucun (Yangwei six village ritual alliance),A094,洋尾六村,Northern
@@ -489,13 +484,13 @@ V482,Shanglindun,上林墩,Qibu qijing (Qibu sevenfold ritual alliance),A107,七
 V483,Jiaodong,郊东,Qibu qijing (Qibu sevenfold ritual alliance),A107,七步七境,Northern
 V484,Jiaoxi,郊西,Qibu qijing (Qibu sevenfold ritual alliance),A107,七步七境,Northern
 V485,Paohudun,袍笏墩,Qibu qijing (Qibu sevenfold ritual alliance),A107,七步七境,Northern
-V486,Wujiang,吴江),Wujiang sishê (Wujiang four shê alliance),A108,吴江四社,Northern
+V486,Wujiang,吴江,Wujiang sishê (Wujiang four shê alliance),A108,吴江四社,Northern
 V488,Shanglin,上林,Daili qijing (Daili sevenfold ritual alliance),A109,埭里七境,Northern
 V487,Xiadun,下墩,Daili qijing (Daili sevenfold ritual alliance),A109,埭里七境,Northern
 V489,Xikou,溪口,Daili qijing (Daili sevenfold ritual alliance),A109,埭里七境,Northern
 V490,Youqiaotou,游桥头,Daili qijing (Daili sevenfold ritual alliance),A109,埭里七境,Northern
-V491,Caidai,dongzhi,Daili qijing (Daili sevenfold ritual alliance),A109,埭里七境,Northern
-V492,Caidai,xizhi,Daili qijing (Daili sevenfold ritual alliance),A109,埭里七境,Northern
+V491,Caidaidongzhi,蔡埭东至,Daili qijing (Daili sevenfold ritual alliance),A109,埭里七境,Northern
+V492,Caidaixizhi,蔡埭西至,Daili qijing (Daili sevenfold ritual alliance),A109,埭里七境,Northern
 V493,Qianhuang,前黄,Daili qijing (Daili sevenfold ritual alliance),A109,埭里七境,Northern
 V494,Xiacheng,下澄,Daili qijing (Daili sevenfold ritual alliance),A109,埭里七境,Northern
 V495,Xiagao,下高,Daili qijing (Daili sevenfold ritual alliance),A109,埭里七境,Northern
@@ -551,7 +546,7 @@ V544,Xiyang,西洋,Wangyang sishê (Wangyang four shê ritual alliance),A119,碗
 V545,Houyang,后洋,Wangyang sishê (Wangyang four shê ritual alliance),A119,碗洋四社,Northern
 V546,Gelong,隔垄,Wangyang sishê (Wangyang four shê ritual alliance),A119,碗洋四社,Northern
 V547,Tiancuo,田厝,Wangyang sishê (Wangyang four shê ritual alliance),A119,碗洋四社,Northern
-V548,Houhuang,后黄),Houhuang ershê (Houhuang two shê ritual alliance),A120,后黄二社,Northern
+V548,Houhuang,后黄,Houhuang ershê (Houhuang two shê ritual alliance),A120,后黄二社,Northern
 V549,Loutou,漏头,Loutou sishê (Loutou four shê ritual alliance),A121,漏头四社,Northern
 V550,Fangzhuang,方庄,Loutou sishê (Loutou four shê ritual alliance),A121,漏头四社,Northern
 V551,Linwai,林外,Wutang qijing (Wutang sevenfold ritual alliance),A122,梧塘七境,Northern
@@ -595,16 +590,14 @@ V588,Qinxi,沁西,Anminqijing (Anmin sevenfold ritual alliance),A128,安民七�
 V589,Dongxu,东徐,Anminqijing (Anmin sevenfold ritual alliance),A128,安民七境,Northern
 V590,Nanpu,南埔,Anminqijing (Anmin sevenfold ritual alliance),A128,安民七境,Northern
 V591,Dongzhu,东珠,Anminqijing (Anmin sevenfold ritual alliance),A128,安民七境,Northern
-V591,Dongzhu,东珠,Anminqijing (Anmin sevenfold ritual alliance),A128,安民七境,Northern
 V592,Houlin,后林,Anminqijing (Anmin sevenfold ritual alliance),A128,安民七境,Northern
-V593,Xizhai,西宅,Anminqijing (Anmin sevenfold ritual alliance),A128,安民七境,Northern
 V593,Xizhai,西宅,Anminqijing (Anmin sevenfold ritual alliance),A128,安民七境,Northern
 V594,Xiashanglin,下上林,Anminqijing (Anmin sevenfold ritual alliance),A128,安民七境,Northern
 V595,Dingshanglin,顶上林,Anminqijing (Anmin sevenfold ritual alliance),A128,安民七境,Northern
 V596,Donglin,东林,Anminqijing (Anmin sevenfold ritual alliance),A128,安民七境,Northern
 V597,Yupo,喻坡,Yupo ershê (Yupo two shê ritual alliance),A129,喻坡二社,Northern
 V598,Tangxi,塘西,Tangxi sanjia (Tangxi three jia ritual alliance),A130,塘西三甲,Northern
-V599,Zhuopo,卓坡),Zhuopo sanjia (Zhuopo three jia ritual alliance),A131,卓坡三甲,Northern
+V599,Zhuopo,卓坡,Zhuopo sanjia (Zhuopo three jia ritual alliance),A131,卓坡三甲,Northern
 V600,Louxia,楼下,Hanjiang ershisi pu (Hanjiang twenty-four wards ritual alliance),A132,涵江二十四铺,Northern
 V601,Baowei,保尾,Hanjiang ershisi pu (Hanjiang twenty-four wards ritual alliance),A132,涵江二十四铺,Northern
 V602,Tangbei,塘北,Hanjiang ershisi pu (Hanjiang twenty-four wards ritual alliance),A132,涵江二十四铺,Northern
@@ -634,7 +627,7 @@ V625,Sucuo,苏厝,Jindun sicun (Jindun four village ritual alliance),A137,金墩
 V626,Zhongdun,中墩,Jindun sicun (Jindun four village ritual alliance),A137,金墩四村,Northern
 V627,Jindun,金墩,Jindun sicun (Jindun four village ritual alliance),A137,金墩四村,Northern
 V628,Yangzhong,洋中,Jindun sicun (Jindun four village ritual alliance),A137,金墩四村,Northern
-V629,Tiezao,铁灶),Tiezao liujia (Tiezao six jia ritual alliance),A138,铁灶六甲,Northern
+V629,Tiezao,铁灶,Tiezao liujia (Tiezao six jia ritual alliance),A138,铁灶六甲,Northern
 V630,Wencuo,温厝,Wencuo sanshê (Wencuo three shê ritual alliance),A139,温厝三社,Northern
 V631,Huangdating,黄大庭,Wencuo sanshê (Wencuo three shê ritual alliance),A139,温厝三社,Northern
 V632,Liuan,刘安,Wencuo sanshê (Wencuo three shê ritual alliance),A139,温厝三社,Northern
@@ -664,7 +657,7 @@ V655,Bancheng,半埕,Gaomei wucun (Gaomei five village ritual alliance),A145,高
 V656,Shangfang,上方,Gaomei wucun (Gaomei five village ritual alliance),A145,高美五村,Northern
 V657,Shanggang,上港,Gaomei wucun (Gaomei five village ritual alliance),A145,高美五村,Northern
 V658,Meiwei,美尾,Gaomei wucun (Gaomei five village ritual alliance),A145,高美五村,Northern
-V659,Xinpu,新浦),Xinpu sishê (Xinpu four shê ritual alliance),A146,新埔四社,Northern
+V659,Xinpu,新浦,Xinpu sishê (Xinpu four shê ritual alliance),A146,新埔四社,Northern
 V660,Xiaoyi,孝义,Jiangkou qijing (Jiangkou sevenfold ritual,A147,alliance),Jiuliyang
 V661,Xiahoudu,下后度,Jiangkou qijing (Jiangkou sevenfold ritual,A147,alliance),Jiuliyang
 V662,Liujing,刘井,Jiangkou qijing (Jiangkou sevenfold ritual,A147,alliance),Jiuliyang
@@ -685,7 +678,7 @@ V676,Xindian,新店,Goushang qijing (Goushang sevenfold ritual alliance),A149,�
 V677,Xindun,新墩,Goushang qijing (Goushang sevenfold ritual alliance),A149,沟上七境,Jiuliyang
 V678,Houchengpu,后埕埔,Goushang qijing (Goushang sevenfold ritual alliance),A149,沟上七境,Jiuliyang
 V679,Qianmian,前面,Goushang qijing (Goushang sevenfold ritual alliance),A149,沟上七境,Jiuliyang
-V680,Ding,dun,Goushang qijing (Goushang sevenfold ritual alliance),A149,沟上七境,Jiuliyang
+V680,Dingdun,顶墩,Goushang qijing (Goushang sevenfold ritual alliance),A149,沟上七境,Jiuliyang
 V681,Xiadun,下墩,Goushang qijing (Goushang sevenfold ritual alliance),A149,沟上七境,Jiuliyang
 V682,Wudun,吴墩,Goushang qijing (Goushang sevenfold ritual alliance),A149,沟上七境,Jiuliyang
 V683,Youdun,游墩,Goushang qijing (Goushang sevenfold ritual alliance),A149,沟上七境,Jiuliyang
