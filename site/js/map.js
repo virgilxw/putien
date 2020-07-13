@@ -1,3 +1,15 @@
+// Popup
+function village_popup(feature, layer) {
+	var UID = feature.properties.UID_V
+
+	$.getJSON("./json/raw_data.json", function (raw_data) {
+		let obj = raw_data.find(o => o.UID === UID);
+		console.log(obj);
+
+		layer.bindPopup("<h3>" + obj.Name + "  " + obj.Name_zh + "</h3>" + "<ul class='popup'> <li> <b>Book ID:</b> " + obj.UID + "</li><li> <b>Village Settlement:</b> " + obj.Village_Settlement + "</li><li> <b>Surname Groups:</b> " + obj.Surname_Groups + "</li></ul>");
+	});
+}
+
 $(document).ready(function () {
 	var mainMap = L.map('MainMap').setView([25.45, 119.12], 12);
 	L.control.scale().addTo(mainMap);
@@ -43,8 +55,10 @@ $(document).ready(function () {
 				opacity: 1,
 				fillOpacity: 1
 			})
-		}
-	})
+		},
+		onEachFeature: village_popup
+	}).addTo(mainMap)
+
 	var Village_Points_All = new L.GeoJSON.AJAX("./geojson/Village_Points_All.geojson", {
 		pointToLayer: function (feature, latlng) {
 			return L.circleMarker(latlng, {
@@ -64,7 +78,6 @@ $(document).ready(function () {
 			fillOpacity: 0.3
 		}
 	})
-
 
 	// Shorelines
 	var Ancient_Shoreline = new L.GeoJSON.AJAX("./geojson/Ancient_Shoreline_Inverted.geojson", {
