@@ -31,6 +31,42 @@ $(document).ready(function () {
 		}
 	];
 
+	// Basemap
+
+	var Village_Points_Studied = new L.GeoJSON.AJAX("./geojson/Village_Points_Studied.geojson", {
+		pointToLayer: function (feature, latlng) {
+			return L.circleMarker(latlng, {
+				radius: 5,
+				fillColor: "#fbb4ae",
+				color: "rgba(0, 0, 0, 0.7)",
+				weight: 1,
+				opacity: 1,
+				fillOpacity: 1
+			})
+		}
+	})
+	var Village_Points_All = new L.GeoJSON.AJAX("./geojson/Village_Points_All.geojson", {
+		pointToLayer: function (feature, latlng) {
+			return L.circleMarker(latlng, {
+				radius: 5,
+				fillColor: "#ccebc5",
+				color: "rgba(0, 0, 0, 0.2)",
+				weight: 1,
+				opacity: 1,
+				fillOpacity: 1
+			})
+		}
+	})
+	var Alliance_Polygons = new L.GeoJSON.AJAX("./geojson/Alliance_Polygon_Studied.geojson", {
+		style: {
+			color: "#decbe4",
+			opacity: 1,
+			fillOpacity: 0.3
+		}
+	})
+
+
+	// Shorelines
 	var Ancient_Shoreline = new L.GeoJSON.AJAX("./geojson/Ancient_Shoreline_Inverted.geojson", {
 		style: {
 			fillColor: "#9ecae1",
@@ -84,6 +120,14 @@ $(document).ready(function () {
 
 	var overlays = [
 		{
+			groupName: "Alliances and Villages",
+			expanded: true,
+			layers: {
+				"Villages Which Were Studied": Village_Points_Studied,
+				"All Cataloged Villages": Village_Points_All,
+				"Ritual Alliances": Alliance_Polygons
+			}
+		}, {
 			groupName: "Shorelines",
 			expanded: true,
 			layers: {
