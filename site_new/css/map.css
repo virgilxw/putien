@@ -1,0 +1,34 @@
+body {
+    overflow: hidden;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: stretch;
+    min-height: 100vh;
+    justify-content: space-between;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    overflow: hidden;
+}
+
+#header {
+    height: 70px;
+    background-color: #659DBD;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header * {
+    margin: 0 15px;
+}
+
+.fa {
+    line-height: 40px;
+}
+
+#mapcont {
+    display: flex;
+    flex-grow: 1;
+    background-color: blue;
+}
