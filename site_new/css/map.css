@@ -10,6 +10,10 @@ body {
     overflow: hidden;
 }
 
+h4 {
+    margin: 12px 0 6px 0;
+}
+
 #header {
     height: 70px;
     background-color: #659DBD;

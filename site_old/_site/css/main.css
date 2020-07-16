@@ -1,0 +1,279 @@
+.site-container {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+
+}
+
+section {
+	margin: 100px 0;
+	max-width: 1300px;
+	width: 50%;
+	font-family: 'Roboto', sans-serif;
+	margin: 35vh 0 10vh 0;
+	background-color: rgba(112, 193, 179, 0.9);
+	padding: 25px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.site-container .title {
+	background-color: #247BA0;
+	max-width: 30vw;
+	margin-bottom: 100vh;
+	margin-top: 30vh;
+}
+
+.site-container div {
+	width: 100%
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 15px;
+	max-width: 700px;
+}
+
+/* unvisited link */
+a:link {
+	color: #c4cba5;
+	text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+	color: #c4cba5;
+	text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+	color: #c4cba5;
+	text-decoration: underline;
+}
+
+/* selected link */
+a:active {
+	color: #c4cba5;
+	text-decoration: underline;
+}
+
+p {
+	line-height: 1.5;
+}
+
+h5 {
+	font-weight: normal;
+	line-height: 200%;
+}
+
+h2 {
+	font-size: 1.5em;
+	margin: 0.67em 15px 0.67em 15px;
+	border-bottom: 2px ridge #5c5c5c;
+}
+
+blockquote {
+	margin: 1em auto;
+	max-width: 550px;
+	padding: 1em;
+	border-left: 5px solid #999;
+}
+
+blockquote:before {
+	display: none;
+}
+
+blockquote:not(:first-of-type) {
+	margin-top: .5em;
+}
+
+blockquote p {
+	color: #555;
+	font-size: 12pt;
+	line-height: 1.4;
+	font-family: 'PT Serif', Cambria, 'Hoefler Text', Utopia, 'Liberation Serif', 'Nimbus Roman No9 L Regular', Times, 'Times New Roman', serif;
+}
+
+blockquote footer {
+	margin-top: .5em;
+	padding: 0;
+	color: #777;
+	font-size: 12pt;
+	text-align: left;
+	font-style: italic;
+}
+
+blockquote footer:before {
+	content: '— ';
+}
+
+blockquote:nth-of-type(even) {
+	text-align: right;
+	border-left: none;
+	border-right: 5px solid #999;
+}
+
+blockquote:nth-of-type(even) footer {
+	text-align: right;
+}
+
+blockquote:nth-of-type(even) footer:before {
+	content: '';
+}
+
+blockquote:nth-of-type(even) footer:after {
+	content: ' —';
+}
+
+@element 'blockquote'and (min-width: 300px) {
+	blockquote {
+		padding: 1em 20% 1em 1em;
+	}
+
+	blockquote p {
+		font-size: 14pt;
+	}
+
+	blockquote:nth-of-type(even) {
+		padding: 1em 1em 1em 20%;
+	}
+}
+
+.credits {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	font-size: 0.8em;
+	margin-top: 30px;
+	width: 90%;
+	max-width: 800px;
+	padding-top: 7px;
+	border-top: 2px solid rgba(70, 70, 70, 0.5);
+}
+
+#landing {
+	width: 100%;
+	max-height: 60vw;
+	margin-top: 77px;
+	position: absolute;
+	z-index: -1;
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+}
+
+#landing #row1,
+#landing #row3 {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	border-right: 5px solid rgba(112, 193, 179, 0.7);
+	border-bottom: 5px solid rgba(112, 193, 179, 0.7);
+}
+
+#landing #row2 {
+	flex: 3;
+}
+
+#landing #row3 {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	border-left: 5px solid rgba(112, 193, 179, 0.7);
+	border-bottom: 5px solid rgba(112, 193, 179, 0.7);
+}
+
+#landing div {
+	overflow: hidden;
+}
+
+
+#landing div img {
+	display: block;
+	max-width: 20vw;
+	max-height: 20vw;
+	width: auto;
+	height: auto;
+}
+
+#inset1 {
+	position: absolute;
+	right: 0;
+	width: 20vw;
+	height: 40vh;
+	background-color: white;
+	transform: translate(-40px, -50vh);
+	border: 3px solid rgba(112, 193, 179, 0.7);
+	display: flex;
+	flex-direction: column;
+}
+
+#inset1Map {
+	height: calc(100% - 20px);
+}
+
+.subtitle {
+	font-size: 0.8em;
+	vertical-align: bottom;
+	margin: auto;
+}
+
+#s2,
+#s3 {
+	margin-bottom: 60vh;
+}
+
+.shoreline {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	left: 0;
+	transform: translate(40px, 400px);
+}
+
+.shoreline legend {
+	background-color: white;
+	text-align: center;
+	padding: 2px 5px;
+}
+
+.swatch {
+	width: 10px;
+	height: 10px;
+	margin-left: 10px;
+	border: 1px solid black;
+	display: inline-block;
+
+}
+
+#swatch1 {
+	background-color: #fef0d9;
+}
+
+#swatch2 {
+	background-color: #fdcc8a;
+}
+
+#swatch3 {
+	background-color: #fc8d59;
+}
+
+#swatch4 {
+	background-color: #e34a33;
+}
+
+#swatch5 {
+	background-color: #b30000;
+}
+
+.leaflet-control-scale {
+	left: 50%;
+	bottom: 50%;
+}
