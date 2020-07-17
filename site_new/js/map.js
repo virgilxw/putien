@@ -1,5 +1,19 @@
 // select layer by uid
 function highlightlayerUID(UID) {
+
+    var match = false
+
+    Object.keys(highlight_buffer).forEach(function (key) {
+        if (key == UID) {
+            match = true
+            highlight_buffer[UID] = highlight_buffer[UID] + 1
+        }
+    })
+
+    if (match == false) {
+        highlight_buffer[UID] = 1
+    }
+
     var match = Village_Points_Studied.eachLayer(function (layer) {
         if (layer.feature.properties.UID_V == UID) {
             layer.setStyle({
@@ -16,18 +30,32 @@ function highlightlayerUID(UID) {
 
 // select layer by uid
 function clearlayerUID(UID) {
-    var match = Village_Points_Studied.eachLayer(function (layer) {
-        if (layer.feature.properties.UID_V == UID) {
-            layer.setStyle({
-                radius: 3,
-                fillColor: "rgba(155, 255, 213, 0.3)",
-                color: "rgba(0, 0, 0, 0.3)",
-                weight: 1,
-                opacity: 1,
-                fillOpacity: 1
-            })
+
+    Object.keys(highlight_buffer).forEach(function (key) {
+        if (key == UID) {
+            match = true
+            highlight_buffer[UID] = highlight_buffer[UID] - 1
+
+            if (highlight_buffer[UID] < 0) {
+                highlight_buffer[UID] = 0
+            }
         }
     })
+
+    if (highlight_buffer[UID] == 0) {
+        var match = Village_Points_Studied.eachLayer(function (layer) {
+            if (layer.feature.properties.UID_V == UID) {
+                layer.setStyle({
+                    radius: 3,
+                    fillColor: "rgba(155, 255, 213, 0.3)",
+                    color: "rgba(0, 0, 0, 0.3)",
+                    weight: 1,
+                    opacity: 1,
+                    fillOpacity: 1
+                })
+            }
+        })
+    }
 }
 
 var mainmap = L.map('mapcont').setView([25.40, 119.1], 11);
@@ -196,6 +224,7 @@ $('.select2-search').select2({
     }
 });
 
+highlight_buffer = {}
 
 $(document).ready(function () {
 
@@ -227,6 +256,8 @@ $(document).ready(function () {
             opacity: 1,
             fillOpacity: 1
         })
-        $('.select2-search').val(null).trigger('change');
+        $('.select2-search').val(null).trigger('change', function () {
+            highlight_buffer = {}
+        });
     })
 })
