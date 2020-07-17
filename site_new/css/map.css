@@ -38,5 +38,9 @@ h4 {
 #mapcont {
     display: flex;
     flex-grow: 1;
-    background-color: blue;
+    background-color: #ffedc5;
+}
+
+.select2-dropdown {
+    z-index: 5000;
 }

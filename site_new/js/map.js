@@ -187,6 +187,16 @@ Village_Points_Studied.on("click", function (event) {
     })
 })
 
+$('.select2-search').select2({
+    placeholder: "enter search term",
+    ajax: {
+        url: './json/searchdata.json',
+        dataType: 'json'
+        // Additional AJAX parameters go here; see the end of this chapter for the full code of this example
+    }
+});
+
+
 $(document).ready(function () {
 
     $("#villages_studied").change(function () {
@@ -197,8 +207,26 @@ $(document).ready(function () {
         }
     });
 
-    $(".js-example-placeholder-multiple").select2({
-        placeholder: "enter search term"
-    });
+    $(".select2-search").on("select2:select",
+        function (e) {
+            highlightlayerUID(e.params.data.id)
+        })
 
+    $(".select2-search").on("select2:unselect",
+        function (e) {
+            clearlayerUID(e.params.data.id)
+        })
+
+    $("#clear").on("click", function () {
+
+        Village_Points_Studied.setStyle({
+            radius: 3,
+            fillColor: "rgba(155, 255, 213, 0.3)",
+            color: "rgba(0, 0, 0, 0.3)",
+            weight: 1,
+            opacity: 1,
+            fillOpacity: 1
+        })
+        $('.select2-search').val(null).trigger('change');
+    })
 })
