@@ -26,6 +26,10 @@
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+    <!-- select2 -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
@@ -43,6 +47,7 @@
             <ul role="tablist">
                 <!-- top aligned tabs -->
                 <li><a href="#home" role="tab"><i class="fa fa-info-circle"></i></a></li>
+                <li><a href="#lookup" role="tab"><i class="fa fa-search"></i></a></li>
             </ul>
 
             <ul role="tablist">
@@ -67,41 +72,41 @@
                 <span>
                     <h4>Village Settlement:</h4>
                 </span>
-                <span id="village_settlement">Village_Settlement:</span>
+                <span id="village_settlement">Select a village on the map</span>
 
                 <span>
                     <h4>Surname Groups:</h4>
                 </span>
-                <span id="Surname_Groups">Surname_Groups:</span>
+                <span id="Surname_Groups">Select a village on the map</span>
 
                 <span>
                     <h4>Village Temples:</h4>
                 </span>
-                <span id="Village_Temples">Village_Temples</span>
+                <span id="Village_Temples">Select a village on the map</span>
 
                 <span>
                     <h4>Yuanxiao Processions:</h4>
                 </span>
-                <span id="Rituals_Yuanxiao_Processions">Rituals_Yuanxiao_Processions</span>
+                <span id="Rituals_Yuanxiao_Processions">Select a village on the map</span>
 
                 <span>
                     <h4>Birthday Celebration of gods:</h4>
                 </span>
-                <span id="Rituals_Birthday_Celebration_of_gods">Rituals_Birthday_Celebration_of_gods</span>
+                <span id="Rituals_Birthday_Celebration_of_gods">Select a village on the map</span>
 
                 <span>
                     <h4>Ritual Groups (if present):</h4>
                 </span>
-                <span id="Rituals_Ritual_Groups"></span>
+                <span id="Rituals_Ritual_Groups">Select a village on the map</span>
 
             </div>
 
-            <div class="leaflet-sidebar-pane" id="profile">
-                <h1 class="leaflet-sidebar-header">Profile<div class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></div>
+            <div class="leaflet-sidebar-pane" id="lookup">
+                <h1 class="leaflet-sidebar-header">Lookup<div class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></div>
                 </h1>
+
+                <select class="js-example-placeholder-multiple js-states form-control" style="width: 100%" multiple="multiple"></select>
             </div>
-
-
         </div>
     </div>
 
