@@ -2,6 +2,8 @@
 function highlightlayerUID(UID) {
 
     var match = false
+    console.log(UID)
+
 
     Object.keys(highlight_buffer).forEach(function (key) {
         if (key == UID) {
@@ -247,9 +249,44 @@ $(document).ready(function () {
                 url: './json/village_search.json',
                 type: 'GET',
                 dataType: 'json',
-                data: {
-                    country: query,
+                data: {},
+                error: function () {
+                    callback();
                 },
+                success: function (res) {
+                    callback(res);
+                }
+            });
+        }
+    });
+
+
+    var $select = $('#select-gods').selectize({
+        maxItems: null,
+        valueField: 'id',
+        labelField: 'title',
+        searchField: 'title',
+        options: [],
+        create: false,
+        onItemAdd: function (val) {
+            array = val.split(",")
+            for (i = 0, len = array.length; i < len; i++) {
+                highlightlayerUID(array[i])
+                console.log(array[i])
+            }
+        },
+        onItemRemove: function (val) {
+            array = val.split(",")
+            for (i = 0, len = array.length; i < len; i++) {
+                clearlayerUID(array[i])
+            }
+        },
+        load: function (query, callback) {
+            if (!query.length) return callback();
+            $.ajax({
+                url: './json/primary_god_search.json',
+                type: 'GET',
+                dataType: 'json',
                 error: function () {
                     callback();
                 },

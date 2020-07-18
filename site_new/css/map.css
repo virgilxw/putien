@@ -44,3 +44,7 @@ h4 {
 .select2-dropdown {
     z-index: 5000;
 }
+
+.control-group {
+    margin: 15 0px;
+}
