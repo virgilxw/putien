@@ -201,7 +201,6 @@ Village_Points_Studied.on("click", function (event) {
 
     $.getJSON("./json/raw_data.json", function (raw_data) {
         let obj = raw_data.find(o => o.UID === event.layer.feature.properties.UID_V);
-        console.log(obj);
 
         namestring = obj.Name + " " + obj.Name_zh
 
@@ -215,15 +214,6 @@ Village_Points_Studied.on("click", function (event) {
     })
 })
 
-$('.select2-search').select2({
-    placeholder: "enter search term",
-    ajax: {
-        url: './json/searchdata.json',
-        dataType: 'json'
-        // Additional AJAX parameters go here; see the end of this chapter for the full code of this example
-    }
-});
-
 highlight_buffer = {}
 
 $(document).ready(function () {
@@ -236,28 +226,37 @@ $(document).ready(function () {
         }
     });
 
-    $(".select2-search").on("select2:select",
-        function (e) {
-            highlightlayerUID(e.params.data.id)
-        })
 
-    $(".select2-search").on("select2:unselect",
-        function (e) {
+
+    var $select = $('#select-village').selectize({
+        maxItems: null,
+        valueField: 'id',
+        labelField: 'title',
+        searchField: 'title',
+        options: [],
+        create: false,
+        onItemAdd: function (val) {
+            highlightlayerUID(val)
+        },
+        onItemRemove: function (val) {
             clearlayerUID(e.params.data.id)
-        })
-
-    $("#clear").on("click", function () {
-
-        Village_Points_Studied.setStyle({
-            radius: 3,
-            fillColor: "rgba(155, 255, 213, 0.3)",
-            color: "rgba(0, 0, 0, 0.3)",
-            weight: 1,
-            opacity: 1,
-            fillOpacity: 1
-        })
-        $('.select2-search').val(null).trigger('change', function () {
-            highlight_buffer = {}
-        });
-    })
+        },
+        load: function (query, callback) {
+            if (!query.length) return callback();
+            $.ajax({
+                url: './json/village_search.json',
+                type: 'GET',
+                dataType: 'json',
+                data: {
+                    country: query,
+                },
+                error: function () {
+                    callback();
+                },
+                success: function (res) {
+                    callback(res);
+                }
+            });
+        }
+    });
 })

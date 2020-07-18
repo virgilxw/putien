@@ -26,9 +26,9 @@
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <!-- select2 -->
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+    <!-- selectize -->
+    <link rel="stylesheet" href="./css/selectize.default.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.js" integrity="sha512-WZ3VAWLJDOQRwRtR4nkn7g7Fb+TSDtdpdQdJgM5tSn82RKD/O84EqMPKqvF+3ypk5+IErlevC4WpbdbRG65uIg==" crossorigin="anonymous"></script>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
@@ -105,9 +105,12 @@
                 <h1 class="leaflet-sidebar-header">Lookup<div class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></div>
                 </h1>
 
-                <select class="select2-search form-control" style="width: 100%" multiple="multiple"></select>
+                <div class="control-group">
+                    <label for="select_village">Select Village(s):</label>
+                    <select id="select-village" placeholder="Pick a tool..."></select>
+                </div>
 
-                <button> clear selection</button>
+                <button id="clear"> clear selection</button>
             </div>
         </div>
     </div>
