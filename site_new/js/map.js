@@ -1,10 +1,17 @@
+var default_style = {
+    radius: 3,
+    fillColor: "rgba(155, 255, 213, 0.3)",
+    color: "rgba(0, 0, 0, 0.3)",
+    weight: 1,
+    opacity: 1,
+    fillOpacity: 1
+}
+
 // select layer by uid
 function highlightlayerUID(UID) {
 
     var match = false
     console.log(UID)
-
-
     Object.keys(highlight_buffer).forEach(function (key) {
         if (key == UID) {
             match = true
@@ -22,7 +29,7 @@ function highlightlayerUID(UID) {
                 radius: 7,
                 fillColor: "#fff500",
                 color: "#ff1400",
-                weight: 3,
+                weight: 1,
                 opacity: 1,
                 fillOpacity: 1
             })
@@ -30,9 +37,7 @@ function highlightlayerUID(UID) {
     })
 }
 
-// select layer by uid
 function clearlayerUID(UID) {
-
     Object.keys(highlight_buffer).forEach(function (key) {
         if (key == UID) {
             match = true
@@ -47,17 +52,18 @@ function clearlayerUID(UID) {
     if (highlight_buffer[UID] == 0) {
         var match = Village_Points_Studied.eachLayer(function (layer) {
             if (layer.feature.properties.UID_V == UID) {
-                layer.setStyle({
-                    radius: 3,
-                    fillColor: "rgba(155, 255, 213, 0.3)",
-                    color: "rgba(0, 0, 0, 0.3)",
-                    weight: 1,
-                    opacity: 1,
-                    fillOpacity: 1
-                })
+                layer.setStyle(default_style)
             }
         })
     }
+}
+
+function clearallUID() {
+    for (const k in highlight_buffer) {
+        clearlayerUID(k)
+    }
+
+    highlight_buffer = {}
 }
 
 var mainmap = L.map('mapcont').setView([25.40, 119.1], 11);
@@ -185,18 +191,14 @@ var sidebar = L.control.sidebar({
 
 var Village_Points_Studied = new L.GeoJSON.AJAX("./geojson/Village_Points_Studied.geojson", {
     pointToLayer: function (feature, latlng) {
-        return L.circleMarker(latlng, {
-            radius: 3,
-            fillColor: "rgba(155, 255, 213, 0.3)",
-            color: "rgba(0, 0, 0, 0.3)",
-            weight: 1,
-            opacity: 1,
-            fillOpacity: 1
-        })
+        return L.circleMarker(latlng, default_style)
     }
 }).addTo(mainmap)
 
 Village_Points_Studied.on("click", function (event) {
+
+    clearallUID();
+    highlightlayerUID(event.layer.feature.properties.UID_V);
 
     sidebar.open('home');
     $("#info_uid").text(event.layer.feature.properties.UID_V)
@@ -214,7 +216,16 @@ Village_Points_Studied.on("click", function (event) {
         $("#Rituals_Birthday_Celebration_of_gods").text(obj.Rituals_Birthday_Celebration_of_gods)
         $("#Rituals_Ritual_Groups").text(obj.Rituals_Ritual_Groups)
     })
+}).on("mouseover", function (event) {
+    event.layer.setStyle({
+        weight: 3
+    });
+}).on("mouseout", function (event) {
+    event.layer.setStyle({
+        weight: 1
+    })
 })
+
 
 highlight_buffer = {}
 
@@ -296,4 +307,9 @@ $(document).ready(function () {
             });
         }
     });
+
+    // clear button
+    $("#clear").click(function () {
+        clearallUID();
+    })
 })
