@@ -48,3 +48,40 @@ h4 {
 .control-group {
     margin: 15 0px;
 }
+
+/* Calendar */
+div.calendar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 5px;
+}
+
+div.month {
+    text-align: right;
+    padding: 5px 10px;
+    background-color: #d53e4f;
+    color: white;
+}
+
+ul.week {
+    display: flex;
+    align-items: stretch;
+    /* Default */
+    justify-content: space-between;
+    width: 100%;
+    padding: 15px;
+    margin: 0;
+    padding: 2px 0;
+}
+
+.week li {
+    display: block;
+    flex-grow: 1;
+    flex-basis: 0;
+    list-style-type: none;
+    text-align: center;
+}

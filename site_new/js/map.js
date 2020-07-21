@@ -1,3 +1,4 @@
+// Default style for (studied) village points
 var default_style = {
     radius: 3,
     fillColor: "rgba(155, 255, 213, 0.3)",
@@ -7,11 +8,10 @@ var default_style = {
     fillOpacity: 1
 }
 
-// select layer by uid
 function highlightlayerUID(UID) {
+    // Helper function to highlight village points by UID
 
     var match = false
-    console.log(UID)
     Object.keys(highlight_buffer).forEach(function (key) {
         if (key == UID) {
             match = true
@@ -38,6 +38,8 @@ function highlightlayerUID(UID) {
 }
 
 function clearlayerUID(UID) {
+    // Helper function to clear highlight of a specific point
+
     Object.keys(highlight_buffer).forEach(function (key) {
         if (key == UID) {
             match = true
@@ -59,6 +61,7 @@ function clearlayerUID(UID) {
 }
 
 function clearallUID() {
+    // Helper function to clear all highlights
     for (const k in highlight_buffer) {
         clearlayerUID(k)
     }
@@ -181,7 +184,6 @@ var control = L.Control.styledLayerControl(baseMaps, overlays, options);
 mainmap.addControl(control);
 
 // Sidebar configuration
-
 var sidebar = L.control.sidebar({
     autopan: true, // whether to maintain the centered map point when opening the sidebar
     closeButton: true, // whether t add a close button to the panes
@@ -231,85 +233,86 @@ highlight_buffer = {}
 
 $(document).ready(function () {
 
-    $("#villages_studied").change(function () {
-        if (this.checked) {
-            mainmap.addLayer(Village_Points_Studied)
-        } else {
-            mainmap.removeLayer(Village_Points_Studied)
-        }
-    });
-
-
-
-    var $select = $('#select-village').selectize({
-        maxItems: null,
-        valueField: 'id',
-        labelField: 'title',
-        searchField: 'title',
-        options: [],
-        create: false,
-        onItemAdd: function (val) {
-            highlightlayerUID(val)
-        },
-        onItemRemove: function (val) {
-            clearlayerUID(e.params.data.id)
-        },
-        load: function (query, callback) {
-            if (!query.length) return callback();
-            $.ajax({
-                url: './json/village_search.json',
-                type: 'GET',
-                dataType: 'json',
-                data: {},
-                error: function () {
-                    callback();
-                },
-                success: function (res) {
-                    callback(res);
+            $("#villages_studied").change(function () {
+                if (this.checked) {
+                    mainmap.addLayer(Village_Points_Studied)
+                } else {
+                    mainmap.removeLayer(Village_Points_Studied)
                 }
             });
-        }
-    });
 
 
-    var $select = $('#select-gods').selectize({
-        maxItems: null,
-        valueField: 'id',
-        labelField: 'title',
-        searchField: 'title',
-        options: [],
-        create: false,
-        onItemAdd: function (val) {
-            array = val.split(",")
-            for (i = 0, len = array.length; i < len; i++) {
-                highlightlayerUID(array[i])
-                console.log(array[i])
-            }
-        },
-        onItemRemove: function (val) {
-            array = val.split(",")
-            for (i = 0, len = array.length; i < len; i++) {
-                clearlayerUID(array[i])
-            }
-        },
-        load: function (query, callback) {
-            if (!query.length) return callback();
-            $.ajax({
-                url: './json/primary_god_search.json',
-                type: 'GET',
-                dataType: 'json',
-                error: function () {
-                    callback();
+
+            var $select = $('#select-village').selectize({
+                maxItems: null,
+                valueField: 'id',
+                labelField: 'title',
+                searchField: 'title',
+                options: [],
+                create: false,
+                onItemAdd: function (val) {
+                    highlightlayerUID(val)
                 },
-                success: function (res) {
-                    callback(res);
+                onItemRemove: function (val) {
+                    clearlayerUID(e.params.data.id)
+                },
+                load: function (query, callback) {
+                    if (!query.length) return callback();
+                    $.ajax({
+                        url: './json/village_search.json',
+                        type: 'GET',
+                        dataType: 'json',
+                        data: {},
+                        error: function () {
+                            callback();
+                        },
+                        success: function (res) {
+                            callback(res);
+                        }
+                    });
                 }
             });
-        }
-    });
 
-    // clear button
-    $("#clear").click(function () {
-        clearallUID();
-    })
-})
+
+            var $select = $('#select-gods').selectize({
+                maxItems: null,
+                valueField: 'id',
+                labelField: 'title',
+                searchField: 'title',
+                options: [],
+                create: false,
+                onItemAdd: function (val) {
+                    array = val.split(",")
+                    for (i = 0, len = array.length; i < len; i++) {
+                        highlightlayerUID(array[i])
+                        console.log(array[i])
+                    }
+                },
+                onItemRemove: function (val) {
+                    array = val.split(",")
+                    for (i = 0, len = array.length; i < len; i++) {
+                        clearlayerUID(array[i])
+                    }
+                },
+                load: function (query, callback) {
+                    if (!query.length) return callback();
+                    $.ajax({
+                        url: './json/primary_god_search.json',
+                        type: 'GET',
+                        dataType: 'json',
+                        error: function () {
+                            callback();
+                        },
+                        success: function (res) {
+                            callback(res);
+                        }
+                    });
+                }
+            });
+
+            // clear button
+            $("#clear").click(function () {
+                clearallUID();
+            })
+
+            // Inject months

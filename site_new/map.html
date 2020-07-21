@@ -48,6 +48,7 @@
                 <!-- top aligned tabs -->
                 <li><a href="#home" role="tab"><i class="fa fa-info-circle"></i></a></li>
                 <li><a href="#lookup" role="tab"><i class="fa fa-search"></i></a></li>
+                <li><a href="#processions" role="tab"><i class="fa fa-users"></i></a></li>
             </ul>
 
             <ul role="tablist">
@@ -115,7 +116,613 @@
                     <select id="select-gods" placeholder="Pick a god"></select>
                 </div>
 
-                <button id="clear"> clear selection</button>
+                <button id="clear">Clear selection</button>
+            </div>
+            <div class="leaflet-sidebar-pane" id="processions">
+
+                <h1 class="leaflet-sidebar-header">Yuanxiao Processions<div class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></div>
+                </h1>
+                <p>Dates are in the format of the Chinese Lunar Calendar.</p>
+
+                <div class="procession-calendar" id="m1">
+                    <div class="month">
+                        正月 First Month
+                    </div>
+                    <ul class="week">
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                    </ul>
+                    <ul class="week">
+                        <li>8</li>
+                        <li>9</li>
+                        <li>10</li>
+                        <li>11</li>
+                        <li>12</li>
+                        <li>13</li>
+                        <li>14</li>
+                    </ul>
+                    <ul class="week">
+                        <li>15</li>
+                        <li>16</li>
+                        <li>17</li>
+                        <li>18</li>
+                        <li>19</li>
+                        <li>20</li>
+                        <li>21</li>
+                    </ul>
+                    <ul class="week">
+                        <li>22</li>
+                        <li>23</li>
+                        <li>24</li>
+                        <li>25</li>
+                        <li>26</li>
+                        <li>27</li>
+                        <li>28</li>
+                    </ul>
+                    <ul class="week">
+                        <li>29</li>
+                        <li>30</li>
+                        <li>31</li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="procession-calendar" id="m2">
+                    <div class="month">
+                        二月 Second Month</div>
+                    <ul class="week">
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                    </ul>
+                    <ul class="week">
+                        <li>8</li>
+                        <li>9</li>
+                        <li>10</li>
+                        <li>11</li>
+                        <li>12</li>
+                        <li>13</li>
+                        <li>14</li>
+                    </ul>
+                    <ul class="week">
+                        <li>15</li>
+                        <li>16</li>
+                        <li>17</li>
+                        <li>18</li>
+                        <li>19</li>
+                        <li>20</li>
+                        <li>21</li>
+                    </ul>
+                    <ul class="week">
+                        <li>22</li>
+                        <li>23</li>
+                        <li>24</li>
+                        <li>25</li>
+                        <li>26</li>
+                        <li>27</li>
+                        <li>28</li>
+                    </ul>
+                    <ul class="week">
+                        <li>29</li>
+                        <li>30</li>
+                        <li>31</li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="procession-calendar" id="m3">
+                    <div class="month">
+                        三月 Third Month
+                    </div>
+                    <ul class="week">
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                    </ul>
+                    <ul class="week">
+                        <li>8</li>
+                        <li>9</li>
+                        <li>10</li>
+                        <li>11</li>
+                        <li>12</li>
+                        <li>13</li>
+                        <li>14</li>
+                    </ul>
+                    <ul class="week">
+                        <li>15</li>
+                        <li>16</li>
+                        <li>17</li>
+                        <li>18</li>
+                        <li>19</li>
+                        <li>20</li>
+                        <li>21</li>
+                    </ul>
+                    <ul class="week">
+                        <li>22</li>
+                        <li>23</li>
+                        <li>24</li>
+                        <li>25</li>
+                        <li>26</li>
+                        <li>27</li>
+                        <li>28</li>
+                    </ul>
+                    <ul class="week">
+                        <li>29</li>
+                        <li>30</li>
+                        <li>31</li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="procession-calendar" id="m4">
+                    <div class="month">
+                        四月 Fourth Month
+                    </div>
+                    <ul class="week">
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                    </ul>
+                    <ul class="week">
+                        <li>8</li>
+                        <li>9</li>
+                        <li>10</li>
+                        <li>11</li>
+                        <li>12</li>
+                        <li>13</li>
+                        <li>14</li>
+                    </ul>
+                    <ul class="week">
+                        <li>15</li>
+                        <li>16</li>
+                        <li>17</li>
+                        <li>18</li>
+                        <li>19</li>
+                        <li>20</li>
+                        <li>21</li>
+                    </ul>
+                    <ul class="week">
+                        <li>22</li>
+                        <li>23</li>
+                        <li>24</li>
+                        <li>25</li>
+                        <li>26</li>
+                        <li>27</li>
+                        <li>28</li>
+                    </ul>
+                    <ul class="week">
+                        <li>29</li>
+                        <li>30</li>
+                        <li>31</li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="procession-calendar" id="m5">
+                    <div class="month">
+                        五月 Fifth Month
+                    </div>
+                    <ul class="week">
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                    </ul>
+                    <ul class="week">
+                        <li>8</li>
+                        <li>9</li>
+                        <li>10</li>
+                        <li>11</li>
+                        <li>12</li>
+                        <li>13</li>
+                        <li>14</li>
+                    </ul>
+                    <ul class="week">
+                        <li>15</li>
+                        <li>16</li>
+                        <li>17</li>
+                        <li>18</li>
+                        <li>19</li>
+                        <li>20</li>
+                        <li>21</li>
+                    </ul>
+                    <ul class="week">
+                        <li>22</li>
+                        <li>23</li>
+                        <li>24</li>
+                        <li>25</li>
+                        <li>26</li>
+                        <li>27</li>
+                        <li>28</li>
+                    </ul>
+                    <ul class="week">
+                        <li>29</li>
+                        <li>30</li>
+                        <li>31</li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="procession-calendar" id="m6">
+                    <div class="month">
+                        六月 Sixth Month
+                    </div>
+                    <ul class="week">
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                    </ul>
+                    <ul class="week">
+                        <li>8</li>
+                        <li>9</li>
+                        <li>10</li>
+                        <li>11</li>
+                        <li>12</li>
+                        <li>13</li>
+                        <li>14</li>
+                    </ul>
+                    <ul class="week">
+                        <li>15</li>
+                        <li>16</li>
+                        <li>17</li>
+                        <li>18</li>
+                        <li>19</li>
+                        <li>20</li>
+                        <li>21</li>
+                    </ul>
+                    <ul class="week">
+                        <li>22</li>
+                        <li>23</li>
+                        <li>24</li>
+                        <li>25</li>
+                        <li>26</li>
+                        <li>27</li>
+                        <li>28</li>
+                    </ul>
+                    <ul class="week">
+                        <li>29</li>
+                        <li>30</li>
+                        <li>31</li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="procession-calendar" id="m7">
+                    <div class="month">
+                        七月 Seventh Month
+                    </div>
+                    <ul class="week">
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                    </ul>
+                    <ul class="week">
+                        <li>8</li>
+                        <li>9</li>
+                        <li>10</li>
+                        <li>11</li>
+                        <li>12</li>
+                        <li>13</li>
+                        <li>14</li>
+                    </ul>
+                    <ul class="week">
+                        <li>15</li>
+                        <li>16</li>
+                        <li>17</li>
+                        <li>18</li>
+                        <li>19</li>
+                        <li>20</li>
+                        <li>21</li>
+                    </ul>
+                    <ul class="week">
+                        <li>22</li>
+                        <li>23</li>
+                        <li>24</li>
+                        <li>25</li>
+                        <li>26</li>
+                        <li>27</li>
+                        <li>28</li>
+                    </ul>
+                    <ul class="week">
+                        <li>29</li>
+                        <li>30</li>
+                        <li>31</li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="procession-calendar" id="m8">
+                    <div class="month">
+                        八月 Eighth Month
+                    </div>
+                    <ul class="week">
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                    </ul>
+                    <ul class="week">
+                        <li>8</li>
+                        <li>9</li>
+                        <li>10</li>
+                        <li>11</li>
+                        <li>12</li>
+                        <li>13</li>
+                        <li>14</li>
+                    </ul>
+                    <ul class="week">
+                        <li>15</li>
+                        <li>16</li>
+                        <li>17</li>
+                        <li>18</li>
+                        <li>19</li>
+                        <li>20</li>
+                        <li>21</li>
+                    </ul>
+                    <ul class="week">
+                        <li>22</li>
+                        <li>23</li>
+                        <li>24</li>
+                        <li>25</li>
+                        <li>26</li>
+                        <li>27</li>
+                        <li>28</li>
+                    </ul>
+                    <ul class="week">
+                        <li>29</li>
+                        <li>30</li>
+                        <li>31</li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="procession-calendar" id="m9">
+                    <div class="month">
+                        九月 Ninth Month
+                    </div>
+                    <ul class="week">
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                    </ul>
+                    <ul class="week">
+                        <li>8</li>
+                        <li>9</li>
+                        <li>10</li>
+                        <li>11</li>
+                        <li>12</li>
+                        <li>13</li>
+                        <li>14</li>
+                    </ul>
+                    <ul class="week">
+                        <li>15</li>
+                        <li>16</li>
+                        <li>17</li>
+                        <li>18</li>
+                        <li>19</li>
+                        <li>20</li>
+                        <li>21</li>
+                    </ul>
+                    <ul class="week">
+                        <li>22</li>
+                        <li>23</li>
+                        <li>24</li>
+                        <li>25</li>
+                        <li>26</li>
+                        <li>27</li>
+                        <li>28</li>
+                    </ul>
+                    <ul class="week">
+                        <li>29</li>
+                        <li>30</li>
+                        <li>31</li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="procession-calendar" id="m10">
+                    <div class="month">
+                        十月 Tenth Month
+                    </div>
+                    <ul class="week">
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                    </ul>
+                    <ul class="week">
+                        <li>8</li>
+                        <li>9</li>
+                        <li>10</li>
+                        <li>11</li>
+                        <li>12</li>
+                        <li>13</li>
+                        <li>14</li>
+                    </ul>
+                    <ul class="week">
+                        <li>15</li>
+                        <li>16</li>
+                        <li>17</li>
+                        <li>18</li>
+                        <li>19</li>
+                        <li>20</li>
+                        <li>21</li>
+                    </ul>
+                    <ul class="week">
+                        <li>22</li>
+                        <li>23</li>
+                        <li>24</li>
+                        <li>25</li>
+                        <li>26</li>
+                        <li>27</li>
+                        <li>28</li>
+                    </ul>
+                    <ul class="week">
+                        <li>29</li>
+                        <li>30</li>
+                        <li>31</li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="procession-calendar" id="m11">
+                    <div class="month">
+                        十一月 Eleventh Month
+                    </div>
+                    <ul class="week">
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                    </ul>
+                    <ul class="week">
+                        <li>8</li>
+                        <li>9</li>
+                        <li>10</li>
+                        <li>11</li>
+                        <li>12</li>
+                        <li>13</li>
+                        <li>14</li>
+                    </ul>
+                    <ul class="week">
+                        <li>15</li>
+                        <li>16</li>
+                        <li>17</li>
+                        <li>18</li>
+                        <li>19</li>
+                        <li>20</li>
+                        <li>21</li>
+                    </ul>
+                    <ul class="week">
+                        <li>22</li>
+                        <li>23</li>
+                        <li>24</li>
+                        <li>25</li>
+                        <li>26</li>
+                        <li>27</li>
+                        <li>28</li>
+                    </ul>
+                    <ul class="week">
+                        <li>29</li>
+                        <li>30</li>
+                        <li>31</li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="procession-calendar" id="m12">
+                    <div class="month">
+                        腊月 Tweleth Month
+                    </div>
+                    <ul class="week">
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                    </ul>
+                    <ul class="week">
+                        <li>8</li>
+                        <li>9</li>
+                        <li>10</li>
+                        <li>11</li>
+                        <li>12</li>
+                        <li>13</li>
+                        <li>14</li>
+                    </ul>
+                    <ul class="week">
+                        <li>15</li>
+                        <li>16</li>
+                        <li>17</li>
+                        <li>18</li>
+                        <li>19</li>
+                        <li>20</li>
+                        <li>21</li>
+                    </ul>
+                    <ul class="week">
+                        <li>22</li>
+                        <li>23</li>
+                        <li>24</li>
+                        <li>25</li>
+                        <li>26</li>
+                        <li>27</li>
+                        <li>28</li>
+                    </ul>
+                    <ul class="week">
+                        <li>29</li>
+                        <li>30</li>
+                        <li>31</li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
