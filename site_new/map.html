@@ -30,6 +30,9 @@
     <link rel="stylesheet" href="./css/selectize.default.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.js" integrity="sha512-WZ3VAWLJDOQRwRtR4nkn7g7Fb+TSDtdpdQdJgM5tSn82RKD/O84EqMPKqvF+3ypk5+IErlevC4WpbdbRG65uIg==" crossorigin="anonymous"></script>
 
+    <!-- d3.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.min.js" integrity="sha512-FHsFVKQ/T1KWJDGSbrUhTJyS1ph3eRrxI228ND0EGaEp6v4a/vGwPWd3Dtd/+9cI7ccofZvl/wulICEurHN1pg==" crossorigin="anonymous"></script>
+
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
@@ -49,6 +52,7 @@
                 <li><a href="#home" role="tab"><i class="fa fa-info-circle"></i></a></li>
                 <li><a href="#lookup" role="tab"><i class="fa fa-search"></i></a></li>
                 <li><a href="#processions" role="tab"><i class="fa fa-users"></i></a></li>
+                <li><a href="#Birthday" role="tab"><i class="fa fa-users"></i></a></li>
             </ul>
 
             <ul role="tablist">
@@ -118,7 +122,16 @@
 
                 <button id="clear">Clear selection</button>
             </div>
+
             <div class="leaflet-sidebar-pane" id="processions">
+
+                <h1 class="leaflet-sidebar-header">Yuanxiao Processions<div class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></div>
+                </h1>
+                <p>Dates are in the format of the Chinese Lunar Calendar.</p>
+                <div id="ProcessionsChart"></div>
+            </div>
+
+            <div class="leaflet-sidebar-pane" id="birthday">
 
                 <h1 class="leaflet-sidebar-header">Yuanxiao Processions<div class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></div>
                 </h1>
