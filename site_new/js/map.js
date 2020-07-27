@@ -233,86 +233,85 @@ highlight_buffer = {}
 
 $(document).ready(function () {
 
-            $("#villages_studied").change(function () {
-                if (this.checked) {
-                    mainmap.addLayer(Village_Points_Studied)
-                } else {
-                    mainmap.removeLayer(Village_Points_Studied)
+    $("#villages_studied").change(function () {
+        if (this.checked) {
+            mainmap.addLayer(Village_Points_Studied)
+        } else {
+            mainmap.removeLayer(Village_Points_Studied)
+        }
+    });
+
+
+
+    var $select = $('#select-village').selectize({
+        maxItems: null,
+        valueField: 'id',
+        labelField: 'title',
+        searchField: 'title',
+        options: [],
+        create: false,
+        onItemAdd: function (val) {
+            highlightlayerUID(val)
+        },
+        onItemRemove: function (val) {
+            clearlayerUID(e.params.data.id)
+        },
+        load: function (query, callback) {
+            if (!query.length) return callback();
+            $.ajax({
+                url: './json/village_search.json',
+                type: 'GET',
+                dataType: 'json',
+                data: {},
+                error: function () {
+                    callback();
+                },
+                success: function (res) {
+                    callback(res);
                 }
             });
+        }
+    });
 
 
-
-            var $select = $('#select-village').selectize({
-                maxItems: null,
-                valueField: 'id',
-                labelField: 'title',
-                searchField: 'title',
-                options: [],
-                create: false,
-                onItemAdd: function (val) {
-                    highlightlayerUID(val)
+    var $select = $('#select-gods').selectize({
+        maxItems: null,
+        valueField: 'id',
+        labelField: 'title',
+        searchField: 'title',
+        options: [],
+        create: false,
+        onItemAdd: function (val) {
+            array = val.split(",")
+            for (i = 0, len = array.length; i < len; i++) {
+                highlightlayerUID(array[i])
+                console.log(array[i])
+            }
+        },
+        onItemRemove: function (val) {
+            array = val.split(",")
+            for (i = 0, len = array.length; i < len; i++) {
+                clearlayerUID(array[i])
+            }
+        },
+        load: function (query, callback) {
+            if (!query.length) return callback();
+            $.ajax({
+                url: './json/primary_god_search.json',
+                type: 'GET',
+                dataType: 'json',
+                error: function () {
+                    callback();
                 },
-                onItemRemove: function (val) {
-                    clearlayerUID(e.params.data.id)
-                },
-                load: function (query, callback) {
-                    if (!query.length) return callback();
-                    $.ajax({
-                        url: './json/village_search.json',
-                        type: 'GET',
-                        dataType: 'json',
-                        data: {},
-                        error: function () {
-                            callback();
-                        },
-                        success: function (res) {
-                            callback(res);
-                        }
-                    });
+                success: function (res) {
+                    callback(res);
                 }
             });
+        }
+    });
 
-
-            var $select = $('#select-gods').selectize({
-                maxItems: null,
-                valueField: 'id',
-                labelField: 'title',
-                searchField: 'title',
-                options: [],
-                create: false,
-                onItemAdd: function (val) {
-                    array = val.split(",")
-                    for (i = 0, len = array.length; i < len; i++) {
-                        highlightlayerUID(array[i])
-                        console.log(array[i])
-                    }
-                },
-                onItemRemove: function (val) {
-                    array = val.split(",")
-                    for (i = 0, len = array.length; i < len; i++) {
-                        clearlayerUID(array[i])
-                    }
-                },
-                load: function (query, callback) {
-                    if (!query.length) return callback();
-                    $.ajax({
-                        url: './json/primary_god_search.json',
-                        type: 'GET',
-                        dataType: 'json',
-                        error: function () {
-                            callback();
-                        },
-                        success: function (res) {
-                            callback(res);
-                        }
-                    });
-                }
-            });
-
-            // clear button
-            $("#clear").click(function () {
-                clearallUID();
-            })
-
-            // Inject months
+    // clear button
+    $("#clear").click(function () {
+        clearallUID();
+    })
+})
