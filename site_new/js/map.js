@@ -1,3 +1,5 @@
+// Helper functions fro "Village Information" tab.
+
 // Default style for (studied) village points
 var default_style = {
     radius: 3,
@@ -65,8 +67,22 @@ function clearallUID() {
     for (const k in highlight_buffer) {
         clearlayerUID(k)
     }
-
     highlight_buffer = {}
+}
+
+// Helper functions for "Yuanxiao Processions tab"
+function generateVillageCard(uid_r) {
+    $.getJSON("./json/processions_info.json", function (data) {
+        let obj = data.find(o => o.uid_r === uid_r)
+
+        var text = "<div class='village_card'> <ul> <li>Ritual ID: <span id='ritual_id'>" + obj.uid_r + "</span></li> <li>Village Name: <span id='ritual_name'>" + obj.VillageName + "</span></li><li>Alliance Membership: <span id='ritual_alliance'>" + obj.UID_A + "</span></li><li>Start Date: <span id='ritual_start_date'>" + obj.startdate + "</span></li> <li>End Date: <span id='ritual_end_date'>" + obj.enddate + "</span></li> <li>Text: <span id='ritual_text'>" + obj.text + "</span></li> </ul> </div>"
+
+        $("#ritualCardsCont").append(text)
+    })
+}
+
+function clearVillageCards() {
+    $("#ritualCardsCont").empty()
 }
 
 var mainmap = L.map('mapcont').setView([25.40, 119.1], 11);
@@ -308,11 +324,6 @@ $(document).ready(function () {
                 }
             });
         }
-    });
-
-    // clear button
-    $("#clear").click(function () {
-        clearallUID();
     })
 
     function drawProcessionsChart(width = 380) {
@@ -327,8 +338,7 @@ $(document).ready(function () {
                 left: 15
             },
             width = width - margin.left - margin.right,
-            height = 380
-
+            height = 250
         var procesionsBar = d3.select("#ProcessionsChart").append("svg")
             .attr("width", width + margin.left + margin.right)
             .attr("height", height + margin.top + margin.bottom)
@@ -435,20 +445,32 @@ $(document).ready(function () {
                         .attr("y", yPos + height / 2 - 13)
                         .attr("width", "40px")
                         .attr("height", "15px")
-                        .attr("fill", "white")
+                        .attr("fill", "#aaceff")
                         .attr("stroke", "black")
+                        .attr("pointer-events", "none")
+                        .attr("rx", "5")
                         .attr("class", "tooltip");
 
                     procesionsBar.append("text")
                         .attr("x", xPos)
                         .attr("y", yPos + height / 2)
                         .attr("class", "tooltip")
+                        .attr("pointer-events", "none")
                         .text(d.date);
 
                 })
                 .on("mouseout", function () {
                     procesionsBar.selectAll(".tooltip").remove();
+                })
+                .on("click", function (d) {
+                    clearallUID()
+                    clearVillageCards()
+                    $("#selectedDate").text(d.date)
 
+                    for (i = 0; i < d.ID.length; i++) {
+                        generateVillageCard(d.ID[i])
+                        highlightlayerUID(d.ID[i].substring(0, 4))
+                    }
                 })
         })
     }

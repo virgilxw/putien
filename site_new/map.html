@@ -1,9 +1,14 @@
+<!DOCTYPE html>
 <html>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <head>
     <title>The Ritual Alliances of Putian</title>
+
+    <!-- Normalise -->
+    <link rel="stylesheet" href="./css/normalize.css">
+
 
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -119,8 +124,6 @@
                     <label for="select-gods">Primary Diety of Temples:</label>
                     <select id="select-gods" placeholder="Pick a god"></select>
                 </div>
-
-                <button id="clear">Clear selection</button>
             </div>
 
             <div class="leaflet-sidebar-pane" id="processions">
@@ -129,8 +132,13 @@
                 </h1>
                 <p>Yuanxiao is often translated as "lantern festival". During these events, the idol of gods are paraded around the village or the boundaries of the ritual alliance.</p>
                 <p>Although the actual festival for Yuanxiao occurs on the 15th day of the first lunar month, i.e. the last day of Chinese New Year, the residents of Putian conduct different Yuanxiao processions throughout the first few months of the year.</p>
-                <p>The following interactive chart shows you the relative nuber of yuanxiao processions happening each day during the first two lunar months of every year.</p>
+                <p>Each bar in the following interactive bar chart represents one calendar day, and the height corresponds to the relative number of Yuanxiao processions happening on that day. Clicking a bar will generate a list of processions occuring on the day. </p>
                 <div id="ProcessionsChart"></div>
+                <h3>Yuanxiao processions on <span id="selectedDate">this day</span>:</h3>
+                <div id="ritualCardsCont">
+
+                </div>
+
             </div>
 
             <div class="leaflet-sidebar-pane" id="birthday">

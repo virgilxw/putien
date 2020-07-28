@@ -89,3 +89,15 @@ ul.week {
 .bar:hover {
     fill: orange;
 }
+
+.village_card {
+    background-color: #fff3cb;
+    border: solid black;
+    border-radius: 10px;
+    list-style-type: none;
+    margin: 15px 0;
+}
+
+.village_card ul {
+    padding-left: 20px
+}
