@@ -323,13 +323,13 @@ $(document).ready(function () {
         var margin = {
                 top: 15,
                 right: 15,
-                bottom: 50,
+                bottom: 100,
                 left: 15
             },
             width = width - margin.left - margin.right,
-            height = 300
+            height = 380
 
-        var svg = d3.select("#ProcessionsChart").append("svg")
+        var procesionsBar = d3.select("#ProcessionsChart").append("svg")
             .attr("width", width + margin.left + margin.right)
             .attr("height", height + margin.top + margin.bottom)
             .append("g")
@@ -355,7 +355,7 @@ $(document).ready(function () {
             })]);
 
             // append the rectangles for the bar chart
-            svg.selectAll(".bar")
+            procesionsBar.selectAll(".bar")
                 .data(data)
                 .enter().append("rect")
                 .attr("class", "bar")
@@ -371,11 +371,11 @@ $(document).ready(function () {
                 });
 
             // add the x Axis
-            svg.append("g")
+            procesionsBar.append("g")
                 .attr("class", "axis")
                 .append("svg").attr("width", width).attr("height", 30)
 
-            svg.append('rect')
+            procesionsBar.append('rect')
                 .attr('x', 1)
                 .attr('y', height)
                 .attr('width', width / 2)
@@ -383,13 +383,13 @@ $(document).ready(function () {
                 .attr('stroke', 'black')
                 .attr('fill', '#ece2f0')
 
-            svg.append("text")
+            procesionsBar.append("text")
                 .text("First Lunar Month")
                 .attr("text-anchor", "middle")
                 .attr('x', width / 4)
                 .attr('y', height + 25);
 
-            svg.append('rect')
+            procesionsBar.append('rect')
                 .attr('x', width / 2)
                 .attr('y', height)
                 .attr('width', width / 2)
@@ -397,12 +397,59 @@ $(document).ready(function () {
                 .attr('stroke', 'black')
                 .attr('fill', '#a6bddb');
 
-            svg.append("text")
+            procesionsBar.append("text")
                 .text("Second Lunar Month")
                 .attr("text-anchor", "middle")
                 .attr('x', width * 3 / 4)
                 .attr('y', height + 25);
 
+            procesionsBar.append('rect')
+                .attr('x', 1)
+                .attr('y', height + 40)
+                .attr('width', width / 4)
+                .attr('height', 40)
+                .attr('stroke', 'black')
+                .attr('fill', '#fc8d62')
+
+            procesionsBar.append("text")
+                .text("Chinese")
+                .attr("text-anchor", "middle")
+                .attr('x', width / 8)
+                .attr('y', height + 55);
+
+            procesionsBar.append("text")
+                .text("New Year")
+                .attr("text-anchor", "middle")
+                .attr('x', width / 8)
+                .attr('y', height + 70);
+
+            procesionsBar.selectAll("rect")
+                .on("mouseover", function (d) {
+
+                    var xPos = parseFloat(d3.select(this).attr("x"));
+                    var yPos = parseFloat(d3.select(this).attr("y"));
+                    var height = parseFloat(d3.select(this).attr("height"))
+
+                    procesionsBar.append("rect")
+                        .attr("x", xPos - 5)
+                        .attr("y", yPos + height / 2 - 13)
+                        .attr("width", "40px")
+                        .attr("height", "15px")
+                        .attr("fill", "white")
+                        .attr("stroke", "black")
+                        .attr("class", "tooltip");
+
+                    procesionsBar.append("text")
+                        .attr("x", xPos)
+                        .attr("y", yPos + height / 2)
+                        .attr("class", "tooltip")
+                        .text(d.date);
+
+                })
+                .on("mouseout", function () {
+                    procesionsBar.selectAll(".tooltip").remove();
+
+                })
         })
     }
 

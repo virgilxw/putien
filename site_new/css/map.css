@@ -85,3 +85,7 @@ ul.week {
     list-style-type: none;
     text-align: center;
 }
+
+.bar:hover {
+    fill: orange;
+}
