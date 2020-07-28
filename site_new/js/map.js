@@ -315,64 +315,101 @@ $(document).ready(function () {
         clearallUID();
     })
 
-    // yuanxiao chart
-    var margin = {
-            top: 15,
-            right: 15,
-            bottom: 50,
-            left: 15
-        },
-        width = 380 - margin.left - margin.right,
-        height = 300
+    function drawProcessionsChart(width = 380) {
+        if (width < 30) {
+            width = 380
+        }
+        // yuanxiao chart
+        var margin = {
+                top: 15,
+                right: 15,
+                bottom: 50,
+                left: 15
+            },
+            width = width - margin.left - margin.right,
+            height = 300
 
-    var svg = d3.select("#ProcessionsChart").append("svg")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
-        .append("g")
-        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+        var svg = d3.select("#ProcessionsChart").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    var x = d3.scaleBand()
-        .range([0, width])
-        .padding(0.1);
-    var y = d3.scaleLinear()
-        .range([height, 0]);
+        var x = d3.scaleBand()
+            .range([0, width])
+            .padding(0.1);
+        var y = d3.scaleLinear()
+            .range([height, 0]);
 
-    d3.json("/json/processions.json").then(function (data) {
-        data.forEach(function (d) {
-            d.weight = +d.weight
+        d3.json("/json/processions.json").then(function (data) {
+            data.forEach(function (d) {
+                d.weight = +d.weight
+            })
+
+            // Scale the range of the data in the domains
+            x.domain(data.map(function (d) {
+                return d.date;
+            }));
+            y.domain([0, d3.max(data, function (d) {
+                return d.weight;
+            })]);
+
+            // append the rectangles for the bar chart
+            svg.selectAll(".bar")
+                .data(data)
+                .enter().append("rect")
+                .attr("class", "bar")
+                .attr("x", function (d) {
+                    return x(d.date);
+                })
+                .attr("width", x.bandwidth())
+                .attr("y", function (d) {
+                    return y(d.weight);
+                })
+                .attr("height", function (d) {
+                    return height - y(d.weight);
+                });
+
+            // add the x Axis
+            svg.append("g")
+                .attr("class", "axis")
+                .append("svg").attr("width", width).attr("height", 30)
+
+            svg.append('rect')
+                .attr('x', 1)
+                .attr('y', height)
+                .attr('width', width / 2)
+                .attr('height', 40)
+                .attr('stroke', 'black')
+                .attr('fill', '#ece2f0')
+
+            svg.append("text")
+                .text("First Lunar Month")
+                .attr("text-anchor", "middle")
+                .attr('x', width / 4)
+                .attr('y', height + 25);
+
+            svg.append('rect')
+                .attr('x', width / 2)
+                .attr('y', height)
+                .attr('width', width / 2)
+                .attr('height', 40)
+                .attr('stroke', 'black')
+                .attr('fill', '#a6bddb');
+
+            svg.append("text")
+                .text("Second Lunar Month")
+                .attr("text-anchor", "middle")
+                .attr('x', width * 3 / 4)
+                .attr('y', height + 25);
+
         })
+    }
 
-        // Scale the range of the data in the domains
-        x.domain(data.map(function (d) {
-            return d.date;
-        }));
-        y.domain([0, d3.max(data, function (d) {
-            return d.weight;
-        })]);
+    drawProcessionsChart()
 
-        // append the rectangles for the bar chart
-        svg.selectAll(".bar")
-            .data(data)
-            .enter().append("rect")
-            .attr("class", "bar")
-            .attr("x", function (d) {
-                return x(d.date);
-            })
-            .attr("width", x.bandwidth())
-            .attr("y", function (d) {
-                return y(d.weight);
-            })
-            .attr("height", function (d) {
-                return height - y(d.weight);
-            });
-
-        // add the x Axis
-        svg.append("g")
-            .attr("class", "axis")
-            .attr("transform", "translate(0," + height + ")")
-            .call(d3.axisBottom(x))
-
-        // add the y Axis
-        svg.append("g");
+    $(window).resize(function () {
+        $("#ProcessionsChart > svg").remove()
+        drawProcessionsChart($("#processions").width())
     })
 })
