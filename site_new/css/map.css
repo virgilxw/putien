@@ -49,6 +49,10 @@ h4 {
     margin: 15 0px;
 }
 
+#processions img {
+    padding: 5px;
+}
+
 /* Calendar */
 div.calendar {
     width: 100%;

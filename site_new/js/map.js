@@ -67,7 +67,8 @@ function clearallUID() {
     for (const k in highlight_buffer) {
         clearlayerUID(k)
     }
-    highlight_buffer = {}
+    highlight_buffer = {};
+    Village_Points_Studied.setStyle(default_style);
 }
 
 // Helper functions for "Yuanxiao Processions tab"
@@ -481,4 +482,10 @@ $(document).ready(function () {
         $("#ProcessionsChart > svg").remove()
         drawProcessionsChart($("#processions").width())
     })
+
+    // Implementation of clear buton
+    $(".clear").click(function () {
+        clearallUID();
+        clearVillageCards();
+    });
 })
