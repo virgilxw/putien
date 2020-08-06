@@ -10,33 +10,47 @@ var default_style = {
     fillOpacity: 1
 }
 
+// Default style for alliance polygons
+var alliance_default_style = {
+    "color": "#000000",
+    "weight": 2,
+    "opacity": 0.9,
+    "fillColor": "#67adff",
+    "fillOpacity": 0.6
+}
+
 function highlightlayerUID(UID) {
     // Helper function to highlight village points by UID
-
     var match = false
-    Object.keys(highlight_buffer).forEach(function (key) {
-        if (key == UID) {
-            match = true
-            highlight_buffer[UID] = highlight_buffer[UID] + 1
-        }
-    })
 
-    if (match == false) {
-        highlight_buffer[UID] = 1
+    // Highlighting village
+    if (UID.charAt(0) == "V") {
+        Object.keys(highlight_buffer).forEach(function (key) {
+            if (key == UID) {
+                match = true
+                highlight_buffer[UID] = highlight_buffer[UID] + 1
+            }
+        })
+
+        if (match == false) {
+            highlight_buffer[UID] = 1
+        }
+
+        var match = Village_Points_Studied.eachLayer(function (layer) {
+            if (layer.feature.properties.UID_V == UID) {
+                layer.setStyle({
+                    radius: 7,
+                    fillColor: "#fff500",
+                    color: "#ff1400",
+                    weight: 1,
+                    opacity: 1,
+                    fillOpacity: 1
+                })
+            }
+        })
+    } else if (UID.charAt(0) == "A") {
+        console.log(UID)
     }
-
-    var match = Village_Points_Studied.eachLayer(function (layer) {
-        if (layer.feature.properties.UID_V == UID) {
-            layer.setStyle({
-                radius: 7,
-                fillColor: "#fff500",
-                color: "#ff1400",
-                weight: 1,
-                opacity: 1,
-                fillOpacity: 1
-            })
-        }
-    })
 }
 
 function clearlayerUID(UID) {
@@ -208,6 +222,10 @@ var sidebar = L.control.sidebar({
     position: 'left', // left or right
 }).addTo(mainmap);
 
+var Alliance_Polygons_Studied = new L.GeoJSON.AJAX("./geojson/Alliance_Polygons_Studied.geojson", {
+    style: alliance_default_style
+}).addTo(mainmap)
+
 var Village_Points_Studied = new L.GeoJSON.AJAX("./geojson/Village_Points_Studied.geojson", {
     pointToLayer: function (feature, latlng) {
         return L.circleMarker(latlng, default_style)
@@ -227,13 +245,9 @@ Village_Points_Studied.on("click", function (event) {
 
         namestring = obj.Name + " " + obj.Name_zh
 
-        $("#info_village_name").text(namestring)
-        $("#village_settlement").text(obj.Village_Settlement)
-        $("#Surname_Groups").text(obj.Surname_Groups)
-        $("#Village_Temples").text(obj.Village_Temples)
-        $("#Rituals_Yuanxiao_Processions").text(obj.Rituals_Yuanxiao_Processions)
-        $("#Rituals_Birthday_Celebration_of_gods").text(obj.Rituals_Birthday_Celebration_of_gods)
-        $("#Rituals_Ritual_Groups").text(obj.Rituals_Ritual_Groups)
+        field_data = "<span> <h4>Village Settlement:</h4> </span> <span id='village_settlement'>" + obj.Village_Settlement + "</span> <span> <h4>Surname Groups:</h4> </span> <span id='Surname_Groups'>" + obj.Surname_Groups + "</span> <span> <h4>Village Temples:</h4> </span> <span id='Village_Temples'>" + obj.Village_Temples + "</span> <span> <h4>Yuanxiao Processions:</h4> </span> <span id='Rituals_Yuanxiao_Processions'>" + obj.Rituals_Yuanxiao_Processions + "</span> <span> <h4>Birthday Celebration of gods:</h4> </span> <span id='Rituals_Birthday_Celebration_of_gods'>" + obj.Rituals_Birthday_Celebration_of_gods + "</span> <span> <h4>Ritual Groups (if present):</h4> </span> <span id='Rituals_Ritual_Groups'>" + obj.Rituals_Ritual_Groups + "</span>"
+
+        $("#info_field").html(field_data)
     })
 }).on("mouseover", function (event) {
     event.layer.setStyle({
@@ -242,6 +256,20 @@ Village_Points_Studied.on("click", function (event) {
 }).on("mouseout", function (event) {
     event.layer.setStyle({
         weight: 1
+    })
+})
+
+
+Alliance_Polygons_Studied.on("click", function (event) {
+
+    highlightlayerUID(event.layer.feature.properties.TOWNSHIP);
+}).on("mouseover", function (event) {
+    event.layer.setStyle({
+        weight: 5,
+    });
+}).on("mouseout", function (event) {
+    event.layer.setStyle({
+        weight: 2
     })
 })
 
@@ -258,6 +286,13 @@ $(document).ready(function () {
         }
     });
 
+    $("#alliances_studied").change(function () {
+        if (this.checked) {
+            mainmap.addLayer(Alliance_Polygons_Studied)
+        } else {
+            mainmap.removeLayer(Alliance_Polygons_Studied)
+        }
+    });
 
 
     var $select = $('#select-village').selectize({

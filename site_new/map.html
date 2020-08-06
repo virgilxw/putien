@@ -57,7 +57,7 @@
                 <li><a href="#home" role="tab"><i class="fa fa-info-circle"></i></a></li>
                 <li><a href="#lookup" role="tab"><i class="fa fa-search"></i></a></li>
                 <li><a href="#processions" role="tab"><img src="./img/Lantern.svg"> </a></li>
-                <li><a href="#Birthday" role="tab"><i class="fa fa-users"></i></a></li>
+                <li><a href="#birthday" role="tab"><i class="fa fa-birthday-cake"></i></a></li>
             </ul>
 
             <ul role="tablist">
@@ -74,40 +74,15 @@
                     <div class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></div>
                 </h1>
                 <input type='checkbox' id='villages_studied' name='villags_studied' value='villages_studied' checked><label for='villages_studied'> Show Villages that were studied</label><br>
+                <input type='checkbox' id='alliances_studied' name='alliances_studied' value='alliances_studied' checked>
+                <label for='alliances_studied'> Show Alliances that were studied</label><br>
+                <p>(Due to limitations to the mapping framework used, you only can click on the last layer you added.   )</p>
                 <h2 id="info_village_name">Village_name</h2>
                 <span>
                     <h4>Book ID: </h4> <span id="info_uid"></span>
                 </span>
 
-                <span>
-                    <h4>Village Settlement:</h4>
-                </span>
-                <span id="village_settlement">Select a village on the map</span>
-
-                <span>
-                    <h4>Surname Groups:</h4>
-                </span>
-                <span id="Surname_Groups">Select a village on the map</span>
-
-                <span>
-                    <h4>Village Temples:</h4>
-                </span>
-                <span id="Village_Temples">Select a village on the map</span>
-
-                <span>
-                    <h4>Yuanxiao Processions:</h4>
-                </span>
-                <span id="Rituals_Yuanxiao_Processions">Select a village on the map</span>
-
-                <span>
-                    <h4>Birthday Celebration of gods:</h4>
-                </span>
-                <span id="Rituals_Birthday_Celebration_of_gods">Select a village on the map</span>
-
-                <span>
-                    <h4>Ritual Groups (if present):</h4>
-                </span>
-                <span id="Rituals_Ritual_Groups">Select a village on the map</span>
+                <div id="info_field"></div>
 
             </div>
 
@@ -132,8 +107,8 @@
                 </h1>
                 <p>Yuanxiao is often translated as "lantern festival". During these events, the idol of gods are paraded around the village or the boundaries of the ritual alliance.</p>
                 <p>Although the actual festival for Yuanxiao occurs on the 15th day of the first lunar month, i.e. the last day of Chinese New Year, the residents of Putian conduct different Yuanxiao processions throughout the first few months of the year.</p>
-                <p>Each bar in the following interactive bar chart represents one calendar day, and the height corresponds to the relative number of Yuanxiao processions happening on that day. Clicking a bar will generate a list of processions occuring on the day. </p>
-                <button> clear</button>
+                <p>Each bar in the following interactive bar chart represents one calendar day, and the height corresponds to the relative number of Yuan xiao processions happening on that day. Clicking a bar will generate a list of processions occuring on the day. </p>
+                <button class="clear"> Clear Selections</button>
                 <div id="ProcessionsChart"></div>
                 <h3>Yuanxiao processions on <span id="selectedDate">this day</span>:</h3>
                 <div id="ritualCardsCont">
