@@ -15,8 +15,8 @@ var alliance_default_style = {
     "color": "#000000",
     "weight": 2,
     "opacity": 0.9,
-    "fillColor": "#67adff",
-    "fillOpacity": 0.6
+    "fillColor": "#67ff73",
+    "fillOpacity": 0.1
 }
 
 function highlightlayerUID(UID) {
@@ -24,18 +24,19 @@ function highlightlayerUID(UID) {
     var match = false
 
     // Highlighting village
-    if (UID.charAt(0) == "V") {
-        Object.keys(highlight_buffer).forEach(function (key) {
-            if (key == UID) {
-                match = true
-                highlight_buffer[UID] = highlight_buffer[UID] + 1
-            }
-        })
-
-        if (match == false) {
-            highlight_buffer[UID] = 1
+    Object.keys(highlight_buffer).forEach(function (key) {
+        if (key == UID) {
+            match = true
+            highlight_buffer[UID] = highlight_buffer[UID] + 1
         }
+    })
 
+    if (match == false) {
+        highlight_buffer[UID] = 1
+    }
+
+
+    if (UID.charAt(0) == "V") {
         var match = Village_Points_Studied.eachLayer(function (layer) {
             if (layer.feature.properties.UID_V == UID) {
                 layer.setStyle({
@@ -49,7 +50,19 @@ function highlightlayerUID(UID) {
             }
         })
     } else if (UID.charAt(0) == "A") {
-        console.log(UID)
+        // Highlighting alliance polygons
+
+        var match = Alliance_Polygons_Studied.eachLayer(function (layer) {
+            if (layer.feature.properties.TOWNSHIP == UID) {
+                layer.setStyle({
+                    fillColor: "#fff500",
+                    color: "#ff1400",
+                    weight: 4,
+                    opacity: 1,
+                    fillOpacity: 0.4
+                })
+            }
+        })
     }
 }
 
@@ -68,16 +81,25 @@ function clearlayerUID(UID) {
     })
 
     if (highlight_buffer[UID] == 0) {
-        var match = Village_Points_Studied.eachLayer(function (layer) {
-            if (layer.feature.properties.UID_V == UID) {
-                layer.setStyle(default_style)
-            }
-        })
+        if (UID.charAt(0) == "V") {
+            var match = Village_Points_Studied.eachLayer(function (layer) {
+                if (layer.feature.properties.UID_V == UID) {
+                    layer.setStyle(default_style)
+                }
+            })
+        } else if (UID.charAt(0) == "A") {
+            var match = Alliance_Polygons_Studied.eachLayer(function (layer) {
+                if (layer.feature.properties.TOWNSHIP == UID) {
+                    layer.setStyle(alliance_default_style)
+                }
+            })
+        }
     }
 }
 
 function clearallUID() {
     // Helper function to clear all highlights
+
     for (const k in highlight_buffer) {
         clearlayerUID(k)
     }
@@ -245,6 +267,10 @@ Village_Points_Studied.on("click", function (event) {
 
         namestring = obj.Name + " " + obj.Name_zh
 
+
+
+        $("#info_village_name").text(namestring)
+
         field_data = "<span> <h4>Village Settlement:</h4> </span> <span id='village_settlement'>" + obj.Village_Settlement + "</span> <span> <h4>Surname Groups:</h4> </span> <span id='Surname_Groups'>" + obj.Surname_Groups + "</span> <span> <h4>Village Temples:</h4> </span> <span id='Village_Temples'>" + obj.Village_Temples + "</span> <span> <h4>Yuanxiao Processions:</h4> </span> <span id='Rituals_Yuanxiao_Processions'>" + obj.Rituals_Yuanxiao_Processions + "</span> <span> <h4>Birthday Celebration of gods:</h4> </span> <span id='Rituals_Birthday_Celebration_of_gods'>" + obj.Rituals_Birthday_Celebration_of_gods + "</span> <span> <h4>Ritual Groups (if present):</h4> </span> <span id='Rituals_Ritual_Groups'>" + obj.Rituals_Ritual_Groups + "</span>"
 
         $("#info_field").html(field_data)
@@ -262,7 +288,20 @@ Village_Points_Studied.on("click", function (event) {
 
 Alliance_Polygons_Studied.on("click", function (event) {
 
-    highlightlayerUID(event.layer.feature.properties.TOWNSHIP);
+    clearallUID();
+    highlightlayerUID(event.layer.feature.properties.TOWNSHIP)
+    sidebar.open('home');
+
+    $.getJSON("./json/Alliance_raw_text.JSON", function (raw_data) {
+
+        let obj = raw_data.find(o => o.UID_A === event.layer.feature.properties.TOWNSHIP);
+
+        namestring = obj.name + " " + obj.name_zh
+
+        $("#info_village_name").text(namestring)
+
+        $("#info_field").html(obj.raw_text)
+    })
 }).on("mouseover", function (event) {
     event.layer.setStyle({
         weight: 5,
@@ -273,8 +312,50 @@ Alliance_Polygons_Studied.on("click", function (event) {
     })
 })
 
-
+// buffer to track what items are selected
 highlight_buffer = {}
+
+// Formating text helper function
+function month_text_format(month) {
+    switch (month) {
+        case "1":
+            return "First Lunar month";
+
+        case "2":
+            return "Second Lunar month";
+
+        case "3":
+            return "Third Lunar month";
+
+        case "4":
+            return "Fourth Lunar month";
+
+        case "5":
+            return "Fifth Lunar month";
+
+        case "6":
+            return "Sixth Lunar month";
+
+        case "7":
+            return "Seventh Lunar month";
+
+        case "8":
+            return "Eighth Lunar month";
+
+        case "9":
+            return "Nineth Lunar month";
+
+        case "10":
+            return "Tenth Lunar month";
+
+        case "11":
+            return "Eleventh Lunar month";
+
+        case "12":
+            return "Twelveth Lunar month";
+
+    }
+}
 
 $(document).ready(function () {
 
@@ -325,6 +406,35 @@ $(document).ready(function () {
         }
     });
 
+    var $select = $('#select-alliance').selectize({
+        maxItems: null,
+        valueField: 'id',
+        labelField: 'title',
+        searchField: 'title',
+        options: [],
+        create: false,
+        onItemAdd: function (val) {
+            highlightlayerUID(val)
+        },
+        onItemRemove: function (val) {
+            clearlayerUID(val)
+        },
+        load: function (query, callback) {
+            if (!query.length) return callback();
+            $.ajax({
+                url: './json/Alliance_search.json',
+                type: 'GET',
+                dataType: 'json',
+                data: {},
+                error: function () {
+                    callback();
+                },
+                success: function (res) {
+                    callback(res);
+                }
+            });
+        }
+    });
 
     var $select = $('#select-gods').selectize({
         maxItems: null,
@@ -337,7 +447,6 @@ $(document).ready(function () {
             array = val.split(",")
             for (i = 0, len = array.length; i < len; i++) {
                 highlightlayerUID(array[i])
-                console.log(array[i])
             }
         },
         onItemRemove: function (val) {
@@ -523,4 +632,43 @@ $(document).ready(function () {
         clearallUID();
         clearVillageCards();
     });
+
+    // Waffle
+
+    d3.json("./json/birthdays_cal.json").then(function (data) {
+
+        const nest = d3.nest()
+            .key(d => d.month)
+            .entries(data)
+
+
+        const waffle = d3.select(".calendar_waffle")
+
+        const group = waffle
+            .selectAll(".group")
+            .data(nest)
+            .enter()
+            .append("div")
+            .attr("class", "group")
+
+        var color = d3.scaleSequential()
+            .interpolator(d3.interpolateOranges)
+
+        group.selectAll('.block')
+            .data(d => d.values)
+            .enter()
+            .append('div')
+            .attr('class', 'block')
+            .style("background-color", d => color(d.weight))
+            .append("text")
+            .attr("class", "date")
+            .text(d => d.date.substring(3, 5))
+
+
+        // add a state label to each group
+        group.append('text')
+            .text(d => month_text_format(d.key))
+            .attr("class", "text")
+    })
+
 })
