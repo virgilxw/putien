@@ -308,7 +308,7 @@ Alliance_Polygons_Studied.on("click", function (event) {
     highlightlayerUID(event.layer.feature.properties.TOWNSHIP)
     sidebar.open('home');
 
-    $.getJSON("./json/Alliance_raw_text.JSON", function (raw_data) {
+    $.getJSON("./json/Alliance_raw_text.json", function (raw_data) {
 
         let obj = raw_data.find(o => o.UID_A === event.layer.feature.properties.TOWNSHIP);
 
@@ -737,5 +737,7 @@ $(document).ready(function () {
             .text(d => month_text_format(d.key))
             .attr("class", "text")
     })
+
+    mainmap.invalidateSize()
 
 })
