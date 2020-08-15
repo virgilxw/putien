@@ -3,7 +3,7 @@
 // Default style for (studied) village points
 var default_style = {
     radius: 3,
-    fillColor: "rgba(155, 255, 213, 0.3)",
+    fillColor: "rgb(248, 108, 108)",
     color: "rgba(0, 0, 0, 0.3)",
     weight: 1,
     opacity: 1,
@@ -14,7 +14,7 @@ var default_style = {
 var alliance_default_style = {
     "color": "#000000",
     "weight": 2,
-    "opacity": 0.9,
+    "opacity": 0.3,
     "fillColor": "#67ff73",
     "fillOpacity": 0.1
 }
@@ -207,6 +207,27 @@ var Irrigation_Line = new L.GeoJSON.AJAX("./geojson/Irrigation_Line.geojson", {
     }
 })
 
+var Not_studied = new L.GeoJSON.AJAX("./geojson/Non-studiedPoints.geojson", {
+    pointToLayer: function (feature, latlng) {
+        return L.circleMarker(latlng, {
+            radius: 2,
+            fillColor: "rgb(108, 248, 151)",
+            color: "rgba(0, 0, 0, 0.3)",
+            weight: 1,
+            opacity: 1,
+            fillOpacity: 1
+        })
+    }
+})
+
+var Villagen_Poly = new L.GeoJSON.AJAX("./geojson/Village_Polygon.geojson", {
+    style: {
+        fillOpacity: 1,
+        fillColor: "#6c6c6c",
+        weight: 0
+    }
+})
+
 // map layer select
 
 var baseMaps = [
@@ -237,6 +258,13 @@ var overlays = [
         layers: {
             "Canals": Irrigation_Line,
             "Major Water Bodies": Irrigation_Poly
+        }
+    }, {
+        groupName: "Villages",
+        expanded: true,
+        layers: {
+            "Villages Not Studied": Not_studied,
+            "Buildings": Villagen_Poly
         }
     }
 ];
