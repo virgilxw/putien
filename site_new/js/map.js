@@ -375,19 +375,20 @@ function month_text_format(month) {
 
 $(document).ready(function () {
 
-    $("#villages_studied").change(function () {
-        if (this.checked) {
-            mainmap.addLayer(Village_Points_Studied)
-        } else {
-            mainmap.removeLayer(Village_Points_Studied)
-        }
-    });
 
     $("#alliances_studied").change(function () {
         if (this.checked) {
             mainmap.addLayer(Alliance_Polygons_Studied)
         } else {
             mainmap.removeLayer(Alliance_Polygons_Studied)
+        }
+    });
+
+    $("#villages_studied").change(function () {
+        if (this.checked) {
+            mainmap.addLayer(Village_Points_Studied)
+        } else {
+            mainmap.removeLayer(Village_Points_Studied)
         }
     });
 
