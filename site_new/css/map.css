@@ -141,3 +141,11 @@ ul.week {
 .tooltip {
     position: absolute;
 }
+
+a,
+a:link,
+a:visited,
+a:active {
+    text-decoration: none;
+    color: black;
+}

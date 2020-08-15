@@ -1,139 +1,131 @@
 <!DOCTYPE html>
-<html>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<html lang="en">
 
 <head>
-    <title>The Ritual Alliances of Putian</title>
 
-    <!-- Normalise -->
-    <link rel="stylesheet" href="./css/normalize.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
+    <title>Heroic Features - Start Bootstrap Template</title>
 
-    <!-- font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Leaflet -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+    <!-- Custom styles for this template -->
+    <link href="css/heroic-features.css" rel="stylesheet">
 
-    <!-- Leaflet styled layer control-->
-    <link rel="stylesheet" href="./css/styledLayerControl.css" />
-    <script src="./js/styledLayerControl.js"></script>
-
-    <!-- Leaflet sidebar -->
-    <link rel="stylesheet" href="./css/leaflet-sidebar.css" />
-    <script src="./js/leaflet-sidebar.js"></script>
-
-    <!-- Leaflet.AJAX -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js" integrity="sha256-rVeyUZMfAHhQJ7hvWaHrKknTDdqGcn1gxBBJA++E4z8=" crossorigin="anonymous"></script>
-
-    <!-- jquery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <!-- selectize -->
-    <link rel="stylesheet" href="./css/selectize.default.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.js" integrity="sha512-WZ3VAWLJDOQRwRtR4nkn7g7Fb+TSDtdpdQdJgM5tSn82RKD/O84EqMPKqvF+3ypk5+IErlevC4WpbdbRG65uIg==" crossorigin="anonymous"></script>
-
-    <!-- d3.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.min.js" integrity="sha512-FHsFVKQ/T1KWJDGSbrUhTJyS1ph3eRrxI228ND0EGaEp6v4a/vGwPWd3Dtd/+9cI7ccofZvl/wulICEurHN1pg==" crossorigin="anonymous"></script>
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div id="header">
-        <h3>Ritual Alliances of the Putian Plain</h3>
-        <h5>NUS Chinese Studies Department</h5>
-    </div>
-    <div id="mapcont"></div>
 
-    <div id="sidebar" class="leaflet-sidebar collapsed">
-        <!-- Nav tabs -->
-        <div class="leaflet-sidebar-tabs">
-            <ul role="tablist">
-                <!-- top aligned tabs -->
-                <li><a href="#home" role="tab"><i class="fa fa-info-circle"></i></a></li>
-                <li><a href="#lookup" role="tab"><i class="fa fa-search"></i></a></li>
-                <li><a href="#processions" role="tab"><img src="./img/Lantern.svg"> </a></li>
-                <li><a href="#birthday" role="tab"><i class="fa fa-birthday-cake"></i></a></li>
-            </ul>
-
-            <ul role="tablist">
-                <!-- bottom aligned tabs -->
-                <li><a href="#settings" role="tab"><i class="fa fa-gear"></i></a></li>
-            </ul>
-        </div>
-
-        <!-- Tab panes -->
-        <div class="leaflet-sidebar-content">
-            <div class="leaflet-sidebar-pane" id="home">
-                <h1 class="leaflet-sidebar-header">
-                    Village Information
-                    <div class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></div>
-                </h1>
-                <input type='checkbox' id='alliances_studied' name='alliances_studied' value='alliances_studied' checked>
-                <label for='alliances_studied'> Show Alliances that were studied</label><br>
-                <input type='checkbox' id='villages_studied' name='villags_studied' value='villages_studied' checked><label for='villages_studied'> Show Villages that were studied</label><br>
-
-                <p>(Due to limitations to the mapping framework used, you only can click on the last layer you added. )</p>
-                <h2 id="info_village_name">Village_name</h2>
-
-                <div id="info_field"></div>
-
-            </div>
-
-            <div class="leaflet-sidebar-pane" id="lookup">
-                <h1 class="leaflet-sidebar-header">Lookup<div class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></div>
-                </h1>
-
-                <div class="control-group">
-                    <label for="select_village">Select Village(s):</label>
-                    <select id="select-village" placeholder="Pick a village"></select>
-                </div>
-                <div class="control-group">
-                    <label for="select-alliance">Select Alliance(s)</label>
-                    <select id="select-alliance" placeholder="Pick a ritual alliance"></select>
-                </div>
-
-                <div class="control-group">
-                    <label for="select-gods">Primary Diety of Temples:</label>
-                    <select id="select-gods" placeholder="Pick a god"></select>
-                </div>
-            </div>
-
-            <div class="leaflet-sidebar-pane" id="processions">
-
-                <h1 class="leaflet-sidebar-header">Yuanxiao Processions<div class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></div>
-                </h1>
-                <p>Yuanxiao is often translated as "lantern festival". During these events, the idol of gods are paraded around the village or the boundaries of the ritual alliance.</p>
-                <p>Although the actual festival for Yuanxiao occurs on the 15th day of the first lunar month, i.e. the last day of Chinese New Year, the residents of Putian conduct different Yuanxiao processions throughout the first few months of the year.</p>
-                <p>Each bar in the following interactive bar chart represents one calendar day, and the height corresponds to the relative number of Yuan xiao processions happening on that day. Clicking a bar will generate a list of processions occuring on the day. </p>
-                <button class="clear"> Clear Selections</button>
-                <div id="ProcessionsChart"></div>
-                <h3>Yuanxiao processions on <span id="selectedDate">this day</span>:</h3>
-                <div id="ritualCardsCont">
-
-                </div>
-
-            </div>
-
-            <div class="leaflet-sidebar-pane" id="birthday">
-
-                <h1 class="leaflet-sidebar-header">Yuanxiao Processions<div class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></div>
-                </h1>
-                <p>Dates are in the format of the Chinese Lunar Calendar. Click on the calendar data and scroll down.</p>
-
-                <div class="calendar_waffle"></div>
-                <h2>Data</h2>
-                <div id="birthdayCardCont"></div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Ritual Alliances of the Putian Plain</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
             </div>
         </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Jumbotron Header -->
+        <header class="jumbotron my-4">
+            <h1 class="display-3">Explore a city with a thousand gods</h1>
+            <p class="lead">This website is a web companion to the book "Ritual Alliances of the Putian Plain". Making ingenious use of a wide variety of sources, and old as well as modern technical resources, Kenneth Dean and Zheng Zhenman here set a new standard for an histoire totale for a coherently well-defined cultural region in China. At the same time it deals in-depth with the ongoing negotiation of modernity in Chinese village rituals.</p>
+            <a href="overview.html" class="btn btn-primary btn-lg">Explore the data!</a>
+        </header>
+
+        <!-- Page Features -->
+        <div class="row text-center">
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="http://placehold.it/500x325" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-primary">Find Out More!</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="http://placehold.it/500x325" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni sapiente, tempore debitis beatae culpa natus architecto.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-primary">Find Out More!</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="http://placehold.it/500x325" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-primary">Find Out More!</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="http://placehold.it/500x325" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni sapiente, tempore debitis beatae culpa natus architecto.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-primary">Find Out More!</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.row -->
+
     </div>
+    <!-- /.container -->
 
-    <!-- custom -->
-    <script src="./js/map.js"></script>
-    <link rel="stylesheet" href="./css/map.css">
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
+        </div>
+        <!-- /.container -->
+    </footer>
 
-</body>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body></html>
