@@ -675,12 +675,6 @@ $(document).ready(function () {
             $(this).css("border-width", 2)
                 .css("cursor", "pointer")
 
-            clearallUID()
-
-            for (entry in $(this)[0].__data__.ID) {
-                highlightlayerUID($(this)[0].__data__.ID[entry].substring(0, 4))
-            }
-
         }
         var mouseleave = function (d) {
             $(this).css("border-width", 1)
