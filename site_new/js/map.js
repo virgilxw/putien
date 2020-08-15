@@ -108,7 +108,7 @@ function clearallUID() {
 }
 
 // Helper functions for "Yuanxiao Processions tab"
-function generateVillageCard(uid_r) {
+function generateprocessioncard(uid_r) {
     $.getJSON("./json/processions_info.json", function (data) {
         let obj = data.find(o => o.uid_r === uid_r)
 
@@ -120,6 +120,22 @@ function generateVillageCard(uid_r) {
 
 function clearVillageCards() {
     $("#ritualCardsCont").empty()
+}
+
+// Helper functions for "Yuanxiao Processions tab"
+function generatebirthdayncard(uid_b) {
+    $.getJSON("./json/birthday_celebrations.json", function (data) {
+        let obj = data.find(o => o.uid_b === uid_b)
+
+        $.getJSON("./json/raw_data.json", function (data2) {
+
+            let obj2 = data2.find(o => o.UID === uid_b.substring(0, 4));
+
+            var text = "<div class='village_card'> <ul> <li>Ritual ID: <span id='ritual_id'>" + obj.uid_b + "</span></li> <li>Village Name: <span id='ritual_name'>" + obj2.Name + " " + obj2.Name_zh + "</span></li><li>Start Date: <span id='ritual_start_date'>" + obj.startdate + "</span></li> <li>End Date: <span id='ritual_end_date'>" + obj.enddate + "</span></li> <li>Text: <span id='ritual_text'>" + obj.text + "</span></li> </ul> </div>"
+
+            $("#birthdayCardCont").append(text)
+        })
+    })
 }
 
 var mainmap = L.map('mapcont').setView([25.40, 119.1], 11);
@@ -612,8 +628,9 @@ $(document).ready(function () {
                     clearVillageCards()
                     $("#selectedDate").text(d.date)
 
+
                     for (i = 0; i < d.ID.length; i++) {
-                        generateVillageCard(d.ID[i])
+                        generateprocessioncard(d.ID[i])
                         highlightlayerUID(d.ID[i].substring(0, 4))
                     }
                 })
@@ -633,9 +650,51 @@ $(document).ready(function () {
         clearVillageCards();
     });
 
-    // Waffle
-
+    // Waffle calendar
     d3.json("./json/birthdays_cal.json").then(function (data) {
+
+        //tooltips
+
+        // create a tooltip
+        var tooltip = d3.select(".calendar_waffle")
+            .append("div")
+            .style("opacity", 0)
+            .attr("class", "tooltip")
+            .style("background-color", "white")
+            .style("border", "solid")
+            .style("border-width", "2px")
+            .style("border-radius", "5px")
+            .style("padding", "5px")
+            .style("position", "absolute")
+            .style("left", 0)
+
+        // Three function that change the tooltip when user hover / move / leave a cell
+        var mouseover = function (d) {
+
+            $(this).css("border-width", 2)
+                .css("cursor", "pointer")
+
+            clearallUID()
+
+            for (entry in $(this)[0].__data__.ID) {
+                highlightlayerUID($(this)[0].__data__.ID[entry].substring(0, 4))
+            }
+
+        }
+        var mouseleave = function (d) {
+            $(this).css("border-width", 1)
+        }
+
+        var click = function (d) {
+            $("#birthdayCardCont").empty()
+
+            clearallUID()
+
+            for (i in d.ID) {
+                generatebirthdayncard(d.ID[i])
+                highlightlayerUID(d.ID[i].substring(0, 4))
+            }
+        }
 
         const nest = d3.nest()
             .key(d => d.month)
@@ -651,8 +710,13 @@ $(document).ready(function () {
             .append("div")
             .attr("class", "group")
 
-        var color = d3.scaleSequential()
-            .interpolator(d3.interpolateOranges)
+        const colorInterpolator = d3.interpolate("#fff5eb", "#8c2d04")
+
+        var color = d3.scaleQuantize()
+            .domain([d3.min(data, d => d.weight),
+                     d3.max(data, d => d.weight)
+                    ])
+            .range(d3.quantize(colorInterpolator, 4))
 
         group.selectAll('.block')
             .data(d => d.values)
@@ -660,6 +724,9 @@ $(document).ready(function () {
             .append('div')
             .attr('class', 'block')
             .style("background-color", d => color(d.weight))
+            .on("mouseover", mouseover)
+            .on("mouseleave", mouseleave)
+            .on("click", click)
             .append("text")
             .attr("class", "date")
             .text(d => d.date.substring(3, 5))

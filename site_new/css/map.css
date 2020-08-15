@@ -137,3 +137,7 @@ ul.week {
 .date {
     margin: 3px;
 }
+
+.tooltip {
+    position: absolute;
+}
