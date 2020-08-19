@@ -1550,9 +1550,387 @@
         "Relations": []
     }, {
         "Village": "V250",
-        "type": 1,
+        "type": 2,
         "Major": ["Chen 陈", "Lin 林"],
         "Minor": ["Zheng 郑", "Huang 黄"],
+        "Relations": []
+    }, {
+        "Village": "V251",
+        "type": 1,
+        "Major": ["Lin 林"],
+        "Minor": [],
+        "Relations": []
+    }, {
+        "Village": "V252",
+        "type": 3,
+        "Major": [],
+        "Minor": ["Lin 林", "Chen 陈", "Zheng 郑"],
+        "Relations": []
+    }, {
+        "Village": "V253",
+        "type": 2,
+        "Major": ["Xie 谢", "Lin 林"],
+        "Minor": [],
+        "Relations": []
+    }, {
+        "Village": "V254",
+        "type": 1,
+        "Major": ["Lin 林"],
+        "Minor": [],
+        "Relations": []
+    }, {
+        "Village": "V255",
+        "type": 1,
+        "Major": ["Chen 陈"],
+        "Minor": [],
+        "Relations": []
+    }, {
+        "Village": "V256",
+        "type": 1,
+        "Major": ["Yu 余"],
+        "Minor": [],
+        "Relations": []
+    }, {
+        "Village": "V257",
+        "type": 2,
+        "Major": ["Huang 黄", "Yi 蚁"],
+        "Minor": [],
+        "Relations": []
+    }, {
+        "Village": "V258",
+        "type": 3,
+        "Major": [],
+        "Minor": ["Huang 黄", "Yi 蚁", "Zheng 郑", "Chen 陈", "Yang 杨", "Zhu 朱"],
+        "Relations": []
+    }, {
+        "Village": "V259",
+        "type": 1,
+        "Major": ["Wen 温"],
+        "Minor": [],
+        "Relations": []
+    }, {
+        "Village": "V260",
+        "type": 2,
+        "Major": ["Xu 徐", "Chen 陈"],
+        "Minor": [],
+        "Relations": []
+    }, {
+        "Village": "V261",
+        "type": 2,
+        "Major": ["Lin 林", "Fang 方."],
+        "Minor": [],
+        "Relations": []
+    }, {
+        "Village": "V262",
+        "type": 1,
+        "Major": ["Fan 范"],
+        "Minor": [],
+        "Relations": []
+    }, {
+        "Village": "V263",
+        "type": 1,
+        "Major": ["Huang 黄"],
+        "Minor": [],
+        "Relations": ["Huang of Huian 惠安"]
+    }, {
+        "Village": "V264",
+        "type": 2,
+        "Major": ["Wu 吴", "Zhou 周", "Liu 刘"],
+        "Minor": [],
+        "Relations": []
+    }, {
+        "Village": "V265",
+        "type": 2,
+        "Major": ["Zhuang 庄", "Huang 黄"],
+        "Minor": [],
+        "Relations": []
+    }, {
+        "Village": "V266",
+        "type": 2,
+        "Major": ["Lin 林", "Cai 蔡", "Xu 徐"],
+        "Minor": [],
+        "Relations": []
+    }, {
+        "Village": "V267",
+        "type": 1,
+        "Major": ["Chen 陈"],
+        "Minor": ["Ren 任", "Zheng 郑"],
+        "Relations": []
+    }, {
+        "Village": "V268",
+        "type": 3,
+        "Major": ["Guo 郭", "Zhuo 卓"],
+        "Minor": [],
+        "Relations": []
+    }, {
+        "Village": "V269",
+        "type": 1,
+        "Major": ["Huang 黄"],
+        "Minor": [],
+        "Relations": []
+    }, {
+        "Village": "V270",
+        "type": 1,
+        "Major": ["Lin 林"],
+        "Minor": [],
+        "Relations": []
+    }, {
+        "Village": "V271",
+        "type": 2,
+        "Major": ["Lin 林", "Chen 陈", "Zheng 郑", "Zhu 朱."],
+        "Minor": [],
+        "Relations": []
+    }, {
+        "Village": "V272",
+        "type": 1,
+        "Major": ["Lin 林"],
+        "Minor": [],
+        "Relations": []
+    }, {
+        "Village": "V273",
+        "type": 2,
+        "Major": ["Lin 林", "Niu 牛", "Zheng 郑"],
+        "Minor": [],
+        "Relations": []
+    }, {
+        "Village": "V274",
+        "type": 1,
+        "Major": ["Lin 林"],
+        "Minor": [],
+        "Relations": []
+    }, {
+        "Village": "V275",
+        "type": 1,
+        "Major": ["Ke 柯"],
+        "Minor": [],
+        "Relations": []
+    }, {
+        "Village": "V276",
+        "type": 1,
+        "Major": ["Cai 蔡"],
+        "Minor": ["Zheng 郑", "Chen 陈"],
+        "Relations": []
+    }, {
+        "Village": "V277",
+        "type": 1,
+        "Major": ["Cai 蔡"],
+        "Minor": ["Zheng 郑", "Huang 黄", "Lin 林", "Chen 陈."],
+        "Relations": []
+    }, {
+        "Village": "V278",
+        "type": 1,
+        "Major": ["Zhang 张", "Yang 杨", "Peng 彭"],
+        "Minor": [],
+        "Relations": []
+    }, {
+        "Village": "V279",
+        "type": 1,
+        "Major": ["Yang 杨"],
+        "Minor": ["Peng 彭", "Zhang 张"],
+        "Relations": []
+    }, {
+        "Village": "V280",
+        "type": 3,
+        "Major": [],
+        "Minor": ["Chen 陈", "Li 李", "Zheng 郑", "Xiao 肖", "Wang 王", "Lan 兰", "Huang 黄"],
+        "Relations": []
+    }, {
+        "Village": "V281",
+        "type": 1,
+        "Major": ["Lin 林"],
+        "Minor": ["Wu 吴", "Peng 彭", "Li 李", "Zhang 张", "Zheng 郑"],
+        "Relations": []
+    }, {
+        "Village": "V282",
+        "type": 1,
+        "Major": ["Chen 陈"],
+        "Minor": ["Zhang 张", "Gao 高", "Zhuo 卓", "Dai 戴", "Zhu 朱", "Yu 俞"],
+        "Relations": []
+    }, {
+        "Village": "V283",
+        "type": 3,
+        "Major": [],
+        "Minor": ["Li 李", "Xie 谢", "Cai 蔡", "Weng 翁", "Zheng 郑"],
+        "Relations": []
+    }, {
+        "Village": "V284",
+        "type": 3,
+        "Major": [],
+        "Minor": ["Su 苏", "Lin 林", "Fu 傅", "Xu 许", "Zheng 郑"],
+        "Relations": []
+    }, {
+        "Village": "V285",
+        "type": 2,
+        "Major": ["Li 李", "Weng 翁", "Xin 辛", "Chen 陈"],
+        "Minor": [],
+        "Relations": []
+    }, {
+        "Village": "V286",
+        "type": 1,
+        "Major": ["Yang 杨", "Zhang 张"],
+        "Minor": [],
+        "Relations": []
+    }, {
+        "Village": "V287",
+        "type": 1,
+        "Major": ["Chen 陈"],
+        "Minor": [],
+        "Relations": []
+    }, {
+        "Village": "V288",
+        "type": 1,
+        "Major": ["Liu 刘"],
+        "Minor": [],
+        "Relations": []
+    }, {
+        "Village": "V289",
+        "type": 1,
+        "Major": ["Huang 黄"],
+        "Minor": [],
+        "Relations": []
+    }, {
+        "Village": "V290",
+        "type": 1,
+        "Major": ["Chen 陈"],
+        "Minor": [],
+        "Relations": []
+    }, {
+        "Village": "V291",
+        "type": 2,
+        "Major": ["Huang 黄", "Xu 徐"],
+        "Minor": [],
+        "Relations": []
+    }, {
+        "Village": "V292",
+        "type": 3,
+        "Major": [],
+        "Minor": ["Song 宋", "Xu 许", "Bao 鲍", "Cai 蔡", "Dong 董", "Zou 邹"],
+        "Relations": []
+    }, {
+        "Village": "V293",
+        "type": 2,
+        "Major": ["Chen 陈", "Cai 蔡", "Zeng 曾"],
+        "Minor": [],
+        "Relations": []
+    }, {
+        "Village": "V294",
+        "type": 1,
+        "Major": ["Ling 凌"],
+        "Minor": ["Chen 陈", "Weng 翁"],
+        "Relations": []
+    }, {
+        "Village": "V295",
+        "type": 1,
+        "Major": ["Chen 陈"],
+        "Minor": [],
+        "Relations": []
+    }, {
+        "Village": "V296",
+        "type": 3,
+        "Major": [],
+        "Minor": ["Mao 茅", "Wu 武", "Weng 翁", "Huang 黄", "Chen 陈"],
+        "Relations": []
+    }, {
+        "Village": "V297",
+        "type": 2,
+        "Major": ["Zhang 张", "Huang 黄", "Zheng 郑"],
+        "Minor": ["Chen 陈", "Wu 吴", "Ruan 阮", "Zhu 朱", "Lin 林"],
+        "Relations": []
+    }, {
+        "Village": "V298",
+        "type": 1,
+        "Major": ["Chen 陈"],
+        "Minor": [],
+        "Relations": []
+    }, {
+        "Village": "V299",
+        "type": 1,
+        "Major": ["Lin 林"],
+        "Minor": [],
+        "Relations": []
+    }, {
+        "Village": "V300",
+        "type": 1,
+        "Major": ["Cai 蔡", "Shi 施"],
+        "Minor": [],
+        "Relations": []
+    }, {
+        "Village": "V244",
+        "type": 1,
+        "Major": ["Chen 陈"],
+        "Minor": [],
+        "Relations": []
+    }, {
+        "Village": "V244",
+        "type": 1,
+        "Major": ["Chen 陈"],
+        "Minor": [],
+        "Relations": []
+    }, {
+        "Village": "V244",
+        "type": 1,
+        "Major": ["Chen 陈"],
+        "Minor": [],
+        "Relations": []
+    }, {
+        "Village": "V244",
+        "type": 1,
+        "Major": ["Chen 陈"],
+        "Minor": [],
+        "Relations": []
+    }, {
+        "Village": "V244",
+        "type": 1,
+        "Major": ["Chen 陈"],
+        "Minor": [],
+        "Relations": []
+    }, {
+        "Village": "V244",
+        "type": 1,
+        "Major": ["Chen 陈"],
+        "Minor": [],
+        "Relations": []
+    }, {
+        "Village": "V244",
+        "type": 1,
+        "Major": ["Chen 陈"],
+        "Minor": [],
+        "Relations": []
+    }, {
+        "Village": "V244",
+        "type": 1,
+        "Major": ["Chen 陈"],
+        "Minor": [],
+        "Relations": []
+    }, {
+        "Village": "V244",
+        "type": 1,
+        "Major": ["Chen 陈"],
+        "Minor": [],
+        "Relations": []
+    }, {
+        "Village": "V244",
+        "type": 1,
+        "Major": ["Chen 陈"],
+        "Minor": [],
+        "Relations": []
+    }, {
+        "Village": "V244",
+        "type": 1,
+        "Major": ["Chen 陈"],
+        "Minor": [],
+        "Relations": []
+    }, {
+        "Village": "V244",
+        "type": 1,
+        "Major": ["Chen 陈"],
+        "Minor": [],
+        "Relations": []
+    }, {
+        "Village": "V244",
+        "type": 1,
+        "Major": ["Chen 陈"],
+        "Minor": [],
         "Relations": []
     }
 ]
