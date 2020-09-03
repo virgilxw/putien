@@ -19,6 +19,16 @@ var alliance_default_style = {
     "fillOpacity": 0.1
 }
 
+function clearallUID() {
+    // Helper function to clear all highlights
+
+    for (const k in highlight_buffer) {
+        clearlayerUID(k)
+    }
+    highlight_buffer = {};
+    Village_Points_Studied.setStyle(default_style);
+}
+
 function highlightlayerUID(UID) {
     // Helper function to highlight village points by UID
     var match = false
