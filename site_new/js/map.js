@@ -41,7 +41,7 @@ function highlightlayerUID(UID) {
             if (layer.feature.properties.UID_V == UID) {
                 layer.setStyle({
                     radius: 7,
-                    fillColor: "#fff500",
+                    fillColor: "#cec719",
                     color: "#ff1400",
                     weight: 1,
                     opacity: 1,
@@ -67,8 +67,8 @@ function highlightlayerUID(UID) {
 }
 
 function clearlayerUID(UID) {
-    // Helper function to clear highlight of a specific point
 
+    // Helper function to clear highlight of a specific point
     Object.keys(highlight_buffer).forEach(function (key) {
         if (key == UID) {
             match = true
@@ -95,16 +95,6 @@ function clearlayerUID(UID) {
             })
         }
     }
-}
-
-function clearallUID() {
-    // Helper function to clear all highlights
-
-    for (const k in highlight_buffer) {
-        clearlayerUID(k)
-    }
-    highlight_buffer = {};
-    Village_Points_Studied.setStyle(default_style);
 }
 
 // Helper functions for "Yuanxiao Processions tab"
