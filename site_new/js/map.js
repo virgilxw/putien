@@ -298,62 +298,6 @@ var Village_Points_Studied = new L.GeoJSON.AJAX("./geojson/Village_Points_Studie
     }
 }).addTo(mainmap)
 
-Village_Points_Studied.on("click", function (event) {
-
-    clearallUID();
-    highlightlayerUID(event.layer.feature.properties.UID_V);
-
-    sidebar.open('home');
-    $("#info_uid").text(event.layer.feature.properties.UID_V)
-
-    $.getJSON("./json/raw_data.json", function (raw_data) {
-        let obj = raw_data.find(o => o.UID === event.layer.feature.properties.UID_V);
-
-        namestring = obj.Name + " " + obj.Name_zh
-
-        $("#info_village_name").text(namestring)
-
-        field_data = "<span> <h4>Village Settlement:</h4> </span> <span id='village_settlement'>" + obj.Village_Settlement + "</span> <span> <h4>Surname Groups:</h4> </span> <span id='Surname_Groups'>" + obj.Surname_Groups + "</span> <span> <h4>Village Temples:</h4> </span> <span id='Village_Temples'>" + obj.Village_Temples + "</span> <span> <h4>Yuanxiao Processions:</h4> </span> <span id='Rituals_Yuanxiao_Processions'>" + obj.Rituals_Yuanxiao_Processions + "</span> <span> <h4>Birthday Celebration of gods:</h4> </span> <span id='Rituals_Birthday_Celebration_of_gods'>" + obj.Rituals_Birthday_Celebration_of_gods + "</span> <span> <h4>Ritual Groups (if present):</h4> </span> <span id='Rituals_Ritual_Groups'>" + obj.Rituals_Ritual_Groups + "</span>"
-
-        $("#info_field").html(field_data)
-    })
-}).on("mouseover", function (event) {
-    event.layer.setStyle({
-        weight: 3
-    });
-}).on("mouseout", function (event) {
-    event.layer.setStyle({
-        weight: 1
-    })
-})
-
-
-Alliance_Polygons_Studied.on("click", function (event) {
-
-    clearallUID();
-    highlightlayerUID(event.layer.feature.properties.TOWNSHIP)
-    sidebar.open('home');
-
-    $.getJSON("./json/Alliance_raw_text.json", function (raw_data) {
-
-        let obj = raw_data.find(o => o.UID_A === event.layer.feature.properties.TOWNSHIP);
-
-        namestring = obj.name + " " + obj.name_zh
-
-        $("#info_village_name").text(namestring)
-
-        $("#info_field").html(obj.raw_text)
-    })
-}).on("mouseover", function (event) {
-    event.layer.setStyle({
-        weight: 5,
-    });
-}).on("mouseout", function (event) {
-    event.layer.setStyle({
-        weight: 2
-    })
-})
-
 // buffer to track what items are selected
 highlight_buffer = {}
 
@@ -399,7 +343,205 @@ function month_text_format(month) {
     }
 }
 
+// Toggle chinese descriptions
+function turn_on_descriptions() {
+
+    Village_Points_Studied.off("click")
+
+    Village_Points_Studied.on("click", function (event) {
+
+        clearallUID();
+        highlightlayerUID(event.layer.feature.properties.UID_V);
+
+        var path = "./inscriptions/" + event.layer.feature.properties.UID_V + ".txt"
+
+        var inscriptions_string = $.ajax({
+            url: path,
+            async: false
+        }).responseText;
+
+        var popup = L.popup({
+                maxHeight: 500,
+                maxWidth: 600,
+                closeOnClick: false,
+                keepInView: true
+            })
+            .setLatLng(event.latlng)
+            .setContent(inscriptions_string)
+            .openOn(mainmap);
+
+
+
+        sidebar.open('home');
+        $("#info_uid").text(event.layer.feature.properties.UID_V)
+
+        $.getJSON("./json/raw_data.json", function (raw_data) {
+            let obj = raw_data.find(o => o.UID === event.layer.feature.properties.UID_V);
+
+            namestring = obj.Name + " " + obj.Name_zh
+
+            $("#info_village_name").text(namestring)
+
+            field_data = "<span> <h4>Village Settlement:</h4> </span> <span id='village_settlement'>" + obj.Village_Settlement + "</span> <span> <h4>Surname Groups:</h4> </span> <span id='Surname_Groups'>" + obj.Surname_Groups + "</span> <span> <h4>Village Temples:</h4> </span> <span id='Village_Temples'>" + obj.Village_Temples + "</span> <span> <h4>Yuanxiao Processions:</h4> </span> <span id='Rituals_Yuanxiao_Processions'>" + obj.Rituals_Yuanxiao_Processions + "</span> <span> <h4>Birthday Celebration of gods:</h4> </span> <span id='Rituals_Birthday_Celebration_of_gods'>" + obj.Rituals_Birthday_Celebration_of_gods + "</span> <span> <h4>Ritual Groups (if present):</h4> </span> <span id='Rituals_Ritual_Groups'>" + obj.Rituals_Ritual_Groups + "</span>"
+
+            $("#info_field").html(field_data)
+        })
+    }).on("mouseover", function (event) {
+        event.layer.setStyle({
+            weight: 3
+        });
+    }).on("mouseout", function (event) {
+        event.layer.setStyle({
+            weight: 1
+        })
+    })
+
+
+    Alliance_Polygons_Studied.on("click", function (event) {
+
+        clearallUID();
+        highlightlayerUID(event.layer.feature.properties.TOWNSHIP)
+
+        var path = "./inscriptions/" + event.layer.feature.properties.TOWNSHIP + ".txt"
+
+        var inscriptions_string = $.ajax({
+            url: path,
+            async: false
+        }).responseText;
+
+        var popup = L.popup({
+                maxHeight: 500,
+                maxWidth: 600,
+                closeOnClick: false,
+                keepInView: true
+            })
+            .setLatLng(event.latlng)
+            .setContent(inscriptions_string)
+            .openOn(mainmap);
+
+        sidebar.open('home');
+
+        $.getJSON("./json/Alliance_raw_text.json", function (raw_data) {
+
+            let obj = raw_data.find(o => o.UID_A === event.layer.feature.properties.TOWNSHIP);
+
+            namestring = obj.name + " " + obj.name_zh
+
+            $("#info_village_name").text(namestring)
+
+            $("#info_field").html(obj.raw_text)
+        })
+    }).on("mouseover", function (event) {
+        event.layer.setStyle({
+            weight: 5,
+        });
+    }).on("mouseout", function (event) {
+        event.layer.setStyle({
+            weight: 2
+        })
+    })
+
+}
+
+function turn_off_descriptions() {
+    Village_Points_Studied.off("click")
+
+    Village_Points_Studied.on("click", function (event) {
+
+        clearallUID();
+        highlightlayerUID(event.layer.feature.properties.UID_V);
+
+        sidebar.open('home');
+        $("#info_uid").text(event.layer.feature.properties.UID_V)
+
+        $.getJSON("./json/raw_data.json", function (raw_data) {
+            let obj = raw_data.find(o => o.UID === event.layer.feature.properties.UID_V);
+
+            namestring = obj.Name + " " + obj.Name_zh
+
+            $("#info_village_name").text(namestring)
+
+            field_data = "<span> <h4>Village Settlement:</h4> </span> <span id='village_settlement'>" + obj.Village_Settlement + "</span> <span> <h4>Surname Groups:</h4> </span> <span id='Surname_Groups'>" + obj.Surname_Groups + "</span> <span> <h4>Village Temples:</h4> </span> <span id='Village_Temples'>" + obj.Village_Temples + "</span> <span> <h4>Yuanxiao Processions:</h4> </span> <span id='Rituals_Yuanxiao_Processions'>" + obj.Rituals_Yuanxiao_Processions + "</span> <span> <h4>Birthday Celebration of gods:</h4> </span> <span id='Rituals_Birthday_Celebration_of_gods'>" + obj.Rituals_Birthday_Celebration_of_gods + "</span> <span> <h4>Ritual Groups (if present):</h4> </span> <span id='Rituals_Ritual_Groups'>" + obj.Rituals_Ritual_Groups + "</span>"
+
+            $("#info_field").html(field_data)
+        })
+    }).on("mouseover", function (event) {
+        event.layer.setStyle({
+            weight: 3
+        });
+    }).on("mouseout", function (event) {
+        event.layer.setStyle({
+            weight: 1
+        })
+    })
+
+
+    Alliance_Polygons_Studied.off("click")
+
+    Alliance_Polygons_Studied.on("click", function (event) {
+
+        clearallUID();
+        highlightlayerUID(event.layer.feature.properties.TOWNSHIP)
+        sidebar.open('home');
+
+        $.getJSON("./json/Alliance_raw_text.json", function (raw_data) {
+
+            let obj = raw_data.find(o => o.UID_A === event.layer.feature.properties.TOWNSHIP);
+
+            namestring = obj.name + " " + obj.name_zh
+
+            $("#info_village_name").text(namestring)
+
+            $("#info_field").html(obj.raw_text)
+        })
+    }).on("mouseover", function (event) {
+        event.layer.setStyle({
+            weight: 3
+        });
+    }).on("mouseout", function (event) {
+        event.layer.setStyle({
+            weight: 1
+        })
+    })
+
+    Alliance_Polygons_Studied.off("click")
+
+    Alliance_Polygons_Studied.on("click", function (event) {
+
+        clearallUID();
+        highlightlayerUID(event.layer.feature.properties.TOWNSHIP)
+        sidebar.open('home');
+
+        $.getJSON("./json/Alliance_raw_text.json", function (raw_data) {
+
+            let obj = raw_data.find(o => o.UID_A === event.layer.feature.properties.TOWNSHIP);
+
+            namestring = obj.name + " " + obj.name_zh
+
+            $("#info_village_name").text(namestring)
+
+            $("#info_field").html(obj.raw_text)
+        })
+    }).on("mouseover", function (event) {
+        event.layer.setStyle({
+            weight: 5,
+        });
+    }).on("mouseout", function (event) {
+        event.layer.setStyle({
+            weight: 2
+        })
+    })
+}
+
 $(document).ready(function () {
+
+    $("#toggle_chinese").change(function () {
+        if (this.checked) {
+            turn_on_descriptions()
+        } else {
+            turn_off_descriptions()
+        }
+    });
 
 
     $("#alliances_studied").change(function () {
@@ -758,6 +900,8 @@ $(document).ready(function () {
             .text(d => month_text_format(d.key))
             .attr("class", "text")
     })
+
+    turn_off_descriptions()
 
     mainmap.invalidateSize()
 

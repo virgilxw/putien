@@ -309,7 +309,7 @@ Village_Points_Studied.on("click", function (event) {
     console.log(event.latlng)
     var popup = L.popup({
             maxHeight: 500,
-            maxWidth: 1000,
+            maxWidth: 600,
             closeOnClick: false,
             keepInView: true
         })
@@ -487,7 +487,6 @@ $(document).ready(function () {
             });
         }
     })
-
 
     mainmap.invalidateSize()
 
