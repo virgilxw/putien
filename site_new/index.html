@@ -63,6 +63,7 @@
                 <li><a href="#processions" role="tab"><img src="./img/Lantern.svg"> </a></li>
                 <li><a href="#birthday" role="tab"><i class="fa fa-birthday-cake"></i></a></li>
                 <li><a href="#chinese" role="chinese">华</a></li>
+                <li><a href="#surname" role="chinese">性</a></li>
             </ul>
 
             <ul role="tablist">
@@ -137,11 +138,55 @@
 
             <div class="leaflet-sidebar-pane" id="chinese">
 
-                <h1 class="leaflet-sidebar-header">Yuanxiao Processions<div class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></div>
+                <h1 class="leaflet-sidebar-header">Chinese Translation<div class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></div>
                 </h1>
                 <p>Click the following checkbox, then click on a feature on the map to read its entry in chinese. The chinese language text also includes transcriptions of steele and documents found at the specified location.</p>
                 <input type='checkbox' id='toggle_chinese' name='toggle_chinese' value='toggle_chinese' unchecked>
                 <label for='toggle_chinese'> Toggle Chinese-language pop-ups</label><br>
+
+
+            </div>
+            <div class="leaflet-sidebar-pane" id="surname">
+
+
+
+                <h1 class="leaflet-sidebar-header">Surnames<div class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></div>
+                </h1>
+                <div class="control-group">
+                    <label for="select_surname">Select Surname:</label>
+                    <select id="select-surname" placeholder="Pick a Surname"></select>
+                </div>
+                <br>
+                <br>
+                <br>
+                <h3>Legend</h3>
+                <div class="row">
+                    <div class="color-box" style="background-color: #66c2a5;">
+                    </div>
+                    <p>Village With One Dominant Surname Group</p>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="color-box" style="background-color: #fc8d62;"></div>
+                    <p>Village With Many Dominant Surname Groups</p>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="color-box" style="background-color: #8da0cb;"></div>
+                    <p>Village Without Dominant Surname Groups</p>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="color-box" style="background-color: #e78ac3;"></div>
+                    <p>Village Without Dominant Surname Groups</p>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="color-box" style="background-color: #a6d854;"></div>
+                    <p>Village With A Large Number of Surname Groups due to Urbanisation</p>
+                </div>
+
+
             </div>
         </div>
     </div>

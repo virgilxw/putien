@@ -696,7 +696,7 @@
         "Relations": ["Huang of Huangxia 黄霞"]
 	}, {
         "Village": "V109",
-        "type": 4,
+        "type": 5,
         "Major": [],
         "Minor": [],
         "Relations": []
@@ -1757,7 +1757,7 @@
 	},
     {
         "Village": "V268",
-        "type": 2,
+        "type": 3,
         "Major": ["Guo 郭", "Zhuo 卓"],
         "Minor": [],
         "Relations": []
@@ -3647,7 +3647,7 @@
 	},
     {
         "Village": "V538",
-        "type": 4,
+        "type": 5,
         "Major": [],
         "Minor": [],
         "Relations": []
@@ -4905,7 +4905,7 @@
         "Relations": []
 	}, {
         "Village": "V717",
-        "type": 2,
+        "type": 1,
         "Major": ["Yi 伊", "Liang 梁", "Yu 余"],
         "Minor": [],
         "Relations": []
@@ -4941,7 +4941,7 @@
         "Relations": []
 	}, {
         "Village": "V723",
-        "type": 2,
+        "type": 1,
         "Major": ["Yao 姚", "Lin 林"],
         "Minor": [],
         "Relations": []

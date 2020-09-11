@@ -901,6 +901,102 @@ $(document).ready(function () {
             .attr("class", "text")
     })
 
+    // Surname
+    var $select = $('#select-surname').selectize({
+        maxItems: 1,
+        valueField: 'id',
+        labelField: 'title',
+        searchField: 'title',
+        options: [],
+        create: false,
+        onItemAdd: function (val) {
+            highlightlayerUID(val)
+        },
+        onItemRemove: function (val) {
+            clearlayerUID(e.params.data.id)
+        },
+        load: function (query, callback) {
+            if (!query.length) return callback();
+            $.ajax({
+                url: './json/surname_search.json',
+                type: 'GET',
+                dataType: 'json',
+                data: {},
+                error: function () {
+                    callback();
+                },
+                success: function (res) {
+                    callback(res);
+                }
+            });
+        }
+    });
+
+    sidebar.on('content', function (e) {
+        // e.id contains the id of the opened panel
+
+        // if surname clicked
+        if (e.id == "surname") {
+            clearallUID()
+
+            $.ajax({
+                url: './json/surnames.json',
+                type: 'GET',
+                dataType: 'json',
+                data: {},
+                error: function () {
+                    console.log("error");
+                },
+                success: function (e) {
+                    e.forEach(function (d) {
+
+                        Village_Points_Studied.eachLayer(function (layer) {
+                            if (layer.feature.properties.UID_V == d["Village"]) {
+                                console.log(d["Village"])
+                                switch (d["type"]) {
+                                    case 1:
+                                        layer.setStyle({
+                                            fillColor: "#66c2a5"
+                                        })
+                                        break;
+                                    case 2:
+                                        layer.setStyle({
+                                            fillColor: "#fc8d62"
+                                        })
+                                        break;
+                                    case 3:
+                                        layer.setStyle({
+                                            fillColor: "#8da0cb"
+                                        })
+                                        break;
+                                    case 4:
+                                        layer.setStyle({
+                                            fillColor: "#e78ac3"
+                                        })
+                                        break;
+                                    case 5:
+                                        layer.setStyle({
+                                            fillColor: "#a6d854"
+                                        })
+                                        break;
+                                    default:
+                                        break;
+                                }
+                            }
+                        })
+
+                    })
+                }
+            })
+        }
+        sidebar.on('closing', function (e) {
+            console.log(e)
+            clearallUID()
+        })
+
+    });
+
+
     turn_off_descriptions()
 
     mainmap.invalidateSize()
