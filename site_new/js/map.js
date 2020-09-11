@@ -990,8 +990,8 @@ $(document).ready(function () {
             })
         }
         sidebar.on('closing', function (e) {
-            console.log(e)
             clearallUID()
+            Village_Points_Studied.setStyle(default_style)
         })
 
     });
