@@ -415,7 +415,7 @@
 	}, {
         "Village": "V063",
         "type": 2,
-        "Major": ["Lin 林", "Dai 戴."],
+        "Major": ["Lin 林", "Dai 戴"],
         "Minor": ["Shen 沈", "Huang 黄", "Weng 翁", "Chen 陈", "Cai 蔡"],
         "Relations": ["Lin of Jiumu 九牧", "Dai of Donggang 东港", "Huang in Huangxia 黄霞", "Chen of Kuokou 阔口"]
 	}, {
@@ -451,7 +451,7 @@
 	}, {
         "Village": "V069",
         "type": 2,
-        "Major": ["Zheng 郑", "Zhu 朱."],
+        "Major": ["Zheng 郑", "Zhu 朱"],
         "Minor": [],
         "Relations": []
 	}, {
@@ -686,7 +686,7 @@
         "Village": "V107",
         "type": 3,
         "Major": [],
-        "Minor": ["Zhang 张", "Chen 陈", "Zheng 郑", "Lin 林."],
+        "Minor": ["Zhang 张", "Chen 陈", "Zheng 郑", "Lin 林"],
         "Relations": []
 	}, {
         "Village": "V108",
@@ -848,7 +848,7 @@
         "Village": "V134",
         "type": 1,
         "Major": ["Li 李"],
-        "Minor": ["Zheng 郑", "Tang 唐", "Dai 戴."],
+        "Minor": ["Zheng 郑", "Tang 唐", "Dai 戴"],
         "Relations": ["Li of Yangwei 洋尾"]
 	}, {
         "Village": "V135",
@@ -889,7 +889,7 @@
 	}, {
         "Village": "V141",
         "type": 2,
-        "Major": ["Chen 陈", "Cheng 程", "Huang 黄."],
+        "Major": ["Chen 陈", "Cheng 程", "Huang 黄"],
         "Minor": [],
         "Relations": ["Chen of Kuokou 阔口", "Huang of Huangxia 黄霞", "Cheng of Chengkou 程口"]
 	}, {
@@ -1555,7 +1555,7 @@
     {
         "Village": "V239",
         "type": 2,
-        "Major": ["Chen 陈", "Zhang 张."],
+        "Major": ["Chen 陈", "Zhang 张"],
         "Minor": [],
         "Relations": []
 	},
@@ -1779,7 +1779,7 @@
     {
         "Village": "V271",
         "type": 2,
-        "Major": ["Lin 林", "Chen 陈", "Zheng 郑", "Zhu 朱."],
+        "Major": ["Lin 林", "Chen 陈", "Zheng 郑", "Zhu 朱"],
         "Minor": [],
         "Relations": []
 	},
@@ -2795,7 +2795,7 @@
         "Village": "V417",
         "type": 1,
         "Major": ["Li 李"],
-        "Minor": ["Chen 陈", "Huang 黄."],
+        "Minor": ["Chen 陈", "Huang 黄"],
         "Relations": []
 	},
     {

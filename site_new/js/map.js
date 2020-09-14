@@ -3,7 +3,7 @@
 // Default style for (studied) village points
 var default_style = {
     radius: 3,
-    fillColor: "rgb(248, 108, 108)",
+    fillColor: "#3182bd",
     color: "rgba(0, 0, 0, 0.3)",
     weight: 1,
     opacity: 1,
@@ -29,7 +29,7 @@ function clearallUID() {
     Village_Points_Studied.setStyle(default_style);
 }
 
-function highlightlayerUID(UID) {
+function highlightlayerUID(UID, sec = false) {
     // Helper function to highlight village points by UID
     var match = false
 
@@ -46,13 +46,26 @@ function highlightlayerUID(UID) {
     }
 
 
-    if (UID.charAt(0) == "V") {
+    if (UID.charAt(0) == "V" && sec == false) {
         var match = Village_Points_Studied.eachLayer(function (layer) {
             if (layer.feature.properties.UID_V == UID) {
                 layer.setStyle({
                     radius: 7,
-                    fillColor: "#cec719",
-                    color: "#ff1400",
+                    fillColor: "#fdae6b",
+                    color: "#ff0000",
+                    weight: 1,
+                    opacity: 1,
+                    fillOpacity: 1
+                })
+            }
+        })
+    } else if (UID.charAt(0) == "V" && sec == true) {
+        var match = Village_Points_Studied.eachLayer(function (layer) {
+            if (layer.feature.properties.UID_V == UID) {
+                layer.setStyle({
+                    radius: 7,
+                    fillColor: "#fee6ce",
+                    color: "#ff0000",
                     weight: 1,
                     opacity: 1,
                     fillOpacity: 1
@@ -910,10 +923,18 @@ $(document).ready(function () {
         options: [],
         create: false,
         onItemAdd: function (val) {
-            highlightlayerUID(val)
+            array = val.split(",")
+            for (e of array) {
+                if (e.charAt(0) == "P") {
+                    highlightlayerUID(e.slice(1), false)
+
+                } else if (e.charAt(0) == "S") {
+                    highlightlayerUID(e.slice(1), true)
+                }
+            }
         },
         onItemRemove: function (val) {
-            clearlayerUID(e.params.data.id)
+            clearallUID();
         },
         load: function (query, callback) {
             if (!query.length) return callback();
@@ -952,7 +973,6 @@ $(document).ready(function () {
 
                         Village_Points_Studied.eachLayer(function (layer) {
                             if (layer.feature.properties.UID_V == d["Village"]) {
-                                console.log(d["Village"])
                                 switch (d["type"]) {
                                     case 1:
                                         layer.setStyle({
