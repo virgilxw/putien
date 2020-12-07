@@ -169,35 +169,35 @@ var Esri_WorldImagery = new L.tileLayer('https://server.arcgisonline.com/ArcGIS/
 })
 
 // Shorelines
-var Ancient_Shoreline = new L.GeoJSON.AJAX("./geojson/Ancient_Shoreline_Inverted.geojson", {
+var Ancient_Shoreline = new L.GeoJSON.AJAX("./geojson/Ancient_Shoreline_Inverted.json", {
     style: {
         fillColor: "#9ecae1",
         opacity: 0,
         fillOpacity: 0.8
     }
 })
-var Tang_Shoreline = new L.GeoJSON.AJAX("./geojson/Tang_Shoreline_Inverted.geojson", {
+var Tang_Shoreline = new L.GeoJSON.AJAX("./geojson/Tang_Shoreline_Inverted.json", {
     style: {
         fillColor: "#6baed6",
         opacity: 0,
         fillOpacity: 0.8
     }
 })
-var Song_Shoreline = new L.GeoJSON.AJAX("./geojson/Song_Shoreline_Inverted.geojson", {
+var Song_Shoreline = new L.GeoJSON.AJAX("./geojson/Song_Shoreline_Inverted.json", {
     style: {
         fillColor: "#4292c6",
         opacity: 0,
         fillOpacity: 0.8
     }
 })
-var Yuan_Shoreline = new L.GeoJSON.AJAX("./geojson/Yuan_Shoreline_Inverted.geojson", {
+var Yuan_Shoreline = new L.GeoJSON.AJAX("./geojson/Yuan_Shoreline_Inverted.json", {
     style: {
         fillColor: "#2171b5",
         opacity: 0,
         fillOpacity: 0.8
     }
 })
-var MingQing_Shoreline = new L.GeoJSON.AJAX("./geojson/MingQing_Shoreline_Inverted.geojson", {
+var MingQing_Shoreline = new L.GeoJSON.AJAX("./geojson/MingQing_Shoreline_Inverted.json", {
     style: {
         fillColor: "#084594",
         opacity: 0,
@@ -206,21 +206,21 @@ var MingQing_Shoreline = new L.GeoJSON.AJAX("./geojson/MingQing_Shoreline_Invert
 })
 
 // Irrigation
-var Irrigation_Poly = new L.GeoJSON.AJAX("./geojson/Irrigation_Poly.geojson", {
+var Irrigation_Poly = new L.GeoJSON.AJAX("./geojson/Irrigation_Poly.json", {
     style: {
         fillOpacity: 1,
         fillColor: "#53a3ff",
         weight: 0
     }
 })
-var Irrigation_Line = new L.GeoJSON.AJAX("./geojson/Irrigation_Line.geojson", {
+var Irrigation_Line = new L.GeoJSON.AJAX("./geojson/Irrigation_Line.json", {
     style: {
         color: "#53a3ff",
         weight: 1
     }
 })
 
-var Not_studied = new L.GeoJSON.AJAX("./geojson/Non-studiedPoints.geojson", {
+var Not_studied = new L.GeoJSON.AJAX("./geojson/Non-studiedPoints.json", {
     pointToLayer: function (feature, latlng) {
         return L.circleMarker(latlng, {
             radius: 2,
@@ -233,7 +233,7 @@ var Not_studied = new L.GeoJSON.AJAX("./geojson/Non-studiedPoints.geojson", {
     }
 })
 
-var Villagen_Poly = new L.GeoJSON.AJAX("./geojson/Village_Polygon.geojson", {
+var Villagen_Poly = new L.GeoJSON.AJAX("./geojson/Village_Polygon.json", {
     style: {
         fillOpacity: 1,
         fillColor: "#6c6c6c",
@@ -301,11 +301,11 @@ var sidebar = L.control.sidebar({
     position: 'left', // left or right
 }).addTo(mainmap);
 
-var Alliance_Polygons_Studied = new L.GeoJSON.AJAX("./geojson/Alliance_Polygons_Studied.geojson", {
+var Alliance_Polygons_Studied = new L.GeoJSON.AJAX("./geojson/Alliance_Polygons_Studied.json", {
     style: alliance_default_style
 }).addTo(mainmap)
 
-var Village_Points_Studied = new L.GeoJSON.AJAX("./geojson/Village_Points_Studied.geojson", {
+var Village_Points_Studied = new L.GeoJSON.AJAX("./geojson/Village_Points_Studied.json", {
     pointToLayer: function (feature, latlng) {
         return L.circleMarker(latlng, default_style)
     }
