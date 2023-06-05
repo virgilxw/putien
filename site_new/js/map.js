@@ -153,7 +153,7 @@ function generatebirthdayncard(uid_b) {
 
 var mainmap = L.map('mapcont').setView([25.40, 119.1], 11);
 
-var streetmap = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+var streetmap = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoidmlyZ2lseHciLCJhIjoiY2xncjR3cWg5MTU3NTNwbXRvZGR1YTB0aCJ9.3BvcTt_rt9WSPpePiM3kQw', {
     maxZoom: 18,
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
         '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
